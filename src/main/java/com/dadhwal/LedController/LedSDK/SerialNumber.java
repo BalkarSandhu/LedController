@@ -1,4 +1,4 @@
-package com.dadhwal.sdk;
+package com.dadhwal.LedController.LedSDK;
 
 public class SerialNumber {
     private String sn;

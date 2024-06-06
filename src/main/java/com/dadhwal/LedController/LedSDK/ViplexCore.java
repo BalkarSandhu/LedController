@@ -1,4 +1,4 @@
-package com.dadhwal.sdk;
+package com.dadhwal.LedController.LedSDK;
 
 import com.sun.jna.Library;
 import com.sun.jna.Callback;
