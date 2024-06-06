@@ -1,0 +1,1101 @@
+[2024-06-06 15:15:42.526578] I [8788] [datamanager.cpp:init:94] DataManager::init begin
+[2024-06-06 15:15:42.526817] I [8788] [datamanager.cpp:init:97] DataManager::init end
+[2024-06-06 15:15:42.526830] D [8788] [viplexcore.cpp:initCore:181] viplexcore db & log init ok
+[2024-06-06 15:15:42.526833] D [8788] [viplexcore.cpp:init:106] sdk version = 3.4.0.01
+[2024-06-06 15:15:42.530247] I [8788] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:15:42.533950] I [8788] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:15:42.533961] I [8788] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:15:42.534065] E [8788] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: PROGRAMTEMPLATE,strSql=SELECT PROGRAMTEMPLATE FROM commonconfig
+[2024-06-06 15:15:42.534104] I [8788] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:15:42.534258] I [8788] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:15:42.534309] E [8788] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: PROGRAMTEMPLATE,strSql=SELECT PROGRAMTEMPLATE FROM commonconfig
+[2024-06-06 15:15:42.537046] I [8788] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:15:42.537062] I [8788] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:15:42.537138] I [8788] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:15:42.537221] I [8788] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:15:42.538846] I [8788] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:15:42.538884] D [8788] [viplexcore.cpp:init:138] viplexcore init ok: version=3.4.0.01, path=D:/NovaStarLED/LedController/temp, credentials={"company":"NovaStar","phone":"029-68216000","email":"hr@novastar.tech"}
+[2024-06-06 15:15:42.538886] D [8788] [viplexcore.cpp:init:139] viplexcore  init ok
+[2024-06-06 15:15:42.538889] I [8788] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:15:42.538957] E [8788] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: publicmodule,strSql=SELECT publicmodule FROM commonconfig
+[2024-06-06 15:15:42.539034] I [6468] [httpHelper.cpp:httpTimeServerRequest:25] httpTimeServerRequest --srart -- url = ,
+[2024-06-06 15:15:42.539070] I [6468] [httpHelper.cpp:httpNodeServerRequest:43] httpNodeServerRequest --srart -- url = ,
+[2024-06-06 15:15:42.539089] I [6468] [httpHelper.cpp:httpVnnoxNodeServerRequest:585] httpVnnoxNodeServerRequest --srart -- url = ,
+[2024-06-06 15:15:42.539107] D [6468] [viplexcore.cpp:operator ():126] getBuryPoint() return true
+[2024-06-06 15:15:42.539111] D [6468] [burypoint.cpp:uploadInit:23] BuryPoint::uploadInit begin
+[2024-06-06 15:15:42.542070] I [8788] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:15:42.607947] D [6468] [burypoint.cpp:getOSSUploadBuryPointInfo:30] BuryPoint::getOSSUploadBuryPointInfo begin
+[2024-06-06 15:15:42.607957] D [6468] [burypoint.cpp:getOSSUploadBuryPointInfo:35] BuryPoint::getOSSUploadBuryPointInfo getOssInfoUrl=
+[2024-06-06 15:15:42.608305] E [6468] [httpttools.cpp:HttpGet:681] httptTools::HttpGet  error, ret:3
+[2024-06-06 15:15:42.608324] D [6468] [burypoint.cpp:getOSSUploadBuryPointInfo:39] BuryPoint::getOSSUploadBuryPointInfo() get ossAuthorization empty!
+[2024-06-06 15:15:44.084928] I [10952] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:15:44.084950] I [9172] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:15:44.084955] I [22888] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:15:44.085781] E [10952] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: NODE_LIST_VNNOX,strSql=SELECT NODE_LIST_VNNOX FROM commonconfig
+[2024-06-06 15:15:44.093928] I [10952] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:15:44.093960] I [10952] [httpHelper.cpp:operator ():596] httpNodeServerRequest request error ,3
+[2024-06-06 15:15:44.094396] E [9172] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: NODE_SERVERS_VNNOX,strSql=SELECT NODE_SERVERS_VNNOX FROM commonconfig
+[2024-06-06 15:15:44.099007] I [9172] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:15:44.099022] I [9172] [httpHelper.cpp:operator ():54] httpNodeServerRequest request error ,3
+[2024-06-06 15:15:44.099242] E [22888] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: TIMING_SERVERS_VNNOX,strSql=SELECT TIMING_SERVERS_VNNOX FROM commonconfig
+[2024-06-06 15:16:49.778244] I [11288] [datamanager.cpp:init:94] DataManager::init begin
+[2024-06-06 15:16:49.778450] I [11288] [datamanager.cpp:init:97] DataManager::init end
+[2024-06-06 15:16:49.778463] D [11288] [viplexcore.cpp:initCore:181] viplexcore db & log init ok
+[2024-06-06 15:16:49.778466] D [11288] [viplexcore.cpp:init:106] sdk version = 3.4.0.01
+[2024-06-06 15:16:49.781861] I [11288] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:16:49.782134] I [11288] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:16:49.782138] I [11288] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:16:49.782182] I [11288] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:16:49.782185] I [11288] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:16:49.782222] I [11288] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:16:49.782346] I [11288] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:16:49.782396] I [11288] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:16:49.782419] D [11288] [viplexcore.cpp:init:138] viplexcore init ok: version=3.4.0.01, path=D:/NovaStarLED/LedController/temp, credentials={"company":"NovaStar","phone":"029-68216000","email":"hr@novastar.tech"}
+[2024-06-06 15:16:49.782420] D [11288] [viplexcore.cpp:init:139] viplexcore  init ok
+[2024-06-06 15:16:49.782422] I [11288] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:16:49.782469] I [11288] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:16:49.782578] I [18940] [httpHelper.cpp:httpTimeServerRequest:25] httpTimeServerRequest --srart -- url = ,
+[2024-06-06 15:16:49.782610] I [18940] [httpHelper.cpp:httpNodeServerRequest:43] httpNodeServerRequest --srart -- url = ,
+[2024-06-06 15:16:49.782627] I [18940] [httpHelper.cpp:httpVnnoxNodeServerRequest:585] httpVnnoxNodeServerRequest --srart -- url = ,
+[2024-06-06 15:16:49.782645] D [18940] [viplexcore.cpp:operator ():126] getBuryPoint() return true
+[2024-06-06 15:16:49.782648] D [18940] [burypoint.cpp:uploadInit:23] BuryPoint::uploadInit begin
+[2024-06-06 15:16:49.829216] D [18940] [burypoint.cpp:getOSSUploadBuryPointInfo:30] BuryPoint::getOSSUploadBuryPointInfo begin
+[2024-06-06 15:16:49.829228] D [18940] [burypoint.cpp:getOSSUploadBuryPointInfo:35] BuryPoint::getOSSUploadBuryPointInfo getOssInfoUrl=
+[2024-06-06 15:16:49.829733] E [18940] [httpttools.cpp:HttpGet:681] httptTools::HttpGet  error, ret:3
+[2024-06-06 15:16:49.829786] D [18940] [burypoint.cpp:getOSSUploadBuryPointInfo:39] BuryPoint::getOSSUploadBuryPointInfo() get ossAuthorization empty!
+[2024-06-06 15:16:51.318705] I [22556] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:16:51.318719] I [22892] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:16:51.318719] I [15208] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:16:51.319291] I [22556] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:16:51.319312] I [22556] [httpHelper.cpp:operator ():596] httpNodeServerRequest request error ,3
+[2024-06-06 15:16:51.319863] I [22892] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:16:51.319892] I [22892] [httpHelper.cpp:operator ():54] httpNodeServerRequest request error ,3
+[2024-06-06 15:16:51.320346] I [15208] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:16:51.320358] I [15208] [httpHelper.cpp:operator ():36] httpTimeServerRequest request error ,3
+[2024-06-06 15:17:12.576024] D [6724] [viplexcoreasync.cpp:nvSearchTerminalAsync:73] nvSearchTerminalAsync serchTerminal begin
+[2024-06-06 15:17:12.576053] I [6724] [udphelper.cpp:serchTerminal:63] serchTerminal:41:56:4f:4e:ff:ff:ff:ff:55:88:81:00:00:00:00:00:00:00:00:00:00:00:8e:00
+[2024-06-06 15:17:12.576153] I [6724] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2024-06-06 15:17:12.576225] I [6724] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2024-06-06 15:17:12.576236] I [6724] [udphelper.cpp:serchTerminal:63] serchTerminal:41:56:4f:4e:ff:ff:ff:ff:55:88:81:00:00:00:00:00:00:00:00:00:00:00:8e:00
+[2024-06-06 15:17:12.576259] I [6724] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2024-06-06 15:17:12.576283] I [6724] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2024-06-06 15:17:12.630979] I [6648] [udpsocket.cpp:recvdata:90] recv  ip:192.168.1.20,data:AVONˇˇˇˇUà
+[2024-06-06 15:17:12.631063] I [6648] [udpsocket.cpp:recvdata:93] UdpSocket::readyrec ipv4 : 192.168.1.20
+[2024-06-06 15:17:12.631118] I [6648] [udphelper.cpp:returnData:92] UdpHelper::returnData  ip:192.168.1.20 ,begin
+[2024-06-06 15:17:12.631316] I [6648] [datamanager.cpp:setMapValueFromSN:333] DataManager::setMapValueFromSN begin
+[2024-06-06 15:17:12.639801] I [6648] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:17:12.639972] E [6648] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: password,strSql=SELECT password FROM terminalinfo
+[2024-06-06 15:17:12.640013] I [6648] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:17:12.640017] I [6648] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:17:12.640078] E [6648] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: ignoreTime,strSql=SELECT ignoreTime FROM terminalinfo
+[2024-06-06 15:17:12.640085] I [6648] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:17:12.640123] I [6648] [serchterminal.cpp:operator ():112] SerchTerminal::serchTerminal result:{"aliasName":"Taurus-10000710","ftpPort":16602,"hasPassWord":false,"height":32,"ignoreTime":0,"ip":"192.168.1.20","key":"novaStar","logined":false,"loginedUsernames":[""],"password":"","platform":"rk312x","privacy":true,"productName":"TCC70","sn":"2YKA04124N1A10000710","syssetFtpPort":16604,"syssetTcpPort":16605,"tcpPort":16603,"terminalState":0,"width":96}
+[2024-06-06 15:17:12.640129] D [6648] [viplexcoreasync.cpp:operator ():77] nvSearchTerminalAsync data callback begin
+[2024-06-06 15:17:12.643387] D [6648] [viplexcoreasync.cpp:operator ():80] nvSearchTerminalAsync data callback end
+[2024-06-06 15:17:12.643403] I [6648] [udphelper.cpp:returnData:94] UdpHelper::returnData  ip:192.168.1.20 , end
+[2024-06-06 15:18:20.575157] I [18408] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvCreateProgramAsync,data:{"name":"Demo","width":100,"height":100,"tplID":1,"winInfo":{"height":50,"width":50,"left":0,"top":0,"zindex":0,"index":0}}
+[2024-06-06 15:18:20.575179] I [18408] [programeditor.cpp:operator ():70] EditProgram::createProgram start createProgram
+[2024-06-06 15:18:20.575182] I [18408] [programeditor.cpp:operator ():71] ProgramEditor::createProgram data {"name":"Demo","width":100,"height":100,"tplID":1,"winInfo":{"height":50,"width":50,"left":0,"top":0,"zindex":0,"index":0}}
+[2024-06-06 15:18:20.575209] I [18408] [datamanager.cpp:getMaxProgramID:495] DataManager::getMaxProgramID begin
+[2024-06-06 15:18:20.575314] E [18408] [sqloperation.cpp:getValueFromField:588] getFiledDataFromValue :no such table: programinfo,strSql=select sn from programinfo
+[2024-06-06 15:18:20.575328] I [18408] [datamanager.cpp:getMaxProgramID:507] DataManager::getMaxProgramID end
+[2024-06-06 15:18:20.575360] I [18408] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2024-06-06 15:18:20.586932] I [18408] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2024-06-06 15:18:20.586976] I [18408] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2024-06-06 15:18:20.587065] E [18408] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: PLAYSOLUTIONRELATION,strSql=SELECT PLAYSOLUTIONRELATION FROM programinfo
+[2024-06-06 15:18:20.589549] I [18408] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2024-06-06 15:18:20.589580] I [18408] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2024-06-06 15:18:20.589650] E [18408] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: SCHEDULECONSTRAINT,strSql=SELECT SCHEDULECONSTRAINT FROM programinfo
+[2024-06-06 15:18:20.592105] I [18408] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2024-06-06 15:18:20.592124] I [18408] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2024-06-06 15:18:20.592191] E [18408] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: PLAYLIST,strSql=SELECT PLAYLIST FROM programinfo
+[2024-06-06 15:18:20.594529] I [18408] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2024-06-06 15:18:20.594536] I [18408] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:20.594608] I [18408] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:20.594620] I [18408] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:20.594660] I [18408] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:20.594663] I [18408] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:20.594702] I [18408] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:20.594704] I [18408] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:20.594740] I [18408] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:20.594758] I [18408] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2024-06-06 15:18:20.594795] E [18408] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: PLAN,strSql=SELECT PLAN FROM programinfo
+[2024-06-06 15:18:20.597196] I [18408] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2024-06-06 15:18:20.597206] I [18408] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2024-06-06 15:18:20.597271] E [18408] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: width,strSql=SELECT width FROM programinfo
+[2024-06-06 15:18:20.599813] I [18408] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2024-06-06 15:18:20.599826] I [18408] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2024-06-06 15:18:20.599921] E [18408] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: height,strSql=SELECT height FROM programinfo
+[2024-06-06 15:18:20.602458] I [18408] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2024-06-06 15:18:20.602475] I [18408] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:20.602556] I [18408] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:20.602589] I [18408] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:18:20.602635] I [18408] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:18:20.602757] I [18408] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2024-06-06 15:18:20.604034] I [18408] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2024-06-06 15:18:20.604053] I [18408] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvCreateProgramAsync
+[2024-06-06 15:18:20.604147] I [18408] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2024-06-06 15:18:20.604154] I [18408] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvCreateProgramAsync
+[2024-06-06 15:18:23.140253] I [24616] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvSetPageProgramAsync,data:{"programID":1,"pageID":1,"pageInfo":{"name":"jiemu","widgetContainers":[{"contents":{"widgets":[{"constraints":[{"cron":["0 0 0 ? * 1,2,3,4,5,6,7"],"endTime":"4017-12-30T23:59:59Z+8:00","startTime":"1970-01-01T00:00:00Z+8:00"}],"duration":15000,"metadata":{"content":{"autoPaging":true,"backgroundMusic":{"duration":0,"isTextSync":false},"displayStyle":{"scrollAttributes":{"effects":{"animation":"MARQUEE_LEFT","speed":1}},"type":"SCROLL"},"paragraphs":[{"backgroundColor":"#00000000","horizontalAlignment":"CENTER","letterSpacing":0,"lineSpacing":0,"lines":[{"segs":[{"content":"hello"}]}],"verticalAlignment":"TOP"}],"textAttributes":[{"backgroundColor":"#ff000000","attributes":{"font":{"family":["Arial"],"isUnderline":false,"size":20,"style":"NORMAL"},"letterSpacing":0,"textColor":"#ffff0000"}}]}},"name":"text","type":"ARCH_TEXT"}]},"id":1,"name":"widgetContainers1"}]}}
+[2024-06-06 15:18:23.140271] I [24616] [programeditor.cpp:operator ():2251] ProgramEditor::setPageParam data {"programID":1,"pageID":1,"pageInfo":{"name":"jiemu","widgetContainers":[{"contents":{"widgets":[{"constraints":[{"cron":["0 0 0 ? * 1,2,3,4,5,6,7"],"endTime":"4017-12-30T23:59:59Z+8:00","startTime":"1970-01-01T00:00:00Z+8:00"}],"duration":15000,"metadata":{"content":{"autoPaging":true,"backgroundMusic":{"duration":0,"isTextSync":false},"displayStyle":{"scrollAttributes":{"effects":{"animation":"MARQUEE_LEFT","speed":1}},"type":"SCROLL"},"paragraphs":[{"backgroundColor":"#00000000","horizontalAlignment":"CENTER","letterSpacing":0,"lineSpacing":0,"lines":[{"segs":[{"content":"hello"}]}],"verticalAlignment":"TOP"}],"textAttributes":[{"backgroundColor":"#ff000000","attributes":{"font":{"family":["Arial"],"isUnderline":false,"size":20,"style":"NORMAL"},"letterSpacing":0,"textColor":"#ffff0000"}}]}},"name":"text","type":"ARCH_TEXT"}]},"id":1,"name":"widgetContainers1"}]}}
+[2024-06-06 15:18:23.140424] I [24616] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:23.140582] I [24616] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:23.140767] I [24616] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2024-06-06 15:18:23.151190] I [24616] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2024-06-06 15:18:23.151228] I [24616] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvSetPageProgramAsync
+[2024-06-06 15:18:23.151313] I [24616] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2024-06-06 15:18:23.151325] I [24616] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvSetPageProgramAsync
+[2024-06-06 15:18:38.127271] I [24696] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvSetPageProgramAsync,data:{"programID":1,"pageID":1,"pageInfo":{"name":"jiemu","widgetContainers":[{"contents":{"widgets":[{"constraints":[{"cron":["0 0 0 ? * 1,2,3,4,5,6,7"],"endTime":"4017-12-30T23:59:59Z+8:00","startTime":"1970-01-01T00:00:00Z+8:00"}],"duration":15000,"metadata":{"content":{"autoPaging":true,"backgroundMusic":{"duration":0,"isTextSync":false},"displayStyle":{"scrollAttributes":{"effects":{"animation":"MARQUEE_LEFT","speed":1}},"type":"SCROLL"},"paragraphs":[{"backgroundColor":"#00000000","horizontalAlignment":"CENTER","letterSpacing":0,"lineSpacing":0,"lines":[{"segs":[{"content":"NoBody"}]}],"verticalAlignment":"TOP"}],"textAttributes":[{"backgroundColor":"#ff000000","attributes":{"font":{"family":["Arial"],"isUnderline":false,"size":20,"style":"NORMAL"},"letterSpacing":0,"textColor":"#ffff0000"}}]}},"name":"text","type":"ARCH_TEXT"}]},"id":1,"name":"widgetContainers1"}]}}
+[2024-06-06 15:18:38.127291] I [24696] [programeditor.cpp:operator ():2251] ProgramEditor::setPageParam data {"programID":1,"pageID":1,"pageInfo":{"name":"jiemu","widgetContainers":[{"contents":{"widgets":[{"constraints":[{"cron":["0 0 0 ? * 1,2,3,4,5,6,7"],"endTime":"4017-12-30T23:59:59Z+8:00","startTime":"1970-01-01T00:00:00Z+8:00"}],"duration":15000,"metadata":{"content":{"autoPaging":true,"backgroundMusic":{"duration":0,"isTextSync":false},"displayStyle":{"scrollAttributes":{"effects":{"animation":"MARQUEE_LEFT","speed":1}},"type":"SCROLL"},"paragraphs":[{"backgroundColor":"#00000000","horizontalAlignment":"CENTER","letterSpacing":0,"lineSpacing":0,"lines":[{"segs":[{"content":"NoBody"}]}],"verticalAlignment":"TOP"}],"textAttributes":[{"backgroundColor":"#ff000000","attributes":{"font":{"family":["Arial"],"isUnderline":false,"size":20,"style":"NORMAL"},"letterSpacing":0,"textColor":"#ffff0000"}}]}},"name":"text","type":"ARCH_TEXT"}]},"id":1,"name":"widgetContainers1"}]}}
+[2024-06-06 15:18:38.127399] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:38.127623] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:38.127931] I [24696] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2024-06-06 15:18:38.138698] I [24696] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2024-06-06 15:18:38.138735] I [24696] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvSetPageProgramAsync
+[2024-06-06 15:18:38.138834] I [24696] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2024-06-06 15:18:38.138850] I [24696] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvSetPageProgramAsync
+[2024-06-06 15:18:40.791127] I [25116] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvMakeProgramAsync,data:{"programID":1,"outPutPath":"D:/NovaStarLED/LedController/temp/"}
+[2024-06-06 15:18:40.791159] I [25116] [programeditor.cpp:operator ():142] EditProgram::makeProgram start makeProgram
+[2024-06-06 15:18:40.791163] I [25116] [programeditor.cpp:operator ():143] ProgramEditor::makeProgram data {"programID":1,"outPutPath":"D:/NovaStarLED/LedController/temp/"}
+[2024-06-06 15:18:40.791186] I [25116] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:18:40.791382] E [25116] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: FILEPATH,strSql=SELECT FILEPATH FROM commonconfig
+[2024-06-06 15:18:40.804157] I [25116] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:18:40.804346] I [25116] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:18:40.804559] I [25116] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:18:40.804575] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.804691] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.804699] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.804798] E [25116] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2024-06-06 15:18:40.804817] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.805345] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.805524] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.806009] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.806134] E [25116] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2024-06-06 15:18:40.806187] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.806454] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.806593] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.806595] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.806673] E [25116] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2024-06-06 15:18:40.806689] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.806909] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.807042] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.807044] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.807122] E [25116] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2024-06-06 15:18:40.807133] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.807360] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.807487] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.807489] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.807563] E [25116] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2024-06-06 15:18:40.807574] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.807578] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.807673] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.807675] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.807764] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.807812] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.807918] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.808070] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.808180] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.808606] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:40.808698] E [25116] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2024-06-06 15:18:40.808706] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:40.808712] I [25116] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvMakeProgramAsync
+[2024-06-06 15:18:40.808801] I [25116] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2024-06-06 15:18:40.808808] I [25116] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvMakeProgramAsync
+[2024-06-06 15:18:43.512826] D [1504] [viplexcoreasync.cpp:nvStartTransferProgramAsync:1454] nvStartTransferProgramAsync begin
+[2024-06-06 15:18:43.512838] I [1504] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvStartTransferProgramAsync,data:{"sn": "2YKA04124N1A10000710","iconPath": "","iconName": "","sendProgramFilePaths": {"programPath": "D:/NovaStarLED/LedController/temp/program1","mediasPath": {}},"programName": "program1","deviceIdentifier": "Demo","startPlayAfterTransferred": true,"insertPlay": true}
+[2024-06-06 15:18:43.512847] I [1504] [programeditor.cpp:startTransferProgram:785] EditProgram::startTransferProgram data={"sn": "2YKA04124N1A10000710","iconPath": "","iconName": "","sendProgramFilePaths": {"programPath": "D:/NovaStarLED/LedController/temp/program1","mediasPath": {}},"programName": "program1","deviceIdentifier": "Demo","startPlayAfterTransferred": true,"insertPlay": true}
+[2024-06-06 15:18:43.512853] I [1504] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:18:43.513005] I [1504] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:18:43.513008] I [1504] [programeditor.cpp:startTransferProgram:788] EditProgram::startTransferProgram startTransferProgramLocal
+[2024-06-06 15:18:43.513016] I [1504] [programeditor.cpp:operator ():801] EditProgram::startTransferProgram start startTransferProgram
+[2024-06-06 15:18:43.513017] I [1504] [programeditor.cpp:operator ():802] ProgramEditor::startTransferProgram data {"sn": "2YKA04124N1A10000710","iconPath": "","iconName": "","sendProgramFilePaths": {"programPath": "D:/NovaStarLED/LedController/temp/program1","mediasPath": {}},"programName": "program1","deviceIdentifier": "Demo","startPlayAfterTransferred": true,"insertPlay": true}
+[2024-06-06 15:18:43.513072] I [1504] [programeditor.cpp:operator ():832] ProgramEditor::startTransferProgram m_ftphelper.clients.zise 1
+[2024-06-06 15:18:43.513086] I [1504] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:18:43.513146] I [1504] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:18:43.513161] I [1504] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:18:43.513211] I [1504] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:18:43.513246] I [1504] [programeditor.cpp:operator ():863] EditProgram::startTransferProgram start getTransferProgramUrl,get medias Url
+[2024-06-06 15:18:43.513272] I [1504] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvStartTransferProgramAsync
+[2024-06-06 15:18:43.513373] I [1504] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2024-06-06 15:18:43.513382] I [1504] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvStartTransferProgramAsync
+[2024-06-06 15:18:57.176008] I [6292] [login.cpp:loginTerminal:29] loginTerminal start
+[2024-06-06 15:18:57.176021] I [6292] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:18:57.176178] I [6292] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:18:57.176181] I [6292] [login.cpp:loginTerminal:33] loginTerminal start localNetLoginTerminal
+[2024-06-06 15:18:57.176209] I [6292] [tcphelper.cpp:request:235] TcpHelper::request What=119,data={"sn":"2YKA04124N1A10000710","username":"admin","rememberPwd":1,"password":"SN2008@+","loginType":0}
+[2024-06-06 15:18:57.176226] I [6292] [tcphelper.cpp:connect:45] TcpHelper::connect begin
+[2024-06-06 15:18:57.176357] I [6292] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:18:57.176421] I [6292] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:18:57.176422] I [6292] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:18:57.176461] I [6292] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:18:57.176461] I [6292] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:18:57.176498] I [6292] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:18:57.176503] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:18:57.176516] I [6292] [tcphelper.cpp:connect:85] TcpHelper::connect end
+[2024-06-06 15:18:57.201237] I [18764] [tcpsocket.cpp:connected:74] connected m_connectCallBack m_sn:2YKA04124N1A10000710
+[2024-06-06 15:18:57.201256] D [18764] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2024-06-06 15:18:57.201265] D [18764] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2024-06-06 15:18:57.201319] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:18:57.201326] D [3200] [tcpsocket.cpp:operator ():278] TcpClient 2YKA04124N1A10000710,code:65297,concount:0
+[2024-06-06 15:18:57.201328] I [3200] [tcphelper.cpp:operator ():124]  TcpHelper connectCallback 2YKA04124N1A10000710
+[2024-06-06 15:18:57.201351] I [3200] [login.cpp:operator ():230]  Login::connectcallback: sn:2YKA04124N1A10000710, code:65297,recdata:Success
+[2024-06-06 15:18:57.201355] I [3200] [login.cpp:operator ():233]  m_requester ConnectionSuccess  sn:2YKA04124N1A10000710
+[2024-06-06 15:18:57.714309] I [3200] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2024-06-06 15:18:57.714982] E [3200] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: rememberPwd,strSql=SELECT rememberPwd FROM terminalinfo
+[2024-06-06 15:18:57.722148] I [3200] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2024-06-06 15:18:57.722191] I [3200] [login.cpp:login:52]   m_requester ready to login  xxxxxx sn:2YKA04124N1A10000710
+[2024-06-06 15:18:57.722202] I [3200] [login.cpp:operator ():63]   m_requester begin to login 
+[2024-06-06 15:18:57.722207] I [3200] [tcphelper.cpp:request:235] TcpHelper::request What=0,data={"loginType":0,"password":"SN2008@+","sn":"2YKA04124N1A10000710","source":{"platform":2,"type":0},"username":"admin"}
+[2024-06-06 15:18:57.722220] I [3200] [tcphelper.cpp:sendData:278] TcpHelper::request alpha.header.sequence:4
+[2024-06-06 15:18:57.722228] I [3200] [tcpsocket.cpp:sendData:101] TcpClient  sendcount begin:0,len:141
+[2024-06-06 15:18:57.722241] D [3200] [tcpsocket.cpp:operator ():280] TcpClient,concount end:0
+[2024-06-06 15:18:57.722245] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:18:57.722384] I [18764] [tcpsocket.cpp:operator ():106] TcpClient  sendcount end:0
+[2024-06-06 15:18:57.780575] D [18764] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2024-06-06 15:18:57.780610] D [18764] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2024-06-06 15:18:57.780707] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:18:57.780724] D [3200] [tcpsocket.cpp:operator ():289] TcpClient 2YKA04124N1A10000710,usercount:0
+[2024-06-06 15:18:57.780729] I [3200] [tcphelper.cpp:onReceiveData:140] TcpHelper onReceiveData
+[2024-06-06 15:18:57.780761] I [3200] [tcphelper.cpp:onReceiveData:163] TcpHelper onReceiveData sequence:4,sn:2YKA04124N1A10000710
+[2024-06-06 15:18:57.780799] D [3200] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:18:57.780813] I [3200] [login.cpp:operator ():69]  m_requester login success
+[2024-06-06 15:18:57.780882] I [3200] [login.cpp:loginReplyHandle:104]  Login::logincallback:login success LoginedBySelf sn:2YKA04124N1A10000710, code:0,recdata:{"logined":true,"loginedUsernames":["admin"],"password":"SN2008@+","sn":"2YKA04124N1A10000710","username":"admin","validation":true,"validition":true}
+[2024-06-06 15:18:57.780888] I [3200] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2024-06-06 15:18:57.781255] E [3200] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: logined,strSql=SELECT logined FROM terminalinfo
+[2024-06-06 15:18:57.787707] I [3200] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2024-06-06 15:18:57.787720] I [3200] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2024-06-06 15:18:57.787831] E [3200] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: username,strSql=SELECT username FROM terminalinfo
+[2024-06-06 15:18:57.791125] I [3200] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2024-06-06 15:18:57.791133] I [3200] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2024-06-06 15:18:57.791201] E [3200] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: validition,strSql=SELECT validition FROM terminalinfo
+[2024-06-06 15:18:57.794335] I [3200] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2024-06-06 15:18:57.794342] I [3200] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2024-06-06 15:18:57.794407] E [3200] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: password,strSql=SELECT password FROM terminalinfo
+[2024-06-06 15:18:57.796784] I [3200] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2024-06-06 15:18:57.799927] D [3200] [login.cpp:getMac:990] Login::getMac() wins mac =0C:37:96:90:56:40
+[2024-06-06 15:18:57.799936] I [3200] [login.cpp:loginReplyHandle:115]  Login::logincallback:login success mac=0C:37:96:90:56:40
+[2024-06-06 15:18:57.799939] D [3200] [viplexcoreasync.cpp:operator ():283] nvLoginAsync data callback begin
+[2024-06-06 15:18:57.800159] D [3200] [viplexcoreasync.cpp:operator ():305] nvLoginAsync data callback end
+[2024-06-06 15:18:57.800171] D [3200] [tcpsocket.cpp:operator ():291] TcpClient usercount end:0
+[2024-06-06 15:18:57.800174] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:19:00.004976] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:19:00.656091] D [6724] [viplexcoreasync.cpp:nvStartTransferProgramAsync:1454] nvStartTransferProgramAsync begin
+[2024-06-06 15:19:00.656103] I [6724] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvStartTransferProgramAsync,data:{"sn": "2YKA04124N1A10000710","iconPath": "","iconName": "","sendProgramFilePaths": {"programPath": "D:/NovaStarLED/LedController/temp/program1","mediasPath": {}},"programName": "program1","deviceIdentifier": "Demo","startPlayAfterTransferred": true,"insertPlay": true}
+[2024-06-06 15:19:00.656107] I [6724] [programeditor.cpp:startTransferProgram:785] EditProgram::startTransferProgram data={"sn": "2YKA04124N1A10000710","iconPath": "","iconName": "","sendProgramFilePaths": {"programPath": "D:/NovaStarLED/LedController/temp/program1","mediasPath": {}},"programName": "program1","deviceIdentifier": "Demo","startPlayAfterTransferred": true,"insertPlay": true}
+[2024-06-06 15:19:00.656113] I [6724] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:19:00.656278] I [6724] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:19:00.656280] I [6724] [programeditor.cpp:startTransferProgram:788] EditProgram::startTransferProgram startTransferProgramLocal
+[2024-06-06 15:19:00.656284] I [6724] [programeditor.cpp:operator ():801] EditProgram::startTransferProgram start startTransferProgram
+[2024-06-06 15:19:00.656285] I [6724] [programeditor.cpp:operator ():802] ProgramEditor::startTransferProgram data {"sn": "2YKA04124N1A10000710","iconPath": "","iconName": "","sendProgramFilePaths": {"programPath": "D:/NovaStarLED/LedController/temp/program1","mediasPath": {}},"programName": "program1","deviceIdentifier": "Demo","startPlayAfterTransferred": true,"insertPlay": true}
+[2024-06-06 15:19:00.656310] I [6724] [programeditor.cpp:operator ():832] ProgramEditor::startTransferProgram m_ftphelper.clients.zise 1
+[2024-06-06 15:19:00.656319] I [6724] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:19:00.656371] I [6724] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:19:00.656379] I [6724] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:19:00.656426] I [6724] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:19:00.656454] I [6724] [programeditor.cpp:operator ():852] Tcard status3
+[2024-06-06 15:19:00.656455] I [6724] [programeditor.cpp:operator ():863] EditProgram::startTransferProgram start getTransferProgramUrl,get medias Url
+[2024-06-06 15:19:00.656475] I [6724] [tcphelper.cpp:request:235] TcpHelper::request What=30,data={"deviceIdentifier":"Demo","local":false,"solutions":{"identifier":"c0d0177afe5820780247f7f45d9272e51717667340","name":"program1"},"source":0,"totalSize":0,"type":"DEFAULT"}
+[2024-06-06 15:19:00.656483] I [6724] [tcphelper.cpp:sendData:278] TcpHelper::request alpha.header.sequence:5
+[2024-06-06 15:19:00.656487] I [6724] [tcpsocket.cpp:sendData:101] TcpClient  sendcount begin:1,len:197
+[2024-06-06 15:19:00.656500] I [6724] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvStartTransferProgramAsync
+[2024-06-06 15:19:00.656585] I [18764] [tcpsocket.cpp:operator ():106] TcpClient  sendcount end:1
+[2024-06-06 15:19:00.745124] D [18764] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2024-06-06 15:19:00.745139] D [18764] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2024-06-06 15:19:00.745195] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:19:00.745201] D [3200] [tcpsocket.cpp:operator ():289] TcpClient 2YKA04124N1A10000710,usercount:1
+[2024-06-06 15:19:00.745203] I [3200] [tcphelper.cpp:onReceiveData:140] TcpHelper onReceiveData
+[2024-06-06 15:19:00.745210] I [3200] [tcphelper.cpp:onReceiveData:163] TcpHelper onReceiveData sequence:5,sn:2YKA04124N1A10000710
+[2024-06-06 15:19:00.745258] I [3200] [programeditor.cpp:operator ():875] getTransferProgramUrl data{"appliedInfos":{"statusCode":0,"uploadUrl":"sdcard/nova/viplex_terminal/program/program_Demo/temp_program1","identifier":"c0d0177afe5820780247f7f45d9272e51717667340","name":"program1"},"canTranster":true,"directoryInfos":[{"availableSize":3943841792,"criticalSize":524288000,"directoryUrl":"sdcard/nova/viplex_terminal/media","reserveSize":0,"totalSize":4081238016,"type":"LOCAL"}],"errorCode":0,"uploadMediaUrl":"sdcard/nova/viplex_terminal/media"}
+[2024-06-06 15:19:00.745318] D [3200] [tcpsocket.cpp:operator ():291] TcpClient usercount end:1
+[2024-06-06 15:19:00.745321] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:19:00.745571] I [12824] [programeditor.cpp:operator ():941] EditProgram::startTransferProgram,update media thread run
+[2024-06-06 15:19:00.745582] I [12824] [programeditor.cpp:operator ():945] EditProgram::startTransferProgram start upLoadJsonAndIcon
+[2024-06-06 15:19:00.745597] I [12824] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:19:00.745749] I [12824] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:19:00.745751] I [12824] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:19:00.745798] I [12824] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:19:00.745806] E [12824] [ftpclient.cpp:connect:206] ftp connect1 this:0x2a4d20fee10
+[2024-06-06 15:19:00.745830] E [12824] [ftpclient.cpp:connect:232] ftp curl_easy_setopt this:0x2a4d20fee10
+[2024-06-06 15:19:00.745837] I [12824] [ftpclient.cpp:connect:237] FtpClient::connect  port:16602
+[2024-06-06 15:19:00.745840] I [12824] [ftpclient.cpp:connect:260] ftp  CURLOPT_URL url:ftp://192.168.1.20:16602
+[2024-06-06 15:19:00.933814] I [12824] [ftpclient.cpp:connect:278] ftp connect success this:0x2a4d20fee10
+[2024-06-06 15:19:00.933834] I [12824] [programeditor.cpp:upLoadJsonAndIcon:1398] EditProgram::upLoadJsonAndIcon end connect FTP
+[2024-06-06 15:19:00.933837] I [12824] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:19:00.934005] I [12824] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:19:00.934006] I [12824] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:19:00.934049] I [12824] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:19:00.934054] I [12824] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/
+[2024-06-06 15:19:00.934057] I [12824] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:19:00.934058] I [12824] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:19:00.934060] I [12824] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=
+[2024-06-06 15:19:00.934081] I [12824] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=
+[2024-06-06 15:19:00.934082] E [12824] [ftpclient.cpp:FtpUpload:408] FtpClient::FtpUpload FTP_LOCAL_FILE_NOT_EXIST 
+[2024-06-06 15:19:00.934118] I [12824] [programeditor.cpp:operator ():1411] EditProgram::upLoadJsonAndIcon-icon,code=2105,data=FTP_LOCAL_FILE_NOT_EXIST
+[2024-06-06 15:19:00.934377] I [12824] [programeditor.cpp:upLoadJsonAndIcon:1418] EditProgram::upLoadJsonAndIcon-json,json file size=5
+[2024-06-06 15:19:00.934383] I [12824] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=planlist.json
+[2024-06-06 15:19:00.934389] I [12824] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json
+[2024-06-06 15:19:00.934391] I [12824] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:19:00.934392] I [12824] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:19:00.934394] I [12824] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/planlist.json
+[2024-06-06 15:19:00.934398] I [12824] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/planlist.json
+[2024-06-06 15:19:00.934464] I [12824] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:19:00.934468] E [12824] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20fee10
+[2024-06-06 15:19:01.231957] I [12824] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:19:01.232028] I [12824] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/planlist.json
+[2024-06-06 15:19:01.232031] I [12824] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:19:01.232097] I [12824] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=planlist.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/planlist.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:19:01.232102] I [12824] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:19:01.232106] I [12824] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=play_solution1.json
+[2024-06-06 15:19:01.232113] I [12824] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/play_solution1.json
+[2024-06-06 15:19:01.232116] I [12824] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:19:01.232118] I [12824] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:19:01.232120] I [12824] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/play_solution1.json
+[2024-06-06 15:19:01.232132] I [12824] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/play_solution1.json
+[2024-06-06 15:19:01.232241] I [12824] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:19:01.232244] E [12824] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20fee10
+[2024-06-06 15:19:01.404555] I [12824] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:19:01.404623] I [12824] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/play_solution1.json
+[2024-06-06 15:19:01.404625] I [12824] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:19:01.404666] I [12824] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=play_solution1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/play_solution1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/play_solution1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:19:01.404671] I [12824] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:19:01.404675] I [12824] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=playlist1.json
+[2024-06-06 15:19:01.404684] I [12824] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playlist1.json
+[2024-06-06 15:19:01.404687] I [12824] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:19:01.404688] I [12824] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:19:01.404690] I [12824] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/playlist1.json
+[2024-06-06 15:19:01.404705] I [12824] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/playlist1.json
+[2024-06-06 15:19:01.404814] I [12824] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:19:01.404816] E [12824] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20fee10
+[2024-06-06 15:19:01.594629] I [12824] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:19:01.594711] I [12824] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/playlist1.json
+[2024-06-06 15:19:01.594715] I [12824] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:19:01.594755] I [12824] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=playlist1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/playlist1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playlist1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:19:01.594760] I [12824] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:19:01.594764] I [12824] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=playSolutionRelation1.json
+[2024-06-06 15:19:01.594773] I [12824] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playSolutionRelation1.json
+[2024-06-06 15:19:01.594777] I [12824] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:19:01.594778] I [12824] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:19:01.594780] I [12824] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/playSolutionRelation1.json
+[2024-06-06 15:19:01.594800] I [12824] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/playSolutionRelation1.json
+[2024-06-06 15:19:01.594887] I [12824] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:19:01.594888] E [12824] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20fee10
+[2024-06-06 15:19:01.769310] I [12824] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:19:01.769382] I [12824] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/playSolutionRelation1.json
+[2024-06-06 15:19:01.769386] I [12824] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:19:01.769435] I [12824] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=playSolutionRelation1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/playSolutionRelation1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playSolutionRelation1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:19:01.769441] I [12824] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:19:01.769446] I [12824] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=schedule_constraint1.json
+[2024-06-06 15:19:01.769455] I [12824] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/schedule_constraint1.json
+[2024-06-06 15:19:01.769459] I [12824] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:19:01.769461] I [12824] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:19:01.769463] I [12824] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/schedule_constraint1.json
+[2024-06-06 15:19:01.769479] I [12824] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/schedule_constraint1.json
+[2024-06-06 15:19:01.769643] I [12824] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:19:01.769649] E [12824] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20fee10
+[2024-06-06 15:19:01.955367] I [12824] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:19:01.955453] I [12824] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/schedule_constraint1.json
+[2024-06-06 15:19:01.955458] I [12824] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:19:01.955516] I [12824] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=schedule_constraint1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/schedule_constraint1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/schedule_constraint1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:19:01.955523] I [12824] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:19:01.955530] I [12824] [programeditor.cpp:upLoadJsonAndIcon:1439] EditProgram::upLoadJsonAndIcon start close FTP
+[2024-06-06 15:19:01.955536] E [12824] [ftpclient.cpp:closeFtp:288] FtpClient::closeFtp() 1111 this:0x2a4d20fee10
+[2024-06-06 15:19:01.964011] E [12824] [ftpclient.cpp:closeFtp:295] FtpClient::closeFtp() 2222 this:0x2a4d20fee10
+[2024-06-06 15:19:01.964065] I [12824] [programeditor.cpp:upLoadJsonAndIcon:1441] EditProgram::upLoadJsonAndIcon end close FTP
+[2024-06-06 15:19:01.964081] I [12824] [programeditor.cpp:operator ():953] EditProgram::startTransferProgram end upLoadJsonAndIcon
+[2024-06-06 15:19:01.964188] I [12824] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:19:01.964507] I [12824] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:19:01.964510] I [12824] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:19:01.964603] I [9892] [programeditor.cpp:operator ():959] EditProgram::startTransferProgram,update media progress thread run
+[2024-06-06 15:19:01.964627] I [12824] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:19:01.964635] I [12824] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:19:01.964773] I [12824] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:19:01.964780] I [12824] [ftpclient.cpp:getFileLists:86] FtpClient::getFileLists
+[2024-06-06 15:19:01.965233] I [12824] [ftpclient.cpp:getFileLists:109] FtpClient::getFileLists tempBodyPath=D:/NovaStarLED/LedController/temp//filelist.txt
+[2024-06-06 15:19:01.965237] I [12824] [ftpclient.cpp:getFileLists:110] FtpClient::getFileLists tempRespPath=D:/NovaStarLED/LedController/temp//filelistresult.txt
+[2024-06-06 15:19:01.965245] I [12824] [ftpclient.cpp:getFileLists:144] FtpClient::getFileLists -----------url:ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/media/--------------
+[2024-06-06 15:19:02.137585] I [12824] [ftpclient.cpp:getFileLists:172] FtpClient::getFileLists fileInfos.size=1
+[2024-06-06 15:19:02.137596] I [12824] [programeditor.cpp:operator ():1022] EditProgram::startTransferProgram start upload media connect FTP
+[2024-06-06 15:19:02.137599] E [12824] [ftpclient.cpp:connect:206] ftp connect1 this:0x2a4d2089e90
+[2024-06-06 15:19:02.137623] E [12824] [ftpclient.cpp:connect:232] ftp curl_easy_setopt this:0x2a4d2089e90
+[2024-06-06 15:19:02.137633] I [12824] [ftpclient.cpp:connect:237] FtpClient::connect  port:16602
+[2024-06-06 15:19:02.137639] I [12824] [ftpclient.cpp:connect:260] ftp  CURLOPT_URL url:ftp://192.168.1.20:16602
+[2024-06-06 15:19:02.274494] I [12824] [ftpclient.cpp:connect:278] ftp connect success this:0x2a4d2089e90
+[2024-06-06 15:19:02.274506] I [12824] [programeditor.cpp:operator ():1024] EditProgram::startTransferProgram end upload media connect FTP
+[2024-06-06 15:19:02.274519] E [12824] [ftpclient.cpp:closeFtp:288] FtpClient::closeFtp() 1111 this:0x2a4d2089e90
+[2024-06-06 15:19:02.281588] E [12824] [ftpclient.cpp:closeFtp:295] FtpClient::closeFtp() 2222 this:0x2a4d2089e90
+[2024-06-06 15:19:02.586619] I [12824] [programeditor.cpp:operator ():1117] EditProgram::startTransferProgram start finishTransferProgram
+[2024-06-06 15:19:02.586678] I [12824] [tcphelper.cpp:request:235] TcpHelper::request What=30,data={"confirmedInfos":{"identifier":"c0d0177afe5820780247f7f45d9272e51717667340","isSupportMd5Checkout":false,"name":"program1","planListUrl":"sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json","source":0,"thumbnailUrl":"sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/"},"playImmediately":true}
+[2024-06-06 15:19:02.586687] I [12824] [tcphelper.cpp:sendData:278] TcpHelper::request alpha.header.sequence:6
+[2024-06-06 15:19:02.586694] I [12824] [tcpsocket.cpp:sendData:101] TcpClient  sendcount begin:2,len:357
+[2024-06-06 15:19:02.586751] I [18764] [tcpsocket.cpp:operator ():106] TcpClient  sendcount end:2
+[2024-06-06 15:19:03.159785] D [18764] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2024-06-06 15:19:03.159804] D [18764] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2024-06-06 15:19:03.159855] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:19:03.159862] D [3200] [tcpsocket.cpp:operator ():289] TcpClient 2YKA04124N1A10000710,usercount:2
+[2024-06-06 15:19:03.159864] I [3200] [tcphelper.cpp:onReceiveData:140] TcpHelper onReceiveData
+[2024-06-06 15:19:03.159871] I [3200] [tcphelper.cpp:onReceiveData:163] TcpHelper onReceiveData sequence:6,sn:2YKA04124N1A10000710
+[2024-06-06 15:19:03.159889] I [3200] [programeditor.cpp:operator ():1119] callback finishTransferProgram info errorCode = 0 result = {"errorStr":"SUCCESS","errorType":0}
+[2024-06-06 15:19:03.159904] I [3200] [programeditor.cpp:operator ():1143] EditProgram::startTransferProgram end finishTransferProgram
+[2024-06-06 15:19:03.159908] I [3200] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvStartTransferProgramAsync
+[2024-06-06 15:19:03.160110] I [3200] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2024-06-06 15:19:03.160116] D [3200] [tcpsocket.cpp:operator ():291] TcpClient usercount end:2
+[2024-06-06 15:19:03.160118] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:19:05.019652] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:19:08.160930] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:19:08.160948] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:19:10.024630] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:19:13.164399] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:19:13.164413] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:19:15.025558] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:19:18.168425] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:19:18.168448] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:19:20.027860] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:19:23.171877] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:19:23.171897] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:19:25.036702] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:19:28.177663] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:19:28.177676] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:19:30.038845] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:19:33.193270] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:19:33.193373] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:19:35.053272] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:19:38.197314] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:19:38.197348] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:19:40.058435] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:19:43.200052] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:19:43.200066] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:19:45.060830] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:19:48.205258] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:19:48.205288] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:19:50.065788] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:19:53.208558] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:19:53.208585] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:19:55.068552] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:19:58.218709] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:19:58.218732] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:20:00.075858] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:20:03.222573] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:20:03.222596] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:20:05.076675] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:20:08.224386] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:20:08.224409] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:20:10.077260] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:20:13.238479] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:20:13.238500] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:20:15.085234] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:20:15.232614] I [18408] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvSetPageProgramAsync,data:{"programID":1,"pageID":1,"pageInfo":{"name":"jiemu","widgetContainers":[{"contents":{"widgets":[{"constraints":[{"cron":["0 0 0 ? * 1,2,3,4,5,6,7"],"endTime":"4017-12-30T23:59:59Z+8:00","startTime":"1970-01-01T00:00:00Z+8:00"}],"duration":15000,"metadata":{"content":{"autoPaging":true,"backgroundMusic":{"duration":0,"isTextSync":false},"displayStyle":{"scrollAttributes":{"effects":{"animation":"MARQUEE_LEFT","speed":1}},"type":"SCROLL"},"paragraphs":[{"backgroundColor":"#00000000","horizontalAlignment":"CENTER","letterSpacing":0,"lineSpacing":0,"lines":[{"segs":[{"content":"Hi There"}]}],"verticalAlignment":"TOP"}],"textAttributes":[{"backgroundColor":"#ff000000","attributes":{"font":{"family":["Arial"],"isUnderline":false,"size":20,"style":"NORMAL"},"letterSpacing":0,"textColor":"#ffff0000"}}]}},"name":"text","type":"ARCH_TEXT"}]},"id":1,"name":"widgetContainers1"}]}}
+[2024-06-06 15:20:15.232629] I [18408] [programeditor.cpp:operator ():2251] ProgramEditor::setPageParam data {"programID":1,"pageID":1,"pageInfo":{"name":"jiemu","widgetContainers":[{"contents":{"widgets":[{"constraints":[{"cron":["0 0 0 ? * 1,2,3,4,5,6,7"],"endTime":"4017-12-30T23:59:59Z+8:00","startTime":"1970-01-01T00:00:00Z+8:00"}],"duration":15000,"metadata":{"content":{"autoPaging":true,"backgroundMusic":{"duration":0,"isTextSync":false},"displayStyle":{"scrollAttributes":{"effects":{"animation":"MARQUEE_LEFT","speed":1}},"type":"SCROLL"},"paragraphs":[{"backgroundColor":"#00000000","horizontalAlignment":"CENTER","letterSpacing":0,"lineSpacing":0,"lines":[{"segs":[{"content":"Hi There"}]}],"verticalAlignment":"TOP"}],"textAttributes":[{"backgroundColor":"#ff000000","attributes":{"font":{"family":["Arial"],"isUnderline":false,"size":20,"style":"NORMAL"},"letterSpacing":0,"textColor":"#ffff0000"}}]}},"name":"text","type":"ARCH_TEXT"}]},"id":1,"name":"widgetContainers1"}]}}
+[2024-06-06 15:20:15.232731] I [18408] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:15.232869] I [18408] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:15.233062] I [18408] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2024-06-06 15:20:15.235971] I [18408] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2024-06-06 15:20:15.235992] I [18408] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvSetPageProgramAsync
+[2024-06-06 15:20:15.236038] I [18408] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2024-06-06 15:20:15.236047] I [18408] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvSetPageProgramAsync
+[2024-06-06 15:20:18.009383] D [24616] [viplexcoreasync.cpp:nvStartTransferProgramAsync:1454] nvStartTransferProgramAsync begin
+[2024-06-06 15:20:18.009396] I [24616] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvStartTransferProgramAsync,data:{"sn": "2YKA04124N1A10000710","iconPath": "","iconName": "","sendProgramFilePaths": {"programPath": "D:/NovaStarLED/LedController/temp/program1","mediasPath": {}},"programName": "program1","deviceIdentifier": "Demo","startPlayAfterTransferred": true,"insertPlay": true}
+[2024-06-06 15:20:18.009400] I [24616] [programeditor.cpp:startTransferProgram:785] EditProgram::startTransferProgram data={"sn": "2YKA04124N1A10000710","iconPath": "","iconName": "","sendProgramFilePaths": {"programPath": "D:/NovaStarLED/LedController/temp/program1","mediasPath": {}},"programName": "program1","deviceIdentifier": "Demo","startPlayAfterTransferred": true,"insertPlay": true}
+[2024-06-06 15:20:18.009405] I [24616] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:20:18.009543] I [24616] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:20:18.009545] I [24616] [programeditor.cpp:startTransferProgram:788] EditProgram::startTransferProgram startTransferProgramLocal
+[2024-06-06 15:20:18.009548] I [24616] [programeditor.cpp:operator ():801] EditProgram::startTransferProgram start startTransferProgram
+[2024-06-06 15:20:18.009549] I [24616] [programeditor.cpp:operator ():802] ProgramEditor::startTransferProgram data {"sn": "2YKA04124N1A10000710","iconPath": "","iconName": "","sendProgramFilePaths": {"programPath": "D:/NovaStarLED/LedController/temp/program1","mediasPath": {}},"programName": "program1","deviceIdentifier": "Demo","startPlayAfterTransferred": true,"insertPlay": true}
+[2024-06-06 15:20:18.009570] I [24616] [programeditor.cpp:operator ():832] ProgramEditor::startTransferProgram m_ftphelper.clients.zise 1
+[2024-06-06 15:20:18.009577] I [24616] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:18.009622] I [24616] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:18.009629] I [24616] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:18.009671] I [24616] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:18.009711] I [24616] [programeditor.cpp:operator ():852] Tcard status3
+[2024-06-06 15:20:18.009712] I [24616] [programeditor.cpp:operator ():863] EditProgram::startTransferProgram start getTransferProgramUrl,get medias Url
+[2024-06-06 15:20:18.009732] I [24616] [tcphelper.cpp:request:235] TcpHelper::request What=30,data={"deviceIdentifier":"Demo","local":false,"solutions":{"identifier":"c0d0177afe5820780247f7f45d9272e51717667418","name":"program1"},"source":0,"totalSize":0,"type":"DEFAULT"}
+[2024-06-06 15:20:18.009738] I [24616] [tcphelper.cpp:sendData:278] TcpHelper::request alpha.header.sequence:7
+[2024-06-06 15:20:18.009743] I [24616] [tcpsocket.cpp:sendData:101] TcpClient  sendcount begin:3,len:197
+[2024-06-06 15:20:18.009756] I [24616] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvStartTransferProgramAsync
+[2024-06-06 15:20:18.009875] I [18764] [tcpsocket.cpp:operator ():106] TcpClient  sendcount end:3
+[2024-06-06 15:20:18.065941] D [18764] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2024-06-06 15:20:18.065968] D [18764] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2024-06-06 15:20:18.066039] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:20:18.066051] D [3200] [tcpsocket.cpp:operator ():289] TcpClient 2YKA04124N1A10000710,usercount:3
+[2024-06-06 15:20:18.066055] I [3200] [tcphelper.cpp:onReceiveData:140] TcpHelper onReceiveData
+[2024-06-06 15:20:18.066069] I [3200] [tcphelper.cpp:onReceiveData:163] TcpHelper onReceiveData sequence:7,sn:2YKA04124N1A10000710
+[2024-06-06 15:20:18.066133] I [3200] [programeditor.cpp:operator ():875] getTransferProgramUrl data{"appliedInfos":{"statusCode":0,"uploadUrl":"sdcard/nova/viplex_terminal/program/program_Demo/temp_program1","identifier":"c0d0177afe5820780247f7f45d9272e51717667418","name":"program1"},"canTranster":true,"directoryInfos":[{"availableSize":3943792640,"criticalSize":524288000,"directoryUrl":"sdcard/nova/viplex_terminal/media","reserveSize":0,"totalSize":4081238016,"type":"LOCAL"}],"errorCode":0,"uploadMediaUrl":"sdcard/nova/viplex_terminal/media"}
+[2024-06-06 15:20:18.066242] D [3200] [tcpsocket.cpp:operator ():291] TcpClient usercount end:3
+[2024-06-06 15:20:18.066247] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:20:18.066656] I [7480] [programeditor.cpp:operator ():941] EditProgram::startTransferProgram,update media thread run
+[2024-06-06 15:20:18.066664] I [7480] [programeditor.cpp:operator ():945] EditProgram::startTransferProgram start upLoadJsonAndIcon
+[2024-06-06 15:20:18.066698] I [7480] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:18.066971] I [7480] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:18.066975] I [7480] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:18.067065] I [7480] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:18.067072] E [7480] [ftpclient.cpp:connect:206] ftp connect1 this:0x2a4d20fee10
+[2024-06-06 15:20:18.067107] E [7480] [ftpclient.cpp:connect:232] ftp curl_easy_setopt this:0x2a4d20fee10
+[2024-06-06 15:20:18.067119] I [7480] [ftpclient.cpp:connect:237] FtpClient::connect  port:16602
+[2024-06-06 15:20:18.067126] I [7480] [ftpclient.cpp:connect:260] ftp  CURLOPT_URL url:ftp://192.168.1.20:16602
+[2024-06-06 15:20:18.203680] I [7480] [ftpclient.cpp:connect:278] ftp connect success this:0x2a4d20fee10
+[2024-06-06 15:20:18.203693] I [7480] [programeditor.cpp:upLoadJsonAndIcon:1398] EditProgram::upLoadJsonAndIcon end connect FTP
+[2024-06-06 15:20:18.203695] I [7480] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:18.203846] I [7480] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:18.203847] I [7480] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:18.203898] I [7480] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:18.203903] I [7480] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/
+[2024-06-06 15:20:18.203905] I [7480] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:20:18.203906] I [7480] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:20:18.203907] I [7480] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=
+[2024-06-06 15:20:18.203911] I [7480] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=
+[2024-06-06 15:20:18.203912] E [7480] [ftpclient.cpp:FtpUpload:408] FtpClient::FtpUpload FTP_LOCAL_FILE_NOT_EXIST 
+[2024-06-06 15:20:18.203944] I [7480] [programeditor.cpp:operator ():1411] EditProgram::upLoadJsonAndIcon-icon,code=2105,data=FTP_LOCAL_FILE_NOT_EXIST
+[2024-06-06 15:20:18.204073] I [7480] [programeditor.cpp:upLoadJsonAndIcon:1418] EditProgram::upLoadJsonAndIcon-json,json file size=5
+[2024-06-06 15:20:18.204075] I [7480] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=planlist.json
+[2024-06-06 15:20:18.204077] I [7480] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json
+[2024-06-06 15:20:18.204078] I [7480] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:20:18.204079] I [7480] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:20:18.204079] I [7480] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/planlist.json
+[2024-06-06 15:20:18.204082] I [7480] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/planlist.json
+[2024-06-06 15:20:18.204124] I [7480] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:20:18.204125] E [7480] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20fee10
+[2024-06-06 15:20:18.499192] I [7480] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:20:18.499264] I [7480] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/planlist.json
+[2024-06-06 15:20:18.499266] I [7480] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:20:18.499300] I [7480] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=planlist.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/planlist.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:20:18.499304] I [7480] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:20:18.499308] I [7480] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=play_solution1.json
+[2024-06-06 15:20:18.499315] I [7480] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/play_solution1.json
+[2024-06-06 15:20:18.499318] I [7480] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:20:18.499319] I [7480] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:20:18.499321] I [7480] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/play_solution1.json
+[2024-06-06 15:20:18.499333] I [7480] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/play_solution1.json
+[2024-06-06 15:20:18.499444] I [7480] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:20:18.499446] E [7480] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20fee10
+[2024-06-06 15:20:18.672372] I [7480] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:20:18.672407] I [7480] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/play_solution1.json
+[2024-06-06 15:20:18.672409] I [7480] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:20:18.672434] I [7480] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=play_solution1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/play_solution1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/play_solution1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:20:18.672437] I [7480] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:20:18.672440] I [7480] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=playlist1.json
+[2024-06-06 15:20:18.672444] I [7480] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playlist1.json
+[2024-06-06 15:20:18.672446] I [7480] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:20:18.672447] I [7480] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:20:18.672448] I [7480] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/playlist1.json
+[2024-06-06 15:20:18.672461] I [7480] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/playlist1.json
+[2024-06-06 15:20:18.672552] I [7480] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:20:18.672554] E [7480] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20fee10
+[2024-06-06 15:20:18.874414] I [7480] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:20:18.874493] I [7480] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/playlist1.json
+[2024-06-06 15:20:18.874497] I [7480] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:20:18.874585] I [7480] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=playlist1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/playlist1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playlist1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:20:18.874593] I [7480] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:20:18.874599] I [7480] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=playSolutionRelation1.json
+[2024-06-06 15:20:18.874610] I [7480] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playSolutionRelation1.json
+[2024-06-06 15:20:18.874614] I [7480] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:20:18.874616] I [7480] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:20:18.874619] I [7480] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/playSolutionRelation1.json
+[2024-06-06 15:20:18.874635] I [7480] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/playSolutionRelation1.json
+[2024-06-06 15:20:18.874788] I [7480] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:20:18.874792] E [7480] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20fee10
+[2024-06-06 15:20:19.076308] I [7480] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:20:19.076393] I [7480] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/playSolutionRelation1.json
+[2024-06-06 15:20:19.076397] I [7480] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:20:19.076445] I [7480] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=playSolutionRelation1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/playSolutionRelation1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playSolutionRelation1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:20:19.076451] I [7480] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:20:19.076456] I [7480] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=schedule_constraint1.json
+[2024-06-06 15:20:19.076466] I [7480] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/schedule_constraint1.json
+[2024-06-06 15:20:19.076470] I [7480] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:20:19.076473] I [7480] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:20:19.076475] I [7480] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/schedule_constraint1.json
+[2024-06-06 15:20:19.076490] I [7480] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/schedule_constraint1.json
+[2024-06-06 15:20:19.076765] I [7480] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:20:19.076771] E [7480] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20fee10
+[2024-06-06 15:20:19.247782] I [7480] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:20:19.247854] I [7480] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/schedule_constraint1.json
+[2024-06-06 15:20:19.247858] I [7480] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:20:19.247906] I [7480] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=schedule_constraint1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/schedule_constraint1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/schedule_constraint1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:20:19.247912] I [7480] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:20:19.247918] I [7480] [programeditor.cpp:upLoadJsonAndIcon:1439] EditProgram::upLoadJsonAndIcon start close FTP
+[2024-06-06 15:20:19.247922] E [7480] [ftpclient.cpp:closeFtp:288] FtpClient::closeFtp() 1111 this:0x2a4d20fee10
+[2024-06-06 15:20:19.253645] E [7480] [ftpclient.cpp:closeFtp:295] FtpClient::closeFtp() 2222 this:0x2a4d20fee10
+[2024-06-06 15:20:19.253690] I [7480] [programeditor.cpp:upLoadJsonAndIcon:1441] EditProgram::upLoadJsonAndIcon end close FTP
+[2024-06-06 15:20:19.253705] I [7480] [programeditor.cpp:operator ():953] EditProgram::startTransferProgram end upLoadJsonAndIcon
+[2024-06-06 15:20:19.253808] I [7480] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:19.254107] I [7480] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:19.254111] I [7480] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:19.254226] I [7480] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:19.254233] I [7480] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:20:19.254296] I [5932] [programeditor.cpp:operator ():959] EditProgram::startTransferProgram,update media progress thread run
+[2024-06-06 15:20:19.254368] I [7480] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:20:19.254373] I [7480] [ftpclient.cpp:getFileLists:86] FtpClient::getFileLists
+[2024-06-06 15:20:19.254634] I [7480] [ftpclient.cpp:getFileLists:109] FtpClient::getFileLists tempBodyPath=D:/NovaStarLED/LedController/temp//filelist.txt
+[2024-06-06 15:20:19.254638] I [7480] [ftpclient.cpp:getFileLists:110] FtpClient::getFileLists tempRespPath=D:/NovaStarLED/LedController/temp//filelistresult.txt
+[2024-06-06 15:20:19.254649] I [7480] [ftpclient.cpp:getFileLists:144] FtpClient::getFileLists -----------url:ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/media/--------------
+[2024-06-06 15:20:19.415231] I [7480] [ftpclient.cpp:getFileLists:172] FtpClient::getFileLists fileInfos.size=1
+[2024-06-06 15:20:19.415243] I [7480] [programeditor.cpp:operator ():1022] EditProgram::startTransferProgram start upload media connect FTP
+[2024-06-06 15:20:19.415246] E [7480] [ftpclient.cpp:connect:206] ftp connect1 this:0x2a4d2089e90
+[2024-06-06 15:20:19.415270] E [7480] [ftpclient.cpp:connect:232] ftp curl_easy_setopt this:0x2a4d2089e90
+[2024-06-06 15:20:19.415280] I [7480] [ftpclient.cpp:connect:237] FtpClient::connect  port:16602
+[2024-06-06 15:20:19.415286] I [7480] [ftpclient.cpp:connect:260] ftp  CURLOPT_URL url:ftp://192.168.1.20:16602
+[2024-06-06 15:20:19.549936] I [7480] [ftpclient.cpp:connect:278] ftp connect success this:0x2a4d2089e90
+[2024-06-06 15:20:19.549946] I [7480] [programeditor.cpp:operator ():1024] EditProgram::startTransferProgram end upload media connect FTP
+[2024-06-06 15:20:19.549948] E [7480] [ftpclient.cpp:closeFtp:288] FtpClient::closeFtp() 1111 this:0x2a4d2089e90
+[2024-06-06 15:20:19.558820] E [7480] [ftpclient.cpp:closeFtp:295] FtpClient::closeFtp() 2222 this:0x2a4d2089e90
+[2024-06-06 15:20:19.863918] I [7480] [programeditor.cpp:operator ():1117] EditProgram::startTransferProgram start finishTransferProgram
+[2024-06-06 15:20:19.863968] I [7480] [tcphelper.cpp:request:235] TcpHelper::request What=30,data={"confirmedInfos":{"identifier":"c0d0177afe5820780247f7f45d9272e51717667418","isSupportMd5Checkout":false,"name":"program1","planListUrl":"sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json","source":0,"thumbnailUrl":"sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/"},"playImmediately":true}
+[2024-06-06 15:20:19.863977] I [7480] [tcphelper.cpp:sendData:278] TcpHelper::request alpha.header.sequence:8
+[2024-06-06 15:20:19.863984] I [7480] [tcpsocket.cpp:sendData:101] TcpClient  sendcount begin:4,len:357
+[2024-06-06 15:20:19.864076] I [18764] [tcpsocket.cpp:operator ():106] TcpClient  sendcount end:4
+[2024-06-06 15:20:20.098432] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:20:20.503745] D [18764] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2024-06-06 15:20:20.503794] D [18764] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2024-06-06 15:20:20.503901] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:20:20.503921] D [3200] [tcpsocket.cpp:operator ():289] TcpClient 2YKA04124N1A10000710,usercount:4
+[2024-06-06 15:20:20.503926] I [3200] [tcphelper.cpp:onReceiveData:140] TcpHelper onReceiveData
+[2024-06-06 15:20:20.503948] I [3200] [tcphelper.cpp:onReceiveData:163] TcpHelper onReceiveData sequence:8,sn:2YKA04124N1A10000710
+[2024-06-06 15:20:20.503971] I [3200] [programeditor.cpp:operator ():1119] callback finishTransferProgram info errorCode = 0 result = {"errorStr":"SUCCESS","errorType":0}
+[2024-06-06 15:20:20.504002] I [3200] [programeditor.cpp:operator ():1143] EditProgram::startTransferProgram end finishTransferProgram
+[2024-06-06 15:20:20.504008] I [3200] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvStartTransferProgramAsync
+[2024-06-06 15:20:20.504979] I [3200] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2024-06-06 15:20:20.504997] D [3200] [tcpsocket.cpp:operator ():291] TcpClient usercount end:4
+[2024-06-06 15:20:20.505003] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:20:25.110221] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:20:25.516367] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:20:25.516466] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:20:30.122852] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:20:30.530539] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:20:30.530550] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:20:35.125591] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:20:35.541189] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:20:35.541208] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:20:35.725193] I [24696] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvMakeProgramAsync,data:{"programID":1,"outPutPath":"D:/NovaStarLED/LedController/temp/"}
+[2024-06-06 15:20:35.725207] I [24696] [programeditor.cpp:operator ():142] EditProgram::makeProgram start makeProgram
+[2024-06-06 15:20:35.725209] I [24696] [programeditor.cpp:operator ():143] ProgramEditor::makeProgram data {"programID":1,"outPutPath":"D:/NovaStarLED/LedController/temp/"}
+[2024-06-06 15:20:35.725238] I [24696] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:20:35.725515] I [24696] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:20:35.725577] I [24696] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:20:35.725708] I [24696] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:20:35.725713] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.725818] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.725820] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.725910] E [24696] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2024-06-06 15:20:35.725929] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.726232] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.726395] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.726900] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.727019] E [24696] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2024-06-06 15:20:35.727036] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.727288] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.727426] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.727428] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.727508] E [24696] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2024-06-06 15:20:35.727523] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.727705] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.727829] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.727831] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.727905] E [24696] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2024-06-06 15:20:35.727949] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.728113] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.728241] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.728243] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.728317] E [24696] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2024-06-06 15:20:35.728331] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.728335] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.728430] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.728432] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.728519] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.728551] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.728649] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.728802] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.728907] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.729123] I [24696] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:35.729303] E [24696] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2024-06-06 15:20:35.729333] I [24696] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:35.729348] I [24696] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvMakeProgramAsync
+[2024-06-06 15:20:35.729419] I [24696] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2024-06-06 15:20:35.729425] I [24696] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvMakeProgramAsync
+[2024-06-06 15:20:38.354383] D [25116] [viplexcoreasync.cpp:nvStartTransferProgramAsync:1454] nvStartTransferProgramAsync begin
+[2024-06-06 15:20:38.354398] I [25116] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvStartTransferProgramAsync,data:{"sn": "2YKA04124N1A10000710","iconPath": "","iconName": "","sendProgramFilePaths": {"programPath": "D:/NovaStarLED/LedController/temp/program1","mediasPath": {}},"programName": "program1","deviceIdentifier": "Demo","startPlayAfterTransferred": true,"insertPlay": true}
+[2024-06-06 15:20:38.354404] I [25116] [programeditor.cpp:startTransferProgram:785] EditProgram::startTransferProgram data={"sn": "2YKA04124N1A10000710","iconPath": "","iconName": "","sendProgramFilePaths": {"programPath": "D:/NovaStarLED/LedController/temp/program1","mediasPath": {}},"programName": "program1","deviceIdentifier": "Demo","startPlayAfterTransferred": true,"insertPlay": true}
+[2024-06-06 15:20:38.354411] I [25116] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:20:38.354644] I [25116] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:20:38.354649] I [25116] [programeditor.cpp:startTransferProgram:788] EditProgram::startTransferProgram startTransferProgramLocal
+[2024-06-06 15:20:38.354654] I [25116] [programeditor.cpp:operator ():801] EditProgram::startTransferProgram start startTransferProgram
+[2024-06-06 15:20:38.354656] I [25116] [programeditor.cpp:operator ():802] ProgramEditor::startTransferProgram data {"sn": "2YKA04124N1A10000710","iconPath": "","iconName": "","sendProgramFilePaths": {"programPath": "D:/NovaStarLED/LedController/temp/program1","mediasPath": {}},"programName": "program1","deviceIdentifier": "Demo","startPlayAfterTransferred": true,"insertPlay": true}
+[2024-06-06 15:20:38.354685] I [25116] [programeditor.cpp:operator ():832] ProgramEditor::startTransferProgram m_ftphelper.clients.zise 1
+[2024-06-06 15:20:38.354698] I [25116] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:38.354818] I [25116] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:38.354830] I [25116] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2024-06-06 15:20:38.354934] I [25116] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2024-06-06 15:20:38.354974] I [25116] [programeditor.cpp:operator ():852] Tcard status3
+[2024-06-06 15:20:38.354976] I [25116] [programeditor.cpp:operator ():863] EditProgram::startTransferProgram start getTransferProgramUrl,get medias Url
+[2024-06-06 15:20:38.355005] I [25116] [tcphelper.cpp:request:235] TcpHelper::request What=30,data={"deviceIdentifier":"Demo","local":false,"solutions":{"identifier":"c0d0177afe5820780247f7f45d9272e51717667438","name":"program1"},"source":0,"totalSize":0,"type":"DEFAULT"}
+[2024-06-06 15:20:38.355014] I [25116] [tcphelper.cpp:sendData:278] TcpHelper::request alpha.header.sequence:9
+[2024-06-06 15:20:38.355021] I [25116] [tcpsocket.cpp:sendData:101] TcpClient  sendcount begin:5,len:197
+[2024-06-06 15:20:38.355039] I [25116] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvStartTransferProgramAsync
+[2024-06-06 15:20:38.355103] I [18764] [tcpsocket.cpp:operator ():106] TcpClient  sendcount end:5
+[2024-06-06 15:20:38.410811] D [18764] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2024-06-06 15:20:38.410833] D [18764] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2024-06-06 15:20:38.410913] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:20:38.410985] D [3200] [tcpsocket.cpp:operator ():289] TcpClient 2YKA04124N1A10000710,usercount:5
+[2024-06-06 15:20:38.410988] I [3200] [tcphelper.cpp:onReceiveData:140] TcpHelper onReceiveData
+[2024-06-06 15:20:38.411004] I [3200] [tcphelper.cpp:onReceiveData:163] TcpHelper onReceiveData sequence:9,sn:2YKA04124N1A10000710
+[2024-06-06 15:20:38.411068] I [3200] [programeditor.cpp:operator ():875] getTransferProgramUrl data{"appliedInfos":{"statusCode":0,"uploadUrl":"sdcard/nova/viplex_terminal/program/program_Demo/temp_program1","identifier":"c0d0177afe5820780247f7f45d9272e51717667438","name":"program1"},"canTranster":true,"directoryInfos":[{"availableSize":3943759872,"criticalSize":524288000,"directoryUrl":"sdcard/nova/viplex_terminal/media","reserveSize":0,"totalSize":4081238016,"type":"LOCAL"}],"errorCode":0,"uploadMediaUrl":"sdcard/nova/viplex_terminal/media"}
+[2024-06-06 15:20:38.411175] D [3200] [tcpsocket.cpp:operator ():291] TcpClient usercount end:5
+[2024-06-06 15:20:38.411179] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:20:38.411382] I [21628] [programeditor.cpp:operator ():941] EditProgram::startTransferProgram,update media thread run
+[2024-06-06 15:20:38.411386] I [21628] [programeditor.cpp:operator ():945] EditProgram::startTransferProgram start upLoadJsonAndIcon
+[2024-06-06 15:20:38.411410] I [21628] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:38.411700] I [21628] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:38.411704] I [21628] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:38.411882] I [21628] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:38.411890] E [21628] [ftpclient.cpp:connect:206] ftp connect1 this:0x2a4d20ff030
+[2024-06-06 15:20:38.411959] E [21628] [ftpclient.cpp:connect:232] ftp curl_easy_setopt this:0x2a4d20ff030
+[2024-06-06 15:20:38.411971] I [21628] [ftpclient.cpp:connect:237] FtpClient::connect  port:16602
+[2024-06-06 15:20:38.411977] I [21628] [ftpclient.cpp:connect:260] ftp  CURLOPT_URL url:ftp://192.168.1.20:16602
+[2024-06-06 15:20:38.536196] I [21628] [ftpclient.cpp:connect:278] ftp connect success this:0x2a4d20ff030
+[2024-06-06 15:20:38.536209] I [21628] [programeditor.cpp:upLoadJsonAndIcon:1398] EditProgram::upLoadJsonAndIcon end connect FTP
+[2024-06-06 15:20:38.536211] I [21628] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:38.536353] I [21628] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:38.536354] I [21628] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:38.536390] I [21628] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:38.536395] I [21628] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/
+[2024-06-06 15:20:38.536396] I [21628] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:20:38.536397] I [21628] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:20:38.536398] I [21628] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=
+[2024-06-06 15:20:38.536402] I [21628] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=
+[2024-06-06 15:20:38.536403] E [21628] [ftpclient.cpp:FtpUpload:408] FtpClient::FtpUpload FTP_LOCAL_FILE_NOT_EXIST 
+[2024-06-06 15:20:38.536427] I [21628] [programeditor.cpp:operator ():1411] EditProgram::upLoadJsonAndIcon-icon,code=2105,data=FTP_LOCAL_FILE_NOT_EXIST
+[2024-06-06 15:20:38.536549] I [21628] [programeditor.cpp:upLoadJsonAndIcon:1418] EditProgram::upLoadJsonAndIcon-json,json file size=5
+[2024-06-06 15:20:38.536550] I [21628] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=planlist.json
+[2024-06-06 15:20:38.536552] I [21628] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json
+[2024-06-06 15:20:38.536553] I [21628] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:20:38.536553] I [21628] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:20:38.536554] I [21628] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/planlist.json
+[2024-06-06 15:20:38.536556] I [21628] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/planlist.json
+[2024-06-06 15:20:38.536939] I [21628] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:20:38.536943] E [21628] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20ff030
+[2024-06-06 15:20:38.831323] I [21628] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:20:38.831368] I [21628] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/planlist.json
+[2024-06-06 15:20:38.831370] I [21628] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:20:38.831406] I [21628] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=planlist.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/planlist.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:20:38.831409] I [21628] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:20:38.831412] I [21628] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=play_solution1.json
+[2024-06-06 15:20:38.831419] I [21628] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/play_solution1.json
+[2024-06-06 15:20:38.831422] I [21628] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:20:38.831423] I [21628] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:20:38.831424] I [21628] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/play_solution1.json
+[2024-06-06 15:20:38.831438] I [21628] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/play_solution1.json
+[2024-06-06 15:20:38.831712] I [21628] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:20:38.831719] E [21628] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20ff030
+[2024-06-06 15:20:39.001676] I [21628] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:20:39.001743] I [21628] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/play_solution1.json
+[2024-06-06 15:20:39.001745] I [21628] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:20:39.001790] I [21628] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=play_solution1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/play_solution1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/play_solution1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:20:39.001794] I [21628] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:20:39.001798] I [21628] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=playlist1.json
+[2024-06-06 15:20:39.001803] I [21628] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playlist1.json
+[2024-06-06 15:20:39.001805] I [21628] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:20:39.001805] I [21628] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:20:39.001807] I [21628] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/playlist1.json
+[2024-06-06 15:20:39.001817] I [21628] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/playlist1.json
+[2024-06-06 15:20:39.002150] I [21628] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:20:39.002153] E [21628] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20ff030
+[2024-06-06 15:20:39.189162] I [21628] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:20:39.189236] I [21628] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/playlist1.json
+[2024-06-06 15:20:39.189238] I [21628] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:20:39.189272] I [21628] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=playlist1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/playlist1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playlist1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:20:39.189276] I [21628] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:20:39.189278] I [21628] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=playSolutionRelation1.json
+[2024-06-06 15:20:39.189284] I [21628] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playSolutionRelation1.json
+[2024-06-06 15:20:39.189286] I [21628] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:20:39.189286] I [21628] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:20:39.189287] I [21628] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/playSolutionRelation1.json
+[2024-06-06 15:20:39.189295] I [21628] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/playSolutionRelation1.json
+[2024-06-06 15:20:39.189378] I [21628] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:20:39.189380] E [21628] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20ff030
+[2024-06-06 15:20:39.375586] I [21628] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:20:39.375652] I [21628] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/playSolutionRelation1.json
+[2024-06-06 15:20:39.375656] I [21628] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:20:39.375723] I [21628] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=playSolutionRelation1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/playSolutionRelation1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playSolutionRelation1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:20:39.375735] I [21628] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:20:39.375739] I [21628] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=schedule_constraint1.json
+[2024-06-06 15:20:39.375745] I [21628] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/schedule_constraint1.json
+[2024-06-06 15:20:39.375747] I [21628] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2024-06-06 15:20:39.375748] I [21628] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2024-06-06 15:20:39.375749] I [21628] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=D:/NovaStarLED/LedController/temp/program1/schedule_constraint1.json
+[2024-06-06 15:20:39.375760] I [21628] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=D:/NovaStarLED/LedController/temp/program1/schedule_constraint1.json
+[2024-06-06 15:20:39.375837] I [21628] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2024-06-06 15:20:39.375838] E [21628] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x2a4d20ff030
+[2024-06-06 15:20:39.577001] I [21628] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2024-06-06 15:20:39.577112] I [21628] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: D:/NovaStarLED/LedController/temp/program1/schedule_constraint1.json
+[2024-06-06 15:20:39.577117] I [21628] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2024-06-06 15:20:39.577179] I [21628] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=schedule_constraint1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.20","localPath":"D:/NovaStarLED/LedController/temp/program1/schedule_constraint1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/schedule_constraint1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2024-06-06 15:20:39.577188] I [21628] [ftpclient.cpp:put:60] FtpClient::put end
+[2024-06-06 15:20:39.577196] I [21628] [programeditor.cpp:upLoadJsonAndIcon:1439] EditProgram::upLoadJsonAndIcon start close FTP
+[2024-06-06 15:20:39.577202] E [21628] [ftpclient.cpp:closeFtp:288] FtpClient::closeFtp() 1111 this:0x2a4d20ff030
+[2024-06-06 15:20:39.583139] E [21628] [ftpclient.cpp:closeFtp:295] FtpClient::closeFtp() 2222 this:0x2a4d20ff030
+[2024-06-06 15:20:39.583194] I [21628] [programeditor.cpp:upLoadJsonAndIcon:1441] EditProgram::upLoadJsonAndIcon end close FTP
+[2024-06-06 15:20:39.583209] I [21628] [programeditor.cpp:operator ():953] EditProgram::startTransferProgram end upLoadJsonAndIcon
+[2024-06-06 15:20:39.583300] I [21628] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:39.583582] I [21628] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:39.583585] I [21628] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2024-06-06 15:20:39.583697] I [21628] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2024-06-06 15:20:39.583704] I [21628] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:20:39.583739] I [8704] [programeditor.cpp:operator ():959] EditProgram::startTransferProgram,update media progress thread run
+[2024-06-06 15:20:39.583811] I [21628] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:20:39.583815] I [21628] [ftpclient.cpp:getFileLists:86] FtpClient::getFileLists
+[2024-06-06 15:20:39.584045] I [21628] [ftpclient.cpp:getFileLists:109] FtpClient::getFileLists tempBodyPath=D:/NovaStarLED/LedController/temp//filelist.txt
+[2024-06-06 15:20:39.584049] I [21628] [ftpclient.cpp:getFileLists:110] FtpClient::getFileLists tempRespPath=D:/NovaStarLED/LedController/temp//filelistresult.txt
+[2024-06-06 15:20:39.584058] I [21628] [ftpclient.cpp:getFileLists:144] FtpClient::getFileLists -----------url:ftp://192.168.1.20:16602/sdcard/nova/viplex_terminal/media/--------------
+[2024-06-06 15:20:39.761540] I [21628] [ftpclient.cpp:getFileLists:172] FtpClient::getFileLists fileInfos.size=1
+[2024-06-06 15:20:39.761551] I [21628] [programeditor.cpp:operator ():1022] EditProgram::startTransferProgram start upload media connect FTP
+[2024-06-06 15:20:39.761554] E [21628] [ftpclient.cpp:connect:206] ftp connect1 this:0x2a4d2089e90
+[2024-06-06 15:20:39.761576] E [21628] [ftpclient.cpp:connect:232] ftp curl_easy_setopt this:0x2a4d2089e90
+[2024-06-06 15:20:39.761586] I [21628] [ftpclient.cpp:connect:237] FtpClient::connect  port:16602
+[2024-06-06 15:20:39.761591] I [21628] [ftpclient.cpp:connect:260] ftp  CURLOPT_URL url:ftp://192.168.1.20:16602
+[2024-06-06 15:20:39.895818] I [21628] [ftpclient.cpp:connect:278] ftp connect success this:0x2a4d2089e90
+[2024-06-06 15:20:39.895828] I [21628] [programeditor.cpp:operator ():1024] EditProgram::startTransferProgram end upload media connect FTP
+[2024-06-06 15:20:39.895832] E [21628] [ftpclient.cpp:closeFtp:288] FtpClient::closeFtp() 1111 this:0x2a4d2089e90
+[2024-06-06 15:20:39.901249] E [21628] [ftpclient.cpp:closeFtp:295] FtpClient::closeFtp() 2222 this:0x2a4d2089e90
+[2024-06-06 15:20:40.131180] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:20:40.210189] I [21628] [programeditor.cpp:operator ():1117] EditProgram::startTransferProgram start finishTransferProgram
+[2024-06-06 15:20:40.210237] I [21628] [tcphelper.cpp:request:235] TcpHelper::request What=30,data={"confirmedInfos":{"identifier":"c0d0177afe5820780247f7f45d9272e51717667438","isSupportMd5Checkout":false,"name":"program1","planListUrl":"sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json","source":0,"thumbnailUrl":"sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/"},"playImmediately":true}
+[2024-06-06 15:20:40.210247] I [21628] [tcphelper.cpp:sendData:278] TcpHelper::request alpha.header.sequence:10
+[2024-06-06 15:20:40.210255] I [21628] [tcpsocket.cpp:sendData:101] TcpClient  sendcount begin:6,len:357
+[2024-06-06 15:20:40.210382] I [18764] [tcpsocket.cpp:operator ():106] TcpClient  sendcount end:6
+[2024-06-06 15:20:40.564453] D [18764] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2024-06-06 15:20:40.564486] D [18764] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2024-06-06 15:20:40.564558] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:20:40.564578] D [3200] [tcpsocket.cpp:operator ():289] TcpClient 2YKA04124N1A10000710,usercount:6
+[2024-06-06 15:20:40.564582] I [3200] [tcphelper.cpp:onReceiveData:140] TcpHelper onReceiveData
+[2024-06-06 15:20:40.564603] I [3200] [tcphelper.cpp:onReceiveData:163] TcpHelper onReceiveData sequence:10,sn:2YKA04124N1A10000710
+[2024-06-06 15:20:40.564620] I [3200] [programeditor.cpp:operator ():1119] callback finishTransferProgram info errorCode = 0 result = {"errorStr":"SUCCESS","errorType":0}
+[2024-06-06 15:20:40.564644] I [3200] [programeditor.cpp:operator ():1143] EditProgram::startTransferProgram end finishTransferProgram
+[2024-06-06 15:20:40.564651] I [3200] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvStartTransferProgramAsync
+[2024-06-06 15:20:40.565073] I [3200] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2024-06-06 15:20:40.565096] D [3200] [tcpsocket.cpp:operator ():291] TcpClient usercount end:6
+[2024-06-06 15:20:40.565103] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:20:45.140721] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:20:45.578317] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:20:45.578335] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:20:50.147559] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:20:50.584935] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:20:50.584946] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:20:55.160166] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:20:55.597355] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:20:55.597364] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:21:00.163734] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:21:00.601067] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:21:00.601079] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:21:05.165963] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:21:05.603210] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:21:05.603227] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:21:10.171245] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:21:10.608531] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:21:10.608549] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:21:15.175805] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:21:15.612667] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:21:15.612684] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:21:20.176099] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:21:20.614436] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:21:20.614458] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:21:25.180564] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:21:25.618569] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:21:25.618578] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:21:30.185169] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:21:30.622545] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:21:30.622567] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:21:35.187729] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:21:35.625576] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:21:35.625593] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:21:40.192668] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:21:40.629843] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:21:40.629853] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:21:45.194665] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:21:45.632260] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:21:45.632278] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:21:50.206794] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:21:50.644515] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:21:50.644525] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:21:55.211358] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:21:55.647015] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:21:55.647025] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:22:00.224331] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:22:00.661744] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:22:00.661761] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:22:05.238133] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:22:05.676105] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:22:05.676119] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:22:10.241612] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:22:10.680104] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:22:10.680127] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:22:15.251205] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:22:15.689036] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:22:15.689051] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:22:20.258514] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:22:20.696617] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:22:20.696636] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:22:25.266723] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:22:25.704075] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:22:25.704090] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:22:30.271879] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:22:30.709194] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:22:30.709209] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:22:35.279906] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:22:35.715358] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:22:35.715368] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:22:40.295291] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:22:40.717460] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:22:40.717480] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:22:45.305239] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:22:45.726064] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:22:45.726076] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:22:50.313552] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:22:50.736042] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:22:50.736146] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:22:55.316943] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:22:55.738964] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:22:55.738982] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:23:00.319794] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:23:00.741378] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:23:00.741394] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:23:05.322869] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:23:05.744723] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:23:05.744739] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:23:10.332406] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:23:10.758221] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:23:10.758233] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:23:15.344805] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:23:15.760728] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:23:15.760749] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:23:20.358496] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:23:20.772781] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:23:20.772794] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:23:25.373174] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:23:25.773588] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:23:25.773612] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:23:30.375439] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:23:30.776202] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:23:30.776214] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:23:35.393810] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:23:35.776393] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:23:35.776404] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:23:40.399574] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:23:40.777596] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:23:40.777612] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:23:45.401078] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:23:45.779532] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:23:45.779541] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:23:50.404789] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:23:50.781036] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:23:50.781054] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:23:55.408759] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:23:55.782444] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:23:55.782476] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:24:00.421227] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:24:00.796492] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:24:00.796516] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:24:05.424097] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:24:05.811404] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:24:05.811436] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:24:10.436969] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:24:10.826791] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:24:10.826817] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:24:15.438936] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:24:15.827620] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:24:15.827648] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:24:20.443504] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:24:20.839117] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:24:20.839126] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:24:25.450038] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:24:25.851187] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:24:25.851209] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:24:30.460570] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:24:30.861317] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:24:30.861337] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:24:35.474414] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:24:35.870168] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:24:35.870180] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:24:40.485590] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:24:40.885173] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:24:40.885189] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:24:45.490364] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:24:45.899393] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:24:45.899403] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:24:50.491654] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:24:50.900716] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:24:50.900738] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:24:55.504689] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:24:55.903241] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:24:55.903254] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:25:00.512805] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:25:00.915786] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:25:00.915805] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:25:05.527983] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:25:05.925014] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:25:05.925035] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:25:10.543314] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:25:10.938604] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:25:10.938621] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:25:15.552811] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:25:15.944244] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:25:15.944263] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:25:20.563432] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:25:20.947112] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:25:20.947186] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:25:25.571261] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:25:25.962454] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:25:25.962469] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:25:30.586049] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:25:30.977607] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:25:30.977628] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:25:35.599644] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:25:35.983458] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:25:35.983472] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:25:40.614355] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:25:40.988909] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:25:40.988919] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:25:45.618969] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:25:45.996978] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:25:45.996998] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:25:50.631075] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:25:51.011900] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:25:51.011918] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:25:55.635776] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:25:56.026967] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:25:56.026986] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:26:00.649447] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:26:01.040655] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:26:01.040675] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:26:05.657812] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:26:06.047686] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:26:06.047699] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:26:10.659837] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:26:11.062680] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:26:11.062691] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:26:15.670048] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:26:16.065902] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:26:16.065933] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:26:20.675019] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2024-06-06 15:26:21.081428] D [3200] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2024-06-06 15:26:21.081446] D [3200] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2024-06-06 15:26:25.677787] D [3716] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::se[2024-06-06 15:27:17.393323] I [10072] [datamanager.cpp:init:94] DataManager::init begin
+[2024-06-06 15:27:17.393626] I [10072] [datamanager.cpp:init:97] DataManager::init end
+[2024-06-06 15:27:17.393649] D [10072] [viplexcore.cpp:initCore:181] viplexcore db & log init ok
+[2024-06-06 15:27:17.393652] D [10072] [viplexcore.cpp:init:106] sdk version = 3.4.0.01
+[2024-06-06 15:27:17.397312] I [10072] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:27:17.397748] I [10072] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:27:17.397757] I [10072] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:27:17.397803] I [10072] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:27:17.397807] I [10072] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-06 15:27:17.397845] I [10072] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-06 15:27:17.398062] I [10072] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:27:17.398126] I [10072] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:27:17.398153] D [10072] [viplexcore.cpp:init:138] viplexcore init ok: version=3.4.0.01, path=D:/NovaStarLED/LedController/temp, credentials={"company":"NovaStar","phone":"029-68216000","email":"hr@novastar.tech"}
+[2024-06-06 15:27:17.398154] D [10072] [viplexcore.cpp:init:139] viplexcore  init ok
+[2024-06-06 15:27:17.398158] I [10072] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-06 15:27:17.398208] I [10072] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-06 15:27:17.398305] I [8920] [httpHelper.cpp:httpTimeServerRequest:25] httpTimeServerRequest --srart -- url = ,
+[2024-06-06 15:27:17.398345] I [8920] [httpHelper.cpp:httpNodeServerRequest:43] httpNodeServerRequest --srart -- url = ,
+[2024-06-06 15:27:17.398370] I [8920] [httpHelper.cpp:httpVnnoxNodeServerRequest:585] httpVnnoxNodeServerRequest --srart -- url = ,
+[2024-06-06 15:27:17.398397] D [8920] [viplexcore.cpp:operator ():126] getBuryPoint() return true
+[2024-06-06 15:27:17.398405] D [8920] [burypoint.cpp:uploadInit:23] BuryPoint::uploadInit begin
+[2024-06-06 15:27:17.437049] D [8920] [burypoint.cpp:getOSSUploadBuryPointInfo:30] BuryPoint::getOSSUploadBuryPointInfo begin
+[2024-06-06 15:27:17.437061] D [8920] [burypoint.cpp:getOSSUploadBuryPointInfo:35] BuryPoint::getOSSUploadBuryPointInfo getOssInfoUrl=
+[2024-06-06 15:27:17.437592] E [8920] [httpttools.cpp:HttpGet:681] httptTools::HttpGet  error, ret:3

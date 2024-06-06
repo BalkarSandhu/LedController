@@ -1,0 +1,12 @@
+220 Service ready for new user.
+331 User name okay, need password for admin.
+230 User logged in, proceed.
+257 "/" is current directory.
+250 Directory changed to /sdcard
+250 Directory changed to /sdcard/nova
+250 Directory changed to /sdcard/nova/viplex_terminal
+250 Directory changed to /sdcard/nova/viplex_terminal/media
+229 Entering Passive Mode (|||56825|)
+200 Command TYPE okay.
+150 File status okay; about to open data connection.
+226 Closing data connection.
