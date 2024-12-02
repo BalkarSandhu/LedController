@@ -1,20 +1,49 @@
 package com.dadhwal.LedController.LedSDK;
 
-import com.google.gson.Gson;
-import com.sun.jna.Native;
-
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.dadhwal.LedController.LedSDK.Editor.Components.Attributes;
+import com.dadhwal.LedController.LedSDK.Editor.Components.BackgroundMusic;
+import com.dadhwal.LedController.LedSDK.Editor.Components.Constraint;
+import com.dadhwal.LedController.LedSDK.Editor.Components.Content;
+import com.dadhwal.LedController.LedSDK.Editor.Components.Contents;
+import com.dadhwal.LedController.LedSDK.Editor.Components.DisplayStyle;
+import com.dadhwal.LedController.LedSDK.Editor.Components.Effects;
+import com.dadhwal.LedController.LedSDK.Editor.Components.Font;
+import com.dadhwal.LedController.LedSDK.Editor.Components.Line;
+import com.dadhwal.LedController.LedSDK.Editor.Components.MetaData;
+import com.dadhwal.LedController.LedSDK.Editor.Components.Paragraph;
+import com.dadhwal.LedController.LedSDK.Editor.Components.ScrollAttributes;
+import com.dadhwal.LedController.LedSDK.Editor.Components.Seg;
+import com.dadhwal.LedController.LedSDK.Editor.Components.TextAttribute;
+import com.dadhwal.LedController.LedSDK.Editor.Components.Widget;
+import com.dadhwal.LedController.LedSDK.Editor.Components.WidgetContainer;
+import com.dadhwal.LedController.LedSDK.Editor.PageInfo;
+import com.dadhwal.LedController.LedSDK.Editor.ProgramData;
+import com.dadhwal.LedController.LedSDK.Ethernet.EthernetData;
+import com.dadhwal.LedController.LedSDK.Ethernet.EthernetTaskInfo;
+import com.dadhwal.LedController.LedSDK.Program.ProgramOutput;
+import com.dadhwal.LedController.LedSDK.Program.ProgramPage;
+import com.dadhwal.LedController.LedSDK.Program.ProgramTransfer;
+import com.dadhwal.LedController.LedSDK.Program.ProgramWindow;
+import com.dadhwal.LedController.LedSDK.Screen.ScreenInfo;
+import com.google.gson.Gson;
+import com.sun.jna.Native;
+
 public class SDKWrapper {
     static boolean g_bAPIReturn = false;
     static String g_sn = "2YKA04124N1A10000710";
+//    static String g_sn = "24A24A000001246";
     static String ROOTDIR = (System.getProperty("user.dir") + "/temp").replaceAll("\\\\", "/");
 
     static ViplexCore instance;
     private static final Logger logger = Logger.getLogger(SDKWrapper.class.getName());
+    static String serialNumber;
+    private static final Gson gson=new Gson();
 
     static void waitAPIReturn(CountDownLatch latch) throws InterruptedException {
         latch.await();
@@ -26,7 +55,7 @@ public class SDKWrapper {
             System.setProperty("jna.encoding", "UTF-8");
             instance = Native.load("src\\main\\resources\\SDK\\bin\\viplexcore.dll", ViplexCore.class);
 
-            String companyInfo = "{\"company\":\"FleetSafe India\",\"phone\":\"9992391581\",\"email\":\"balkar@fleetsafeindia.com\"}";
+            String companyInfo = gson.toJson(new CompanyInfo("FleetSafe India","9992391581","balkar@fleetsafeindia.com"));
             instance.nvSetDevLang("Java");
             instance.nvInit(ROOTDIR, companyInfo);
         } catch (Exception e) {
@@ -56,7 +85,7 @@ public class SDKWrapper {
     public static CompletableFuture<String> login() throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
         try {
-            String loginParam = String.format("{\"sn\":\"%s\",\"username\":\"admin\",\"rememberPwd\":1,\"password\":\"SN2008@+\",\"loginType\":0}", g_sn);
+            String loginParam = gson.toJson(new LoginReq(g_sn,"admin","SN2008@+", 0,1));
             CountDownLatch latch = new CountDownLatch(1);
             instance.nvLoginAsync(loginParam, (code, data) -> {
                 if (code == 0) {
@@ -73,12 +102,13 @@ public class SDKWrapper {
         return future;
     }
 
-    public static CompletableFuture<String> createProgram() throws InterruptedException {
+    public static CompletableFuture<String> createProgramPage() throws InterruptedException {
         CompletableFuture<String> future =  new CompletableFuture<>();
         try {
-            String createProgram = "{\"name\":\"Demo\",\"width\":100,\"height\":100,\"tplID\":1,\"winInfo\":{\"height\":50,\"width\":50,\"left\":0,\"top\":-4,\"zindex\":0,\"index\":0}}";
+            ProgramWindow winInfo=new ProgramWindow(50,50,0,0,0,0);
+            String programWindow = gson.toJson(new ProgramPage("Program1", 100, 100, 1, winInfo));
             CountDownLatch latch = new CountDownLatch(1);
-            instance.nvCreateProgramAsync(createProgram, (code, data) -> {
+            instance.nvCreateProgramAsync(programWindow, (code, data) -> {
                 if(code==0){
                     future.complete(data);
                 } else {
@@ -93,10 +123,13 @@ public class SDKWrapper {
         return future;
     }
 
-    public static CompletableFuture<String> setPageProgram(String s) throws InterruptedException {
+    public static CompletableFuture<String> setPageProgram(String text, String textColor) throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
         try {
-            String editProgram = String.format("{\"programID\":1,\"pageID\":1,\"pageInfo\":{\"name\":\"jiemu\",\"widgetContainers\":[{\"contents\":{\"widgets\":[{\"constraints\":[{\"cron\":[\"0 0 0 ? * 1,2,3,4,5,6,7\"],\"endTime\":\"4017-12-30T23:59:59Z+8:00\",\"startTime\":\"1970-01-01T00:00:00Z+8:00\"}],\"duration\":15000,\"metadata\":{\"content\":{\"autoPaging\":true,\"backgroundMusic\":{\"duration\":0,\"isTextSync\":false},\"displayStyle\":{\"scrollAttributes\":{\"effects\":{\"animation\":\"MARQUEE_LEFT\",\"speed\":1}},\"type\":\"SCROLL\"},\"paragraphs\":[{\"backgroundColor\":\"#00000000\",\"horizontalAlignment\":\"CENTER\",\"letterSpacing\":0,\"lineSpacing\":-4,\"lines\":[{\"segs\":[{\"content\":\"%s\"}]}],\"verticalAlignment\":\"TOP\"}],\"textAttributes\":[{\"backgroundColor\":\"#ff000000\",\"attributes\":{\"font\":{\"family\":[\"Arial\"],\"isUnderline\":false,\"size\":16,\"style\":\"NORMAL\"},\"letterSpacing\":0,\"textColor\":\"#ff8080\"}}]}},\"name\":\"text\",\"type\":\"ARCH_TEXT\"}]},\"id\":1,\"name\":\"widgetContainers1\"}]}}",s);
+            Constraint constraint=new Constraint(List.of("0 0 0 ? * 1,2,3,4,5,6,7"),"4017-12-30T23:59:59Z+8:00","1970-01-01T00:00:00Z+8:00");
+            PageInfo pageInfo = getPageInfo(text, textColor, constraint);
+            String editProgram= gson.toJson(new ProgramData(1,1,pageInfo));
+
             CountDownLatch latch = new CountDownLatch(1);
             instance.nvSetPageProgramAsync(editProgram, (code, data) -> {
                 if(code==0){
@@ -113,13 +146,36 @@ public class SDKWrapper {
         return future;
     }
 
+    private static PageInfo getPageInfo(String text, String textColor, Constraint constraint) {
+        BackgroundMusic backgroundMusic=new BackgroundMusic(0,false);
+        Content content = getContent(text, textColor, backgroundMusic);
+        MetaData metaData=new MetaData(content);
+        Widget widget=new Widget(List.of(constraint),15000, metaData,"text","ARCH_TEXT");
+        Contents contents=new Contents(List.of(widget));
+        WidgetContainer widgetContainers=new WidgetContainer(contents,1 , "widgetContainers1");
+        return new PageInfo("textWindow",List.of(widgetContainers));
+    }
+
+    private static Content getContent(String s, String textColor, BackgroundMusic backgroundMusic) {
+        Effects effects=new Effects("MARQUEE_LEFT",1);
+        ScrollAttributes scrollAttributes=new ScrollAttributes(effects);
+        DisplayStyle displayStyle=new DisplayStyle(scrollAttributes,"STATIC");
+        Seg seg=new Seg(s);
+        Line lines=new Line(List.of(seg));
+        Paragraph paragraphs=new Paragraph("#00000000","CENTER",0,0,List.of(lines),"TOP");
+        Font font=new Font(List.of("Arial"),false,14,"NORMAL");
+        Attributes attributes=new Attributes(font,0,textColor);
+        TextAttribute textAttribute=new TextAttribute("#ff0000",attributes);
+        return new Content(true, backgroundMusic,displayStyle,List.of(paragraphs),List.of(textAttribute));
+    }
+
     public static CompletableFuture<String> makeProgram() throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
         try {
 
-            String genrateProgram = String.format("{\"programID\":1,\"outPutPath\":\"%s/\"}", ROOTDIR);
+            String programOutput = gson.toJson(new ProgramOutput(1,ROOTDIR));
             CountDownLatch latch = new CountDownLatch(1);
-            instance.nvMakeProgramAsync(genrateProgram, (code, data) -> {
+            instance.nvMakeProgramAsync(programOutput, (code, data) -> {
                 if(code == 0){
                     future.complete(data);
                 } else {
@@ -137,8 +193,7 @@ public class SDKWrapper {
     public static CompletableFuture<String> transferProgram() throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
         try {
-
-            String transferProgram = String.format("{\"sn\": \"%s\",\"iconPath\": \"\",\"iconName\": \"\",\"sendProgramFilePaths\": {\"programPath\": \"%s/program1\",\"mediasPath\": {}},\"programName\": \"program1\",\"deviceIdentifier\": \"Demo\",\"startPlayAfterTransferred\": true,\"insertPlay\": true}", g_sn, ROOTDIR);
+            String transferProgram = gson.toJson(new ProgramTransfer(g_sn,"","",ROOTDIR+"/program1",new Object(),"program1","Demo",true,true));
             CountDownLatch latch = new CountDownLatch(1);
             instance.nvStartTransferProgramAsync(transferProgram, (code, data) -> {
                 if(code == 0){
@@ -159,9 +214,9 @@ public class SDKWrapper {
     public static CompletableFuture<String> getProgramInfo() throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
         try {
-            String requestDatasn = String.format("{\"sn\":\"%s\"}", g_sn);
+            serialNumber=gson.toJson(new StringFormatter(g_sn));
             CountDownLatch latch = new CountDownLatch(1);
-            instance.nvGetProgramInfoAsync(requestDatasn, (code, data) -> {
+            instance.nvGetProgramInfoAsync(serialNumber, (code, data) -> {
                 if(code == 0){
                     future.complete(data);
                 } else {
@@ -179,9 +234,9 @@ public class SDKWrapper {
     public static CompletableFuture<String> setVolume() throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
         try {
-            String setVolumeParam = String.format("{\"sn\":\"%s\",\"volumeInfo\":{\"ratio\":60.0}}", g_sn);
+            String volumeData= gson.toJson(new StringFormatter(g_sn,60.0));
             CountDownLatch latch = new CountDownLatch(1);
-            instance.nvSetVolumeAsync(setVolumeParam, (code, data) -> {
+            instance.nvSetVolumeAsync(volumeData, (code, data) -> {
                 if(code == 0){
                     future.complete(data);
                 } else {
@@ -199,9 +254,9 @@ public class SDKWrapper {
     public static CompletableFuture<String> getVolume() throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
         try {
-            String getVolumeParam = String.format("{\"sn\":\"%s\"}", g_sn);
+            serialNumber=gson.toJson(new StringFormatter(g_sn));
             CountDownLatch latch = new CountDownLatch(1);
-            instance.nvGetVolumeAsync(getVolumeParam, (code, data) -> {
+            instance.nvGetVolumeAsync(serialNumber, (code, data) -> {
                 if(code == 0){
                     future.complete(data);
                 } else {
@@ -219,11 +274,9 @@ public class SDKWrapper {
     public static CompletableFuture<String> getEthernetInfo() throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
         try {
-            SerialNumber serialNumber = new SerialNumber(g_sn);
-            Gson gson = new Gson();
-            String getEthernetParam = gson.toJson(serialNumber);
+            serialNumber=gson.toJson(new StringFormatter(g_sn));
             CountDownLatch latch = new CountDownLatch(1);
-            instance.nvGetEthernetInfoAsync(getEthernetParam, (code, data) -> {
+            instance.nvGetEthernetInfoAsync(serialNumber, (code, data) -> {
                 if(code == 0){
                     future.complete(data);
                 } else {
@@ -241,9 +294,11 @@ public class SDKWrapper {
     public static CompletableFuture<String> setEthernetInfo() throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
         try {
-            String data = String.format("{\"sn\":\"%s\",\"taskInfo\":{\"ethernets\":[{\"scopeId\":-1,\"name\":\"eth0\",\"dhcp\":false,\"ip\":\"192.168.1.20\",\"mask\":\"255.255.255.0\",\"gateWay\":\"192.168.1.1\",\"dns\":[\"8.8.8.8\"]}]}}", g_sn);
+            EthernetData ethernet=new EthernetData(-1, "eth0", false, "192.168.1.50", "255.255.255.0", "192.168.1.1", List.of("8.8.8.8"));
+            EthernetTaskInfo taskInfo= new EthernetTaskInfo(List.of(ethernet));
+            String ethernetInfo= gson.toJson(new StringFormatter(g_sn,taskInfo));
             CountDownLatch latch = new CountDownLatch(1);
-            instance.nvSetEthernetInfoAsync(data, (code, result) -> {
+            instance.nvSetEthernetInfoAsync(ethernetInfo, (code, result) -> {
                 if(code == 0){
                     future.complete(result);
                 } else {
@@ -258,4 +313,25 @@ public class SDKWrapper {
         return future;
     }
 
+    public static CompletableFuture<String> setScreenInfo() throws  InterruptedException {
+        CompletableFuture<String> future = new CompletableFuture<>();
+        try {
+            ScreenInfo screen = new ScreenInfo(g_sn,"Taurus-10000710", 64, 16, 16602, 16604, 16603, 16605);
+            System.out.println(screen.toString());
+            String screenInfo= gson.toJson(screen);
+            CountDownLatch latch = new CountDownLatch(1);
+            instance.nvSetScreenInfoAsync(screenInfo, (code, result) -> {
+                if(code == 0){
+                    future.complete(result);
+                } else {
+                    future.completeExceptionally(new Exception("Set Screen Info Failed"));
+                }
+                latch.countDown();
+            });
+            waitAPIReturn(latch);
+        } catch (InterruptedException e){
+            future.completeExceptionally(e);
+        }
+        return future;
+    }
 }

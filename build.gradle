@@ -18,6 +18,7 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'net.java.dev.jna:jna:5.6.0'
 	implementation 'net.java.dev.jna:jna-platform:5.6.0'
 	implementation 'com.google.code.gson:gson:2.8.9'
@@ -28,4 +29,18 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+task copyDll(type: Copy) {
+	from 'src/main/resources/SDK/bin'
+	into 'build/libs/SDK/bin'
+}
+
+// Task to create the final JAR including the DLL file
+bootJar {
+	dependsOn copyDll
+	duplicatesStrategy = 'exclude'
+	from('build/libs/SDK') {
+		into 'BOOT-INF/classes/SDK'
+	}
 }

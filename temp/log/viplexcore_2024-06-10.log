@@ -1,0 +1,48 @@
+[2024-06-10 12:40:52.506694] I [52416] [datamanager.cpp:init:94] DataManager::init begin
+[2024-06-10 12:40:52.507908] I [52416] [datamanager.cpp:init:97] DataManager::init end
+[2024-06-10 12:40:52.507958] D [52416] [viplexcore.cpp:initCore:181] viplexcore db & log init ok
+[2024-06-10 12:40:52.507966] D [52416] [viplexcore.cpp:init:106] sdk version = 3.4.0.01
+[2024-06-10 12:40:52.513587] I [52416] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-10 12:40:52.514378] I [52416] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-10 12:40:52.514390] I [52416] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-10 12:40:52.514465] I [52416] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-10 12:40:52.514471] I [52416] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-10 12:40:52.514534] I [52416] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-10 12:40:52.514918] I [52416] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-10 12:40:52.515049] I [52416] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-10 12:40:52.515122] D [52416] [viplexcore.cpp:init:138] viplexcore init ok: version=3.4.0.01, path=D:/NovaStarLED/LedController/temp, credentials={"company":"FleetSafe India","phone":"9992391581","email":"balkar@fleetsafeindia.com"}
+[2024-06-10 12:40:52.515126] D [52416] [viplexcore.cpp:init:139] viplexcore  init ok
+[2024-06-10 12:40:52.515135] I [52416] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-10 12:40:52.515328] I [39056] [httpHelper.cpp:httpTimeServerRequest:25] httpTimeServerRequest --srart -- url = ,
+[2024-06-10 12:40:52.515382] I [52416] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-10 12:40:52.515442] I [39056] [httpHelper.cpp:httpNodeServerRequest:43] httpNodeServerRequest --srart -- url = ,
+[2024-06-10 12:40:52.515506] I [39056] [httpHelper.cpp:httpVnnoxNodeServerRequest:585] httpVnnoxNodeServerRequest --srart -- url = ,
+[2024-06-10 12:40:52.515563] D [39056] [viplexcore.cpp:operator ():126] getBuryPoint() return true
+[2024-06-10 12:40:52.515579] D [39056] [burypoint.cpp:uploadInit:23] BuryPoint::uploadInit begin
+[2024-06-10 12:40:52.552220] D [39056] [burypoint.cpp:getOSSUploadBuryPointInfo:30] BuryPoint::getOSSUploadBuryPointInfo begin
+[2024-06-10 12:40:52.552238] D [39056] [burypoint.cpp:getOSSUploadBuryPointInfo:35] BuryPoint::getOSSUploadBuryPointInfo getOssInfoUrl=
+[2024-06-10 12:40:52.553001] E [39056] [httpttools.cpp:HttpGet:681] httptTools::HttpGet  error, ret:3
+[2024-06-10 12:55:02.123071] I [30472] [datamanager.cpp:init:94] DataManager::init begin
+[2024-06-10 12:55:02.123394] I [30472] [datamanager.cpp:init:97] DataManager::init end
+[2024-06-10 12:55:02.123415] D [30472] [viplexcore.cpp:initCore:181] viplexcore db & log init ok
+[2024-06-10 12:55:02.123420] D [30472] [viplexcore.cpp:init:106] sdk version = 3.4.0.01
+[2024-06-10 12:55:02.131130] I [30472] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-10 12:55:02.131772] I [30472] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-10 12:55:02.131782] I [30472] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-10 12:55:02.131858] I [30472] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-10 12:55:02.131863] I [30472] [datamanager.cpp:getString:174] DataManager::getString begin
+[2024-06-10 12:55:02.131942] I [30472] [datamanager.cpp:getString:195] DataManager::getString end
+[2024-06-10 12:55:02.132182] I [30472] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-10 12:55:02.132306] I [30472] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-10 12:55:02.132354] D [30472] [viplexcore.cpp:init:138] viplexcore init ok: version=3.4.0.01, path=D:/NovaStarLED/LedController/temp, credentials={"company":"FleetSafe India","phone":"9992391581","email":"balkar@fleetsafeindia.com"}
+[2024-06-10 12:55:02.132358] D [30472] [viplexcore.cpp:init:139] viplexcore  init ok
+[2024-06-10 12:55:02.132362] I [30472] [datamanager.cpp:setString:121] DataManager::setString begin
+[2024-06-10 12:55:02.132445] I [30472] [datamanager.cpp:setString:169] DataManager::setString end
+[2024-06-10 12:55:02.132513] I [11992] [httpHelper.cpp:httpTimeServerRequest:25] httpTimeServerRequest --srart -- url = ,
+[2024-06-10 12:55:02.132591] I [11992] [httpHelper.cpp:httpNodeServerRequest:43] httpNodeServerRequest --srart -- url = ,
+[2024-06-10 12:55:02.132653] I [11992] [httpHelper.cpp:httpVnnoxNodeServerRequest:585] httpVnnoxNodeServerRequest --srart -- url = ,
+[2024-06-10 12:55:02.132709] D [11992] [viplexcore.cpp:operator ():126] getBuryPoint() return true
+[2024-06-10 12:55:02.132722] D [11992] [burypoint.cpp:uploadInit:23] BuryPoint::uploadInit begin
+[2024-06-10 12:55:02.177549] D [11992] [burypoint.cpp:getOSSUploadBuryPointInfo:30] BuryPoint::getOSSUploadBuryPointInfo begin
+[2024-06-10 12:55:02.177568] D [11992] [burypoint.cpp:getOSSUploadBuryPointInfo:35] BuryPoint::getOSSUploadBuryPointInfo getOssInfoUrl=
+[2024-06-10 12:55:02.178379] E [11992] [httpttools.cpp:HttpGet:681] httptTools::HttpGet  error, ret:3
