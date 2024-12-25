@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.3.0'
 	id 'io.spring.dependency-management' version '1.1.5'
+	id 'edu.sc.seis.launch4j' version '3.0.6'
 }
 
 group = 'com.dadhwal'
@@ -32,8 +33,8 @@ tasks.named('test') {
 }
 
 task copyDll(type: Copy) {
-	from 'src/main/resources/SDK/bin'
-	into 'build/libs/SDK/bin'
+	from 'src/main/resources/SDK'
+	into 'build/libs/SDK'
 }
 
 // Task to create the final JAR including the DLL file

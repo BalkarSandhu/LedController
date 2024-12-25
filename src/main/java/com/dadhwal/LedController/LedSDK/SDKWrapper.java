@@ -31,13 +31,14 @@ import com.dadhwal.LedController.LedSDK.Program.ProgramPage;
 import com.dadhwal.LedController.LedSDK.Program.ProgramTransfer;
 import com.dadhwal.LedController.LedSDK.Program.ProgramWindow;
 import com.dadhwal.LedController.LedSDK.Screen.ScreenInfo;
+import com.dadhwal.LedController.controller.responses.SearchTerminal;
 import com.google.gson.Gson;
 import com.sun.jna.Native;
 
 public class SDKWrapper {
     static boolean g_bAPIReturn = false;
-    static String g_sn = "2YKA04124N1A10000710";
-//    static String g_sn = "24A24A000001246";
+    // static String g_sn = "2YKA04124N1A10000710";
+    static String g_sn = "";
     static String ROOTDIR = (System.getProperty("user.dir") + "/temp").replaceAll("\\\\", "/");
 
     static ViplexCore instance;
@@ -69,6 +70,14 @@ public class SDKWrapper {
             CountDownLatch latch = new CountDownLatch(1);
             instance.nvSearchTerminalAsync((code, data) -> {
                 if (code == 0) {
+                    SearchTerminal response = gson.fromJson(data, SearchTerminal.class);
+                    String serialNumber = response.getSn();
+                    if (serialNumber.length() > 10 &&  (response.getProductName()).equals("TCC70")) {
+                        System.out.println("Terminal is ready");
+                        System.out.println("Terminal SN: " + serialNumber);
+                        g_sn = serialNumber; 
+                    }
+                    logger.log(Level.INFO, "Updated serial number: {0}", g_sn);
                     future.complete(data); // Complete future with data
                 } else {
                     future.completeExceptionally(new Exception("Search terminal failed")); // Complete with exception
@@ -291,10 +300,10 @@ public class SDKWrapper {
         return future;
     }
 
-    public static CompletableFuture<String> setEthernetInfo() throws InterruptedException {
+    public static CompletableFuture<String> setEthernetInfo(String ip) throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
         try {
-            EthernetData ethernet=new EthernetData(-1, "eth0", false, "192.168.1.50", "255.255.255.0", "192.168.1.1", List.of("8.8.8.8"));
+            EthernetData ethernet=new EthernetData(-1, "eth0", false, ip, "255.255.255.0", "192.168.1.1", List.of("8.8.8.8"));
             EthernetTaskInfo taskInfo= new EthernetTaskInfo(List.of(ethernet));
             String ethernetInfo= gson.toJson(new StringFormatter(g_sn,taskInfo));
             CountDownLatch latch = new CountDownLatch(1);
