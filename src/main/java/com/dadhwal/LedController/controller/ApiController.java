@@ -1,23 +1,33 @@
 package com.dadhwal.LedController.controller;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.InetAddress;
+import java.util.Properties;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.net.InetAddress;
-import java.io.IOException;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.util.Properties;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.dadhwal.LedController.LedSDK.SDKWrapper;
 import com.dadhwal.LedController.controller.requests.MessageRequest;
+import com.dadhwal.LedController.controller.responses.SearchTerminal;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+
+import jakarta.annotation.PostConstruct;
 
 @RestController
 @RequestMapping("/api")
@@ -25,52 +35,58 @@ public class ApiController {
 
     private static final Logger logger = Logger.getLogger(ApiController.class.getName());
     private static final String CONFIG_FILE = "config.properties";
-    private static String controllerIp;
-    private static boolean sdkInitialized = false;
+    private static String controllerIp; // Default IP
+    private static volatile boolean sdkInitialized = false;
+    private static volatile boolean login = false;
+    private static final Gson gson=new Gson();
 
-    static {
+    @PostConstruct
+    public void initialize() {
         loadConfiguration();
         initializeSDK();
     }
 
-    private static void loadConfiguration() {
+    private void loadConfiguration() {
         Properties properties = new Properties();
-        // Load the configuration file from the resources folder using the class loader
-        try (InputStream input = ApiController.class.getClassLoader().getResourceAsStream(CONFIG_FILE)) {
+        try (InputStream input = new FileInputStream("src/main/resources/" + CONFIG_FILE)) {
             if (input == null) {
-                logger.log(Level.SEVERE, "Configuration file not found in resources");
-                controllerIp = "192.168.1.50"; // Default value
+                logger.log(Level.WARNING, "Configuration file not found. Using default IP: " + controllerIp);
             } else {
                 properties.load(input);
-                controllerIp = properties.getProperty("controller.ip", "192.168.1.50"); // Default value
+                controllerIp = properties.getProperty("controller.ip", controllerIp);
             }
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Failed to load configuration", e);
-            controllerIp = "192.168.1.50"; // Default value
         }
     }
 
-    private static void initializeSDK() {
-        if (!sdkInitialized) {
+    private void initializeSDK() {
+        try {
             if (isPingable(controllerIp)) {
-                try {
-                    SDKWrapper.init();
-                    SDKWrapper.searchTerminal();
-                    SDKWrapper.login();
-                    sdkInitialized = true;
-                } catch (InterruptedException e) {
-                    logger.log(Level.SEVERE, "SDK Initialization failed", e);
-                    throw new RuntimeException("SDK Initialization failed", e);
+                SDKWrapper.init();
+                SDKWrapper.searchTerminalByIp(controllerIp);
+                Boolean logined = performLogin();
+                if(logined) {
+                    login=true;
+                    SDKWrapper.createProgramPage();
+                    SDKWrapper.setPageProgram("BCCL", "#5bc0de");
+                    SDKWrapper.makeProgram();
+                    SDKWrapper.transferProgram();
+
                 }
+                sdkInitialized = true;
             } else {
-                logger.log(Level.SEVERE, "SDK IP is not reachable: " + controllerIp);
+                logger.log(Level.WARNING, "Controller IP is not reachable: " + controllerIp);
             }
-        } else {
-            logger.log(Level.INFO, "SDK already initialized.");
+        } catch (InterruptedException e) {
+            logger.log(Level.SEVERE, "SDK Initialization interrupted", e);
+            Thread.currentThread().interrupt();
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, "Unexpected error during SDK initialization", e);
         }
     }
 
-    private static boolean isPingable(String ipAddress) {
+    private boolean isPingable(String ipAddress) {
         try {
             InetAddress inet = InetAddress.getByName(ipAddress);
             return inet.isReachable(3000); // 3-second timeout
@@ -80,24 +96,55 @@ public class ApiController {
         }
     }
 
-    // Scheduled task to check the IP every 5 minutes and initialize the SDK if reachable
-    @Scheduled(fixedRate = 300000) // 5 minutes in milliseconds
-    public void checkSdkInitialization() {
-        if (!sdkInitialized && isPingable(controllerIp)) {
-            try {
-                initializeSDK();
-                logger.log(Level.INFO, "SDK Initialized successfully after IP became reachable.");
-            } catch (Exception e) {
-                logger.log(Level.SEVERE, "Error initializing SDK", e);
-            }
+    @Scheduled(fixedRate = 30000) // Retry every 30 Second
+    public void checkAndInitializeSDK() {
+        if(!isPingable(controllerIp)){
+            login = false;
+            return;
+        }
+        if (!sdkInitialized) {
+            logger.log(Level.INFO, "Retrying SDK initialization...");
+            initialize();
         }
     }
 
     private ResponseEntity<String> checkSdkStatus() {
         if (!sdkInitialized) {
-            return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("Screen is not reachable. SDK not initialized.");
+            return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("SDK not initialized yet.");
         }
         return null;
+    }
+
+    private boolean performLogin() {
+        try {
+            CompletableFuture<String> res = SDKWrapper.login();
+            String result = res.get(); // Block until the login result is available
+
+            // Parse the JSON response
+            JsonObject response = gson.fromJson(result, JsonObject.class);
+
+            // Check if the "logined" field is true
+            if (response.has("logined") && response.get("logined").getAsBoolean()) {
+                login = true; // Set the login state to true
+                return true; // Login was successful
+            } else {
+                login = false; // Explicitly set to false if "logined" is not true
+            }
+        } catch (InterruptedException | ExecutionException e) {
+            logger.log(Level.SEVERE, "Login failed", e);
+            login = false; // Ensure login is set to false in case of failure
+        }
+        return false; // Login was not successful
+    }
+
+
+    @GetMapping("/sdkStatus")
+    public ResponseEntity<String> getSdkStatus() {
+        if (sdkInitialized) {
+            return ResponseEntity.ok("SDK is initialized.");
+        } else {
+            return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("SDK not initialized yet.");
+        }
     }
 
     @GetMapping("/updateConfig")
@@ -125,6 +172,7 @@ public class ApiController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to update configuration file");
         }
 
+        checkAndInitializeSDK();
         return ResponseEntity.ok("Configuration updated successfully to IP: " + newIp);
     }
 
@@ -140,7 +188,29 @@ public class ApiController {
 
         try {
             CompletableFuture<String> resultFuture = SDKWrapper.searchTerminal();
+            String result = resultFuture.get();
+            return ResponseEntity.ok(result);
+        } catch (InterruptedException | ExecutionException e) {
+            logger.log(Level.SEVERE, "Search Terminal failed", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Search Terminal failed");
+        }
+    }
+
+    @GetMapping("/searchScreen")
+    public ResponseEntity<String> searchTerminalIp() {
+        ResponseEntity<String> sdkStatus = checkSdkStatus();
+        if (sdkStatus != null) return sdkStatus;
+
+        try {
+            CompletableFuture<String> resultFuture = SDKWrapper.searchTerminalByIp(controllerIp);
             String result = resultFuture.get(); // This will block until the future completes
+            SearchTerminal response = gson.fromJson(result, SearchTerminal.class);
+            if (!response.isLogined()){
+                Boolean logined = performLogin();
+                if(logined) {
+                    login=true;
+                }
+            }
             return ResponseEntity.ok(result);
         } catch (InterruptedException | ExecutionException e) {
             logger.log(Level.SEVERE, "Search Terminal failed", e);
@@ -154,9 +224,31 @@ public class ApiController {
         if (sdkStatus != null) return sdkStatus;
 
         try {
-            CompletableFuture<String> res = SDKWrapper.login();
-            return ResponseEntity.ok(res.get());
-        } catch (InterruptedException | ExecutionException e) {
+            Boolean logined = performLogin();
+            if(logined) {
+                return ResponseEntity.ok("Login Successful");
+            } else {
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login Failed");
+            }
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, "Login failed", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Login Failed");
+        }
+    }
+
+    @GetMapping("/login")
+    public ResponseEntity<String> getlogin() {
+        ResponseEntity<String> sdkStatus = checkSdkStatus();
+        if (sdkStatus != null) return sdkStatus;
+
+        try {
+            Boolean logined = performLogin();
+            if(logined) {
+                return ResponseEntity.ok("Login Successful");
+            } else {
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login Failed");
+            }
+        } catch (Exception e) {
             logger.log(Level.SEVERE, "Login failed", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Login Failed");
         }
@@ -218,20 +310,59 @@ public class ApiController {
         }
     }
 
-    @PostMapping("/publishMessage")
-    public ResponseEntity<String> setPublishMessage(@RequestBody MessageRequest messageRequest) {
+     @PostMapping("/publishMessage")
+     public ResponseEntity<String> setPublishMessage(@RequestBody MessageRequest messageRequest) throws InterruptedException {
+        if(!login && sdkInitialized) {
+            searchTerminalIp();
+        }
+         ResponseEntity<String> sdkStatus = checkSdkStatus();
+         if (sdkStatus != null) return sdkStatus;
+
+         try {
+             String info = messageRequest.getInfo();
+             String success = messageRequest.getSuccess();
+             String error = messageRequest.getError();
+             if (info != null) {
+                 SDKWrapper.setPageProgram(info, "#5bc0de");
+             } else if (success != null) {
+                 SDKWrapper.setPageProgram(success, "#22bb33");
+             } else {
+                 SDKWrapper.setPageProgram(error, "#bb2124");
+             }
+
+             SDKWrapper.makeProgram();
+             CompletableFuture<String> res = SDKWrapper.transferProgram();
+             return ResponseEntity.ok(res.get());
+         } catch (InterruptedException | ExecutionException e) {
+             logger.log(Level.SEVERE, "Error Publishing Message", e);
+             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Set Page Program failed");
+         }
+     }
+
+   
+    @GetMapping("/publishMessage")
+    public ResponseEntity<String> setPublishMessage(
+        @RequestParam(required = false) String info,
+        @RequestParam(required = false) String success,
+        @RequestParam(required = false) String error) {
+        if(!login && sdkInitialized) {
+            Boolean logined = performLogin();
+            if(logined) {
+                login=true;
+            }
+        }
+
         ResponseEntity<String> sdkStatus = checkSdkStatus();
         if (sdkStatus != null) return sdkStatus;
 
         try {
-            String info = messageRequest.getInfo();
-            String success = messageRequest.getSuccess();
-            String error = messageRequest.getError();
+            SDKWrapper.createProgramPage();
+            // Check which parameter is provided and set the page program accordingly
             if (info != null) {
                 SDKWrapper.setPageProgram(info, "#5bc0de");
             } else if (success != null) {
                 SDKWrapper.setPageProgram(success, "#22bb33");
-            } else {
+            } else if (error != null) {
                 SDKWrapper.setPageProgram(error, "#bb2124");
             }
 
@@ -243,6 +374,7 @@ public class ApiController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Set Page Program failed");
         }
     }
+
 
     @GetMapping("/getProgramInfo")
     public ResponseEntity<String> getProgramInfo() {

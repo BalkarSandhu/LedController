@@ -34,8 +34,19 @@ tasks.named('test') {
 
 task copyDll(type: Copy) {
 	from 'src/main/resources/SDK'
-	into 'build/libs/SDK'
+	into 'build/src/main/resources/SDK'
 }
+
+tasks.withType(JavaExec) {
+	systemProperty 'java.library.path', "${projectDir}/src/main/resources/SDK/bin"
+}
+
+//tasks.processResources {
+//	duplicatesStrategy = 'exclude'
+//	from('src/main/resources') {
+//		include '**/*.dll'
+//	}
+//}
 
 // Task to create the final JAR including the DLL file
 bootJar {

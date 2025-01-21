@@ -54,8 +54,16 @@ public class SDKWrapper {
     public static void init() {
         try {
             System.setProperty("jna.encoding", "UTF-8");
-            instance = Native.load("src\\main\\resources\\SDK\\bin\\viplexcore.dll", ViplexCore.class);
 
+            String dllPath = System.getProperty("user.dir") + "/src/main/resources/SDK/bin/viplexcore.dll";
+            dllPath = dllPath.replace("/", "\\");
+
+            // Debug the DLL path
+            System.out.println("Loading DLL from: " + dllPath);
+
+
+            instance = Native.loadLibrary(dllPath, ViplexCore.class);
+//            instance = Native.load("src\\main\\resources\\SDK\\bin\\viplexcore.dll", ViplexCore.class);
             String companyInfo = gson.toJson(new CompanyInfo("FleetSafe India","9992391581","balkar@fleetsafeindia.com"));
             instance.nvSetDevLang("Java");
             instance.nvInit(ROOTDIR, companyInfo);
@@ -90,6 +98,35 @@ public class SDKWrapper {
         }
         return future;
     }
+
+    public static CompletableFuture<String> searchTerminalByIp(String ip) throws InterruptedException {
+        CompletableFuture<String> future = new CompletableFuture<>();
+        try {
+            String searchParam = gson.toJson(new SearchTerminalip(ip));
+            CountDownLatch latch = new CountDownLatch(1);
+            instance.nvSearchAppointIpAsync(searchParam, (code, data) -> {
+                if (code == 0) {
+                    SearchTerminal response = gson.fromJson(data, SearchTerminal.class);
+                    String serialNumber = response.getSn();
+                    if (serialNumber.length() > 10 &&  (response.getProductName()).equals("TCC70")) {
+                        System.out.println("Terminal is ready");
+                        System.out.println("Terminal SN: " + serialNumber);
+                        g_sn = serialNumber;
+                    }
+                    logger.log(Level.INFO, "Updated serial number: {0}", g_sn);
+                    future.complete(data); // Complete future with data
+                } else {
+                    future.completeExceptionally(new Exception("Search terminal failed")); // Complete with exception
+                }
+                latch.countDown();
+            });
+            waitAPIReturn(latch);
+        } catch (InterruptedException e){
+            future.completeExceptionally(e);
+        }
+        return future;
+    }
+
 
     public static CompletableFuture<String> login() throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
@@ -168,7 +205,16 @@ public class SDKWrapper {
     private static Content getContent(String s, String textColor, BackgroundMusic backgroundMusic) {
         Effects effects=new Effects("MARQUEE_LEFT",1);
         ScrollAttributes scrollAttributes=new ScrollAttributes(effects);
-        DisplayStyle displayStyle=new DisplayStyle(scrollAttributes,"STATIC");
+        DisplayStyle displayStyle;
+
+    // Check the length of the string
+        if (s.length() > 10) {
+            // Use SCROLL if the string length is greater than 9
+            displayStyle = new DisplayStyle(scrollAttributes, "SCROLL");
+        } else {
+            // Use STATIC otherwise
+            displayStyle = new DisplayStyle(scrollAttributes, "STATIC");
+        }
         Seg seg=new Seg(s);
         Line lines=new Line(List.of(seg));
         Paragraph paragraphs=new Paragraph("#00000000","CENTER",0,0,List.of(lines),"TOP");
@@ -300,16 +346,25 @@ public class SDKWrapper {
         return future;
     }
 
+    private static String setGateway(String ip) {
+        String[] ipParts = ip.split("\\.");
+        // Set the last octet to '1' for the gateway
+        ipParts[3] = "1";
+        return String.join(".", ipParts);
+    }
+
     public static CompletableFuture<String> setEthernetInfo(String ip) throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
         try {
-            EthernetData ethernet=new EthernetData(-1, "eth0", false, ip, "255.255.255.0", "192.168.1.1", List.of("8.8.8.8"));
+            String gateway = setGateway(ip);
+
+            EthernetData ethernet=new EthernetData(-1, "eth0", false, ip, "255.255.255.0", gateway, List.of("8.8.8.8", "1.1.1.1"));
             EthernetTaskInfo taskInfo= new EthernetTaskInfo(List.of(ethernet));
             String ethernetInfo= gson.toJson(new StringFormatter(g_sn,taskInfo));
             CountDownLatch latch = new CountDownLatch(1);
-            instance.nvSetEthernetInfoAsync(ethernetInfo, (code, result) -> {
+            instance.nvSetEthernetInfoAsync(ethernetInfo, (code, data) -> {
                 if(code == 0){
-                    future.complete(result);
+                    future.complete("Screen Ip Successfully Set to: "+ip);
                 } else {
                     future.completeExceptionally(new Exception("Set Ethernet Info Failed"));
                 }

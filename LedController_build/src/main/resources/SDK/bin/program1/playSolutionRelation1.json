@@ -1,0 +1,1 @@
+{"id":1,"name":"playSolutionRelation1.json","playSolutionSource":"","relations":[{"playSolutionSource":"play_solution1.json","scheduleConstraints":[{"constraintId":1,"constraintSource":"schedule_constraint1.json","playlists":[{"playlistId":1,"playlistSource":"playlist1.json"}]}],"taskId":1}]}
