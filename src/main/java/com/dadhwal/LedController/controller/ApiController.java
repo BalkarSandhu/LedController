@@ -42,6 +42,7 @@ public class ApiController {
 
     @PostConstruct
     public void initialize() {
+        System.out.println("Initializing SDK 1");
         loadConfiguration();
         initializeSDK();
     }
@@ -204,6 +205,7 @@ public class ApiController {
         try {
             CompletableFuture<String> resultFuture = SDKWrapper.searchTerminalByIp(controllerIp);
             String result = resultFuture.get(); // This will block until the future completes
+            System.out.println(result);
             SearchTerminal response = gson.fromJson(result, SearchTerminal.class);
             if (!response.isLogined()){
                 Boolean logined = performLogin();
@@ -313,7 +315,10 @@ public class ApiController {
      @PostMapping("/publishMessage")
      public ResponseEntity<String> setPublishMessage(@RequestBody MessageRequest messageRequest) throws InterruptedException {
         if(!login && sdkInitialized) {
-            searchTerminalIp();
+            Boolean logined = performLogin();
+            if(logined) {
+                login=true;
+            }
         }
          ResponseEntity<String> sdkStatus = checkSdkStatus();
          if (sdkStatus != null) return sdkStatus;
@@ -326,9 +331,11 @@ public class ApiController {
                  SDKWrapper.setPageProgram(info, "#5bc0de");
              } else if (success != null) {
                  SDKWrapper.setPageProgram(success, "#22bb33");
-             } else {
-                 SDKWrapper.setPageProgram(error, "#bb2124");
-             }
+             } else if (error != null) {
+                SDKWrapper.setPageProgram(error, "#bb2124");
+            } else {
+                SDKWrapper.setPageProgram("Incorrect Input", "#bb2124");
+            }
 
              SDKWrapper.makeProgram();
              CompletableFuture<String> res = SDKWrapper.transferProgram();
@@ -364,6 +371,8 @@ public class ApiController {
                 SDKWrapper.setPageProgram(success, "#22bb33");
             } else if (error != null) {
                 SDKWrapper.setPageProgram(error, "#bb2124");
+            } else {
+                SDKWrapper.setPageProgram("Incorrect Input", "#bb2124");
             }
 
             SDKWrapper.makeProgram();
