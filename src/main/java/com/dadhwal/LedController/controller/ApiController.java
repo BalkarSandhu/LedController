@@ -34,6 +34,7 @@ import jakarta.annotation.PostConstruct;
 public class ApiController {
 
     private static final Logger logger = Logger.getLogger(ApiController.class.getName());
+    private static volatile boolean isProcessingPublishMessage = false;
     private static final String CONFIG_FILE = "config.properties";
     private static String controllerIp; // Default IP
     private static volatile boolean sdkInitialized = false;
@@ -314,6 +315,13 @@ public class ApiController {
 
      @PostMapping("/publishMessage")
      public ResponseEntity<String> setPublishMessage(@RequestBody MessageRequest messageRequest) throws InterruptedException {
+        if (isProcessingPublishMessage) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Previous publish message is still being processed. Please wait.");
+        }
+
+        // Set the flag to indicate that the processing has started
+        isProcessingPublishMessage = true;
+
         if(!login && sdkInitialized) {
             Boolean logined = performLogin();
             if(logined) {
@@ -343,47 +351,97 @@ public class ApiController {
          } catch (InterruptedException | ExecutionException e) {
              logger.log(Level.SEVERE, "Error Publishing Message", e);
              return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Set Page Program failed");
-         }
+         } finally {
+            // Reset the flag after processing
+            isProcessingPublishMessage = false;
+        }
      }
 
-   
-    @GetMapping("/publishMessage")
-    public ResponseEntity<String> setPublishMessage(
-        @RequestParam(required = false) String info,
-        @RequestParam(required = false) String success,
-        @RequestParam(required = false) String error) {
-        if(!login && sdkInitialized) {
-            Boolean logined = performLogin();
-            if(logined) {
-                login=true;
-            }
-        }
-
-        ResponseEntity<String> sdkStatus = checkSdkStatus();
-        if (sdkStatus != null) return sdkStatus;
-
-        try {
-            SDKWrapper.createProgramPage();
-            // Check which parameter is provided and set the page program accordingly
-            if (info != null) {
-                SDKWrapper.setPageProgram(info, "#5bc0de");
-            } else if (success != null) {
-                SDKWrapper.setPageProgram(success, "#22bb33");
-            } else if (error != null) {
-                SDKWrapper.setPageProgram(error, "#bb2124");
-            } else {
-                SDKWrapper.setPageProgram("Incorrect Input", "#bb2124");
-            }
-
-            SDKWrapper.makeProgram();
-            CompletableFuture<String> res = SDKWrapper.transferProgram();
-            return ResponseEntity.ok(res.get());
-        } catch (InterruptedException | ExecutionException e) {
-            logger.log(Level.SEVERE, "Error Publishing Message", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Set Page Program failed");
-        }
-    }
-
+     @GetMapping("/publishMessage")
+     public ResponseEntity<String> setPublishMessage(
+         @RequestParam(required = false) String info,
+         @RequestParam(required = false) String success,
+         @RequestParam(required = false) String error) {
+     
+         if (isProcessingPublishMessage) {
+             return ResponseEntity.status(HttpStatus.CONFLICT).body("Previous publish message is still being processed. Please wait.");
+         }
+     
+         // Set the flag to indicate that the processing has started
+         isProcessingPublishMessage = true;
+     
+         // Perform initial login if not logged in, and SDK is initialized
+         if (!login && sdkInitialized) {
+             Boolean logined = performLogin(); // Automatically perform login
+             if (logined) {
+                 login = true;
+             } else {
+                 isProcessingPublishMessage = false;  // Reset flag on failure
+                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Initial login failed.");
+             }
+         }
+     
+         ResponseEntity<String> sdkStatus = checkSdkStatus();
+         if (sdkStatus != null) {
+             isProcessingPublishMessage = false;  // Reset flag if SDK status check fails
+             return sdkStatus;
+         }
+     
+         int retryCount = 3; // Maximum number of retries
+         int attempt = 0;
+     
+         try {
+             while (attempt < retryCount) {
+                 try {
+                     // Re-run the entire process on every retry
+     
+                     SDKWrapper.createProgramPage();  // Recreate the program page
+     
+                     // Check which parameter is provided and set the page program accordingly
+                     if (info != null) {
+                         SDKWrapper.setPageProgram(info, "#5bc0de");
+                     } else if (success != null) {
+                         SDKWrapper.setPageProgram(success, "#22bb33");
+                     } else if (error != null) {
+                         SDKWrapper.setPageProgram(error, "#bb2124");
+                     } else {
+                         SDKWrapper.setPageProgram("Incorrect Input", "#bb2124");
+                     }
+     
+                     SDKWrapper.makeProgram();  // Create the program
+                     CompletableFuture<String> res = SDKWrapper.transferProgram();  // Transfer the program
+                     return ResponseEntity.ok(res.get());  // Return the result of the transfer
+     
+                 } catch (InterruptedException | ExecutionException e) {
+                     attempt++;
+                     logger.log(Level.SEVERE, "Error Publishing Message, Attempt " + attempt, e);
+     
+                     if (attempt == retryCount) {
+                         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Set Page Program failed after " + retryCount + " attempts.");
+                     }
+     
+                     // Attempt to login again automatically before retrying
+                     logger.log(Level.INFO, "Attempting to login before retrying...");
+                     performLogin();  // Automatically perform login again if an error occurs
+     
+                     // Retry after a small delay (optional)
+                     try {
+                         Thread.sleep(2000); // Retry delay of 2 seconds (adjust as needed)
+                     } catch (InterruptedException ie) {
+                         // Handle thread interruption
+                         Thread.currentThread().interrupt();
+                         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Thread interrupted while retrying.");
+                     }
+                 }
+             }
+     
+             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Unexpected error occurred.");
+         } finally {
+             // Reset the flag after processing
+             isProcessingPublishMessage = false;
+         }
+     }
+     
 
     @GetMapping("/getProgramInfo")
     public ResponseEntity<String> getProgramInfo() {
