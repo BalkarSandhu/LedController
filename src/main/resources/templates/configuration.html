@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Controller Configuration</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .tabs { display: flex; margin-bottom: 20px; }
+        .tab { padding: 10px 20px; background: #f0f0f0; border: none; cursor: pointer; margin-right: 5px; }
+        .tab.active { background: #007bff; color: white; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .section { background: #f8f9fa; padding: 20px; margin-bottom: 20px; border: 1px solid #ddd; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 8px; border: 1px solid #ddd; }
+        .btn { background: #007bff; color: white; border: none; padding: 8px 15px; cursor: pointer; margin-right: 10px; }
+        .btn.success { background: #28a745; }
+        .btn.danger { background: #dc3545; }
+        .btn.info { background: #17a2b8; }
+        .status { padding: 10px; margin-top: 10px; display: none; }
+        .status.success { background: #d4edda; color: #155724; }
+        .status.error { background: #f8d7da; color: #721c24; }
+        .status.info { background: #d1ecf1; color: #0c5460; }
+        .system-info { background: #f8f9fa; padding: 15px; border: 1px solid #ddd; margin-top: 15px; }
+        .status-row { display: flex; justify-content: space-between; margin-bottom: 10px; padding: 5px 0; }
+        .status-value { font-family: monospace; background: #fff; padding: 2px 8px; border: 1px solid #ddd; }
+        .output-area { background: #f8f9fa; padding: 15px; border: 1px solid #ddd; margin-top: 15px; min-height: 100px; font-family: monospace; white-space: pre-wrap; }
+        .message-controls { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+        .custom-message-row { display: flex; gap: 10px; margin-top: 15px; }
+        .custom-message-row input { flex: 1; }
+        .custom-message-row select { width: auto; min-width: 120px; }
+        .volume-controls { display: flex; gap: 15px; align-items: center; margin-top: 15px; }
+        .volume-display { font-weight: bold; background: #fff; padding: 8px 15px; border: 1px solid #ddd; }
+        .file-input-container { position: relative; }
+        .file-validation { font-size: 12px; color: #666; margin-top: 5px; }
+        .file-validation.error { color: #dc3545; }
+        .file-validation.success { color: #28a745; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>LED Controller Configuration</h1>
+
+    <div class="tabs">
+        <button class="tab active" onclick="switchTab('config')">Configuration</button>
+        <button class="tab" onclick="switchTab('message')">Message Control</button>
+        <button class="tab" onclick="switchTab('system')">System Status</button>
+    </div>
+
+    <div id="config-content" class="tab-content active">
+        <div class="system-info">
+            <h3>Current System Status</h3>
+            <div class="status-row">
+                <span>SDK Status:</span>
+                <span class="status-value" id="sdkStatus">Loading...</span>
+            </div>
+            <div class="status-row">
+                <span>Login Status:</span>
+                <span class="status-value" id="loginStatus">Checking...</span>
+            </div>
+            <div class="status-row">
+                <span>Connection Status:</span>
+                <span class="status-value" id="connectionStatus">Unknown</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Screen IP Configuration</h2>
+            <div class="form-group">
+                <label>Controller IP Address</label>
+                <input type="text" id="screenIp" placeholder="192.168.1.50" value="192.168.1.50">
+            </div>
+            <button class="btn" onclick="updateScreenIp()">Update Screen IP</button>
+            <button class="btn info" onclick="testConnection()">Test Connection</button>
+        </div>
+
+        <div class="section">
+            <h2>Authentication & Search</h2>
+            <p>Search for screen (this will automatically login if needed):</p>
+            <button class="btn success" onclick="searchScreen()">Search Screen & Auto Login</button>
+            <button class="btn info" onclick="checkSdkStatus()">Check SDK Status</button>
+        </div>
+
+        <div class="section">
+            <h2>File Configuration</h2>
+            <div class="form-group">
+                <label>File Path (Only .txt files accepted)</label>
+                <div class="file-input-container">
+                    <input type="text" id="filePath" placeholder="/path/to/your/file.txt" value="">
+                    <div class="file-validation" id="fileValidation">Please enter a path ending with .txt</div>
+                </div>
+            </div>
+            <button class="btn" onclick="updateFilePath()">Update File Path</button>
+            <button class="btn info" onclick="readFile()">Read File</button>
+            <div class="output-area" id="fileContent" style="display: none;"></div>
+        </div>
+    </div>
+
+    <div id="message-content" class="tab-content">
+        <div class="section">
+            <h2>Publish Message</h2>
+            <div class="message-controls">
+                <button class="btn info" onclick="sendQuickMessage('info', 'System Information')">Send Info</button>
+                <button class="btn success" onclick="sendQuickMessage('success', 'Operation Successful')">Send Success</button>
+                <button class="btn danger" onclick="sendQuickMessage('error', 'Error Occurred')">Send Error</button>
+            </div>
+
+            <div class="custom-message-row">
+                <input type="text" id="customMessage" placeholder="Enter custom message">
+                <select id="messageType">
+                    <option value="info">Info</option>
+                    <option value="success">Success</option>
+                    <option value="error">Error</option>
+                </select>
+                <button class="btn" onclick="sendCustomMessage()">Send Custom</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Volume Control</h2>
+            <div class="volume-controls">
+                <button class="btn info" onclick="getVolume()">Get Volume</button>
+                <div class="volume-display" id="volumeDisplay">Volume: --</div>
+                <button class="btn" onclick="setVolume()">Set Volume</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Screen Information</h2>
+            <button class="btn info" onclick="setScreenInfo()">Set Screen Info</button>
+        </div>
+    </div>
+
+    <div id="system-content" class="tab-content">
+        <div class="section">
+            <h2>System Operations</h2>
+            <button class="btn info" onclick="refreshSystemStatus()">Refresh All Status</button>
+            <button class="btn info" onclick="testNetworkConnection()">Test Network</button>
+        </div>
+
+        <div class="section">
+            <h2>System Information</h2>
+            <div class="output-area" id="systemInfo">Click "Refresh All Status" to load system information...</div>
+        </div>
+
+        <div class="section">
+            <h2>Debug Information</h2>
+            <div class="output-area" id="debugInfo">Debug information will appear here...</div>
+        </div>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+</div>
+
+<script>
+    const API_BASE = '/api';
+    let isInitialized = false;
+    let isLoggedIn = false;
+
+    function switchTab(tabName) {
+        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+        event.target.classList.add('active');
+        document.getElementById(tabName + '-content').classList.add('active');
+    }
+
+    function showStatus(message, type = 'info') {
+        const statusDiv = document.getElementById('statusMessage');
+        statusDiv.textContent = message;
+        statusDiv.className = `status ${type}`;
+        statusDiv.style.display = 'block';
+
+        console.log(`[${type.toUpperCase()}] ${message}`);
+
+        setTimeout(() => {
+            statusDiv.style.display = 'none';
+        }, 5000);
+    }
+
+    function logDebug(message) {
+        const debugDiv = document.getElementById('debugInfo');
+        const timestamp = new Date().toLocaleTimeString();
+        debugDiv.textContent += `[${timestamp}] ${message}\n`;
+        debugDiv.scrollTop = debugDiv.scrollHeight;
+    }
+
+    function updateLoginStatus(loggedIn) {
+        isLoggedIn = loggedIn;
+        const statusElement = document.getElementById('loginStatus');
+        if (loggedIn) {
+            statusElement.textContent = 'Logged In';
+            statusElement.style.color = 'green';
+        } else {
+            statusElement.textContent = 'Not Logged In';
+            statusElement.style.color = 'red'; 
+        }
+    }
+
+    function validateFilePath(path) {
+        const validationDiv = document.getElementById('fileValidation');
+        
+        if (!path) {
+            validationDiv.textContent = 'Please enter a file path';
+            validationDiv.className = 'file-validation error';
+            return false;
+        }
+        
+        if (!path.toLowerCase().endsWith('.txt')) {
+            validationDiv.textContent = 'Error: Only .txt files are accepted';
+            validationDiv.className = 'file-validation error';
+            return false;
+        }
+        
+        validationDiv.textContent = 'Valid .txt file path';
+        validationDiv.className = 'file-validation success';
+        return true;
+    }
+
+    // Add real-time validation for file path input
+    document.addEventListener('DOMContentLoaded', function() {
+        const filePathInput = document.getElementById('filePath');
+        filePathInput.addEventListener('input', function() {
+            validateFilePath(this.value);
+        });
+    });
+
+    async function checkSdkStatus() {
+        logDebug('Checking SDK status...');
+
+        try {
+            const response = await fetch(`${API_BASE}/sdkStatus`);
+            const result = await response.text();
+
+            if (response.ok) {
+                isInitialized = true;
+                document.getElementById('sdkStatus').textContent = 'Initialized';
+                document.getElementById('sdkStatus').style.color = 'green';
+                showStatus('SDK is initialized', 'success');
+                logDebug('SDK status: Initialized');
+            } else {
+                isInitialized = false;
+                document.getElementById('sdkStatus').textContent = 'Not Initialized';
+                document.getElementById('sdkStatus').style.color = 'red';
+                showStatus('SDK not initialized', 'error');
+                logDebug('SDK status: Not initialized');
+            }
+        } catch (error) {
+            document.getElementById('sdkStatus').textContent = 'Error';
+            document.getElementById('sdkStatus').style.color = 'red';
+            showStatus(`SDK status check error: ${error.message}`, 'error');
+            logDebug(`SDK status check error: ${error.message}`);
+        }
+    }
+
+    async function updateScreenIp() {
+        const ip = document.getElementById('screenIp').value;
+        if (!ip) {
+            showStatus('Please enter a valid IP address', 'error');
+            return;
+        }
+
+        showStatus('Updating screen IP...', 'info');
+        logDebug(`Updating screen IP to: ${ip}`);
+
+        try {
+            const response = await fetch(`${API_BASE}/updateConfig?newIp=${encodeURIComponent(ip)}`);
+            const result = await response.text();
+
+            if (response.ok) {
+                showStatus(`Screen IP updated successfully: ${result}`, 'success');
+                logDebug(`Screen IP updated: ${result}`);
+                // Reset login status when IP changes
+                updateLoginStatus(false);
+                // Re-check status after IP update
+                setTimeout(() => checkSdkStatus(), 2000);
+            } else {
+                showStatus(`Failed to update IP: ${result}`, 'error');
+                logDebug(`IP update failed: ${result}`);
+            }
+        } catch (error) {
+            showStatus(`Error updating IP: ${error.message}`, 'error');
+            logDebug(`IP update error: ${error.message}`);
+        }
+    }
+
+    async function searchScreen() {
+        if (!isInitialized) {
+            showStatus('Please wait for SDK to initialize or refresh the page', 'error');
+            return;
+        }
+
+        showStatus('Searching for screen (will auto-login if needed)...', 'info');
+        logDebug('Searching for screen...');
+
+        try {
+            const response = await fetch(`${API_BASE}/searchScreen`);
+            const result = await response.text();
+
+            if (response.ok) {
+                showStatus('Screen search completed', 'success');
+                document.getElementById('systemInfo').textContent = `Screen Search Results:\n${result}`;
+                logDebug(`Screen search: ${result}`);
+
+                // Parse response to check if logged in
+                try {
+                    const searchResult = JSON.parse(result);
+                    if (searchResult.logined === true) {
+                        updateLoginStatus(true);
+                        showStatus('Screen found and logged in automatically', 'success');
+                        logDebug('Automatic login successful');
+                    } else {
+                        updateLoginStatus(false);
+                        showStatus('Screen found but not logged in', 'error');
+                        logDebug('Screen found but login failed');
+                    }
+                } catch (parseError) {
+                    logDebug('Could not parse search result as JSON');
+                    // If we can't parse as JSON, but the response was successful, assume login worked
+                    updateLoginStatus(true);
+                }
+            } else {
+                showStatus(`Screen search failed: ${result}`, 'error');
+                logDebug(`Screen search failed: ${result}`);
+                updateLoginStatus(false);
+            }
+        } catch (error) {
+            showStatus(`Search error: ${error.message}`, 'error');
+            logDebug(`Screen search error: ${error.message}`);
+            updateLoginStatus(false);
+        }
+    }
+
+    async function testConnection() {
+        showStatus('Testing connection...', 'info');
+        logDebug('Testing connection...');
+
+        try {
+            const response = await fetch(`${API_BASE}/test`);
+            const result = await response.text();
+
+            if (response.ok) {
+                document.getElementById('connectionStatus').textContent = 'Connected';
+                document.getElementById('connectionStatus').style.color = 'green';
+                showStatus(`Connection test successful: ${result}`, 'success');
+                logDebug(`Connection test: ${result}`);
+            } else {
+                document.getElementById('connectionStatus').textContent = 'Failed';
+                document.getElementById('connectionStatus').style.color = 'red';
+                showStatus(`Connection test failed: ${result}`, 'error');
+                logDebug(`Connection test failed: ${result}`);
+            }
+        } catch (error) {
+            document.getElementById('connectionStatus').textContent = 'Error';
+            document.getElementById('connectionStatus').style.color = 'red';
+            showStatus(`Connection test error: ${error.message}`, 'error');
+            logDebug(`Connection test error: ${error.message}`);
+        }
+    }
+
+    async function sendQuickMessage(type, message) {
+        // Remove the login check - let the backend handle it
+        showStatus(`Sending ${type} message...`, 'info');
+        logDebug(`Sending ${type} message: ${message}`);
+
+        try {
+            const response = await fetch(`${API_BASE}/publishMessage?${type}=${encodeURIComponent(message)}`);
+            const result = await response.text();
+
+            if (response.ok) {
+                showStatus(`Message sent successfully: ${result}`, 'success');
+                logDebug(`Message sent: ${result}`);
+            } else {
+                showStatus(`Failed to send message: ${result}`, 'error');
+                logDebug(`Message failed: ${result}`);
+
+                // If the message failed, try to search screen again to re-login
+                if (result.includes('login') || result.includes('Login')) {
+                    showStatus('Attempting to re-login...', 'info');
+                    await searchScreen();
+                }
+            }
+        } catch (error) {
+            showStatus(`Error sending message: ${error.message}`, 'error');
+            logDebug(`Message error: ${error.message}`);
+        }
+    }
+
+    async function sendCustomMessage() {
+        const message = document.getElementById('customMessage').value;
+        const type = document.getElementById('messageType').value;
+
+        if (!message) {
+            showStatus('Please enter a message', 'error');
+            return;
+        }
+
+        // Remove the login check - let the backend handle it
+        showStatus(`Sending ${type} message...`, 'info');
+        logDebug(`Sending custom ${type} message: ${message}`);
+
+        try {
+            const response = await fetch(`${API_BASE}/publishMessage?${type}=${encodeURIComponent(message)}`);
+            const result = await response.text();
+
+            if (response.ok) {
+                showStatus(`Message sent successfully: ${result}`, 'success');
+                logDebug(`Custom message sent: ${result}`);
+                document.getElementById('customMessage').value = '';
+            } else {
+                showStatus(`Failed to send message: ${result}`, 'error');
+                logDebug(`Custom message failed: ${result}`);
+
+                // If the message failed, try to search screen again to re-login
+                if (result.includes('login') || result.includes('Login')) {
+                    showStatus('Attempting to re-login...', 'info');
+                    await searchScreen();
+                }
+            }
+        } catch (error) {
+            showStatus(`Error sending message: ${error.message}`, 'error');
+            logDebug(`Custom message error: ${error.message}`);
+        }
+    }
+
+    async function updateFilePath() {
+        const path = document.getElementById('filePath').value;
+        
+        if (!validateFilePath(path)) {
+            showStatus('Please enter a valid .txt file path', 'error');
+            return;
+        }
+
+        showStatus('Updating file path...', 'info');
+        logDebug(`Updating file path: ${path}`);
+
+        try {
+            const response = await fetch(`${API_BASE}/updateWbFile?newPath=${encodeURIComponent(path)}`);
+            const result = await response.text();
+
+            if (response.ok) {
+                showStatus(`File path updated: ${result}`, 'success');
+                logDebug(`File path updated: ${result}`);
+            } else {
+                showStatus(`Failed to update file path: ${result}`, 'error');
+                logDebug(`File path update failed: ${result}`);
+            }
+        } catch (error) {
+            showStatus(`Error updating file path: ${error.message}`, 'error');
+            logDebug(`File path update error: ${error.message}`);
+        }
+    }
+
+    async function readFile() {
+        const path = document.getElementById('filePath').value;
+        
+        if (!validateFilePath(path)) {
+            showStatus('Please enter a valid .txt file path first', 'error');
+            return;
+        }
+
+        showStatus('Reading file...', 'info');
+        logDebug('Reading file...');
+
+        try {
+            const response = await fetch(`${API_BASE}/readable`);
+            const result = await response.text();
+
+            if (response.ok) {
+                document.getElementById('fileContent').textContent = result;
+                document.getElementById('fileContent').style.display = 'block';
+                showStatus('File read successfully', 'success');
+                logDebug('File read successfully');
+            } else {
+                showStatus(`Failed to read file: ${result}`, 'error');
+                logDebug(`File read failed: ${result}`);
+            }
+        } catch (error) {
+            showStatus(`Error reading file: ${error.message}`, 'error');
+            logDebug(`File read error: ${error.message}`);
+        }
+    }
+
+    async function getVolume() {
+        showStatus('Getting volume...', 'info');
+        logDebug('Getting volume...');
+
+        try {
+            const response = await fetch(`${API_BASE}/getVolume`);
+            const result = await response.text();
+
+            if (response.ok) {
+                document.getElementById('volumeDisplay').textContent = `Volume: ${result}`;
+                showStatus('Volume retrieved', 'success');
+                logDebug(`Volume: ${result}`);
+            } else {
+                showStatus(`Failed to get volume: ${result}`, 'error');
+                logDebug(`Volume get failed: ${result}`);
+            }
+        } catch (error) {
+            showStatus(`Error getting volume: ${error.message}`, 'error');
+            logDebug(`Volume get error: ${error.message}`);
+        }
+    }
+
+    async function setVolume() {
+        showStatus('Setting volume...', 'info');
+        logDebug('Setting volume...');
+
+        try {
+            const response = await fetch(`${API_BASE}/setVolumeData`, { method: 'POST' });
+            const result = await response.text();
+
+            if (response.ok) {
+                showStatus(`Volume set: ${result}`, 'success');
+                logDebug(`Volume set: ${result}`);
+                setTimeout(() => getVolume(), 1000);
+            } else {
+                showStatus(`Failed to set volume: ${result}`, 'error');
+                logDebug(`Volume set failed: ${result}`);
+            }
+        } catch (error) {
+            showStatus(`Error setting volume: ${error.message}`, 'error');
+            logDebug(`Volume set error: ${error.message}`);
+        }
+    }
+
+    async function setScreenInfo() {
+        showStatus('Setting screen info...', 'info');
+        logDebug('Setting screen info...');
+
+        try {
+            const response = await fetch(`${API_BASE}/setScreenInfo`, { method: 'POST' });
+            const result = await response.text();
+
+            if (response.ok) {
+                showStatus(`Screen info set: ${result}`, 'success');
+                logDebug(`Screen info set: ${result}`);
+            } else {
+                showStatus(`Failed to set screen info: ${result}`, 'error');
+                logDebug(`Screen info set failed: ${result}`);
+            }
+        } catch (error) {
+            showStatus(`Error setting screen info: ${error.message}`, 'error');
+            logDebug(`Screen info set error: ${error.message}`);
+        }
+    }
+
+    async function refreshSystemStatus() {
+        showStatus('Refreshing system status...', 'info');
+        await checkSdkStatus();
+        await searchScreen(); // This will also update login status
+        await testConnection();
+        showStatus('System status refreshed', 'success');
+    }
+
+    async function testNetworkConnection() {
+        await testConnection();
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        checkSdkStatus();
+        // Auto-search screen to check login status
+        setTimeout(() => searchScreen(), 1000);
+        
+        // Add file path validation
+        const filePathInput = document.getElementById('filePath');
+        filePathInput.addEventListener('input', function() {
+            validateFilePath(this.value);
+        });
+    });
+</script>
+</body>
+</html>

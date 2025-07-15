@@ -1,11 +1,10 @@
 package com.dadhwal.LedController.controller;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.InetAddress;
-import java.util.Properties;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.logging.Level;
@@ -14,12 +13,7 @@ import java.util.logging.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.dadhwal.LedController.LedSDK.SDKWrapper;
 import com.dadhwal.LedController.controller.requests.MessageRequest;
@@ -31,35 +25,37 @@ import jakarta.annotation.PostConstruct;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class ApiController {
 
     private static final Logger logger = Logger.getLogger(ApiController.class.getName());
     private static volatile boolean isProcessingPublishMessage = false;
-    private static final String CONFIG_FILE = "config.properties";
-    private static String controllerIp; // Default IP
     private static volatile boolean sdkInitialized = false;
     private static volatile boolean login = false;
-    private static final Gson gson=new Gson();
+    private static final Gson gson = new Gson();
+
+    private static String controllerIp;
+    private static String wbFile;
+    private static String baseurl;
+
+    private final AppConfig appConfig;
+
+    public ApiController(AppConfig appConfig) {
+        this.appConfig = appConfig;
+    }
 
     @PostConstruct
     public void initialize() {
-        System.out.println("Initializing SDK 1");
-        loadConfiguration();
-        initializeSDK();
-    }
+        System.out.println("Initializing SDK");
+        controllerIp = appConfig.getControllerIp();
+        wbFile = appConfig.getWbFile();
+        baseurl = appConfig.getBaseurl();
 
-    private void loadConfiguration() {
-        Properties properties = new Properties();
-        try (InputStream input = new FileInputStream("src/main/resources/" + CONFIG_FILE)) {
-            if (input == null) {
-                logger.log(Level.WARNING, "Configuration file not found. Using default IP: " + controllerIp);
-            } else {
-                properties.load(input);
-                controllerIp = properties.getProperty("controller.ip", controllerIp);
-            }
-        } catch (IOException e) {
-            logger.log(Level.SEVERE, "Failed to load configuration", e);
-        }
+        System.out.println("Base URL: " + baseurl);
+        System.out.println("Controller IP: " + controllerIp);
+        System.out.println("WB File: " + wbFile);
+
+        initializeSDK();
     }
 
     private void initializeSDK() {
@@ -68,13 +64,12 @@ public class ApiController {
                 SDKWrapper.init();
                 SDKWrapper.searchTerminalByIp(controllerIp);
                 Boolean logined = performLogin();
-                if(logined) {
-                    login=true;
+                if (logined) {
+                    login = true;
                     SDKWrapper.createProgramPage();
-                    SDKWrapper.setPageProgram("BCCL", "#5bc0de");
+                    SDKWrapper.setWebPageProgram(baseurl + "/page");
                     SDKWrapper.makeProgram();
                     SDKWrapper.transferProgram();
-
                 }
                 sdkInitialized = true;
             } else {
@@ -91,16 +86,16 @@ public class ApiController {
     private boolean isPingable(String ipAddress) {
         try {
             InetAddress inet = InetAddress.getByName(ipAddress);
-            return inet.isReachable(3000); // 3-second timeout
+            return inet.isReachable(3000);
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Ping check failed for IP: " + ipAddress, e);
             return false;
         }
     }
 
-    @Scheduled(fixedRate = 30000) // Retry every 30 Second
+    @Scheduled(fixedRate = 30000)
     public void checkAndInitializeSDK() {
-        if(!isPingable(controllerIp)){
+        if (!isPingable(controllerIp)) {
             login = false;
             return;
         }
@@ -120,25 +115,20 @@ public class ApiController {
     private boolean performLogin() {
         try {
             CompletableFuture<String> res = SDKWrapper.login();
-            String result = res.get(); // Block until the login result is available
-
-            // Parse the JSON response
+            String result = res.get();
             JsonObject response = gson.fromJson(result, JsonObject.class);
-
-            // Check if the "logined" field is true
             if (response.has("logined") && response.get("logined").getAsBoolean()) {
-                login = true; // Set the login state to true
-                return true; // Login was successful
+                login = true;
+                return true;
             } else {
-                login = false; // Explicitly set to false if "logined" is not true
+                login = false;
             }
         } catch (InterruptedException | ExecutionException e) {
             logger.log(Level.SEVERE, "Login failed", e);
-            login = false; // Ensure login is set to false in case of failure
+            login = false;
         }
-        return false; // Login was not successful
+        return false;
     }
-
 
     @GetMapping("/sdkStatus")
     public ResponseEntity<String> getSdkStatus() {
@@ -151,36 +141,31 @@ public class ApiController {
 
     @GetMapping("/updateConfig")
     public ResponseEntity<String> updateConfig(@RequestParam String newIp) {
-        Properties properties = new Properties();
-        // Load the configuration file from the resources folder using the class loader
-        try (InputStream input = ApiController.class.getClassLoader().getResourceAsStream(CONFIG_FILE)) {
-            if (input == null) {
-                logger.log(Level.SEVERE, "Configuration file not found in resources");
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Configuration file not found");
-            }
-            properties.load(input);
-        } catch (IOException e) {
-            logger.log(Level.SEVERE, "Failed to read configuration file", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to read configuration file");
-        }
-
-        // Update the IP in the properties
-        try (FileOutputStream output = new FileOutputStream("src/main/resources/" + CONFIG_FILE)) {
-            properties.setProperty("controller.ip", newIp);
-            properties.store(output, null);
-            controllerIp = newIp;
-        } catch (IOException e) {
-            logger.log(Level.SEVERE, "Failed to update configuration file", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to update configuration file");
-        }
-
-        checkAndInitializeSDK();
-        return ResponseEntity.ok("Configuration updated successfully to IP: " + newIp);
+        controllerIp = newIp;
+        initialize(); // re-init SDK with new IP
+        return ResponseEntity.ok("IP updated to: " + newIp + " (Note: Not persisted to properties file)");
     }
 
     @GetMapping("/test")
     public ResponseEntity<String> test() {
         return ResponseEntity.ok("Test Passed");
+    }
+
+    @GetMapping("/updateWbFile")
+    public ResponseEntity<String> updateWbFile(@RequestParam String newPath) {
+        wbFile = newPath;
+        return ResponseEntity.ok("WbFile path updated to: " + newPath + " (Note: Not persisted to properties file)");
+    }
+
+    @GetMapping("/readable")
+    public ResponseEntity<String> readFile() {
+        try {
+            Path filePath = Paths.get(wbFile);
+            String fileContent = Files.readString(filePath);
+            return ResponseEntity.ok(fileContent);
+        } catch (IOException e) {
+            return ResponseEntity.status(500).body("Error reading file: " + e.getMessage());
+        }
     }
 
     @GetMapping("/searchTerminal")
@@ -205,14 +190,11 @@ public class ApiController {
 
         try {
             CompletableFuture<String> resultFuture = SDKWrapper.searchTerminalByIp(controllerIp);
-            String result = resultFuture.get(); // This will block until the future completes
-            System.out.println(result);
+            String result = resultFuture.get();
             SearchTerminal response = gson.fromJson(result, SearchTerminal.class);
-            if (!response.isLogined()){
+            if (!response.isLogined()) {
                 Boolean logined = performLogin();
-                if(logined) {
-                    login=true;
-                }
+                if (logined) login = true;
             }
             return ResponseEntity.ok(result);
         } catch (InterruptedException | ExecutionException e) {
@@ -228,11 +210,7 @@ public class ApiController {
 
         try {
             Boolean logined = performLogin();
-            if(logined) {
-                return ResponseEntity.ok("Login Successful");
-            } else {
-                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login Failed");
-            }
+            return logined ? ResponseEntity.ok("Login Successful") : ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login Failed");
         } catch (Exception e) {
             logger.log(Level.SEVERE, "Login failed", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Login Failed");
@@ -241,207 +219,114 @@ public class ApiController {
 
     @GetMapping("/login")
     public ResponseEntity<String> getlogin() {
+        return login();
+    }
+
+    @PostMapping("/publishMessage")
+    public ResponseEntity<String> setPublishMessage(@RequestBody MessageRequest messageRequest) throws InterruptedException {
+        if (isProcessingPublishMessage) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Previous publish message is still being processed.");
+        }
+
+        isProcessingPublishMessage = true;
+
+        if (!login && sdkInitialized) {
+            if (performLogin()) login = true;
+        }
+
         ResponseEntity<String> sdkStatus = checkSdkStatus();
         if (sdkStatus != null) return sdkStatus;
 
         try {
-            Boolean logined = performLogin();
-            if(logined) {
-                return ResponseEntity.ok("Login Successful");
+            String info = messageRequest.getInfo();
+            String success = messageRequest.getSuccess();
+            String error = messageRequest.getError();
+            if (info != null) {
+                SDKWrapper.setPageProgram(info, "#5bc0de");
+            } else if (success != null) {
+                SDKWrapper.setPageProgram(success, "#22bb33");
+            } else if (error != null) {
+                SDKWrapper.setPageProgram(error, "#bb2124");
             } else {
-                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login Failed");
+                SDKWrapper.setWebPageProgram(baseurl + "/page");
             }
-        } catch (Exception e) {
-            logger.log(Level.SEVERE, "Login failed", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Login Failed");
-        }
-    }
 
-    @PostMapping("/createProgram")
-    public ResponseEntity<String> createProgram() {
-        ResponseEntity<String> sdkStatus = checkSdkStatus();
-        if (sdkStatus != null) return sdkStatus;
-
-        try {
-            CompletableFuture<String> res = SDKWrapper.createProgramPage();
-            return ResponseEntity.ok(res.get());
-        } catch (InterruptedException | ExecutionException e) {
-            logger.log(Level.SEVERE, "Create Program failed", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Create Program failed");
-        }
-    }
-
-    @PostMapping("/setPageProgram")
-    public ResponseEntity<String> setPageProgram(@RequestParam String message) {
-        ResponseEntity<String> sdkStatus = checkSdkStatus();
-        if (sdkStatus != null) return sdkStatus;
-
-        try {
-            CompletableFuture<String> res = SDKWrapper.setPageProgram(message, "#339CFF");
-            return ResponseEntity.ok(res.get());
-        } catch (InterruptedException | ExecutionException e) {
-            logger.log(Level.SEVERE, "Set Page Program failed", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Set Page Program failed");
-        }
-    }
-
-    @GetMapping("/makeProgram")
-    public ResponseEntity<String> makeProgram() {
-        ResponseEntity<String> sdkStatus = checkSdkStatus();
-        if (sdkStatus != null) return sdkStatus;
-
-        try {
-            CompletableFuture<String> res = SDKWrapper.makeProgram();
-            return ResponseEntity.ok(res.get());
-        } catch (InterruptedException | ExecutionException e) {
-            logger.log(Level.SEVERE, "Make Program failed", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Make Program failed");
-        }
-    }
-
-    @PostMapping("/transferProgram")
-    public ResponseEntity<String> transferProgram() {
-        ResponseEntity<String> sdkStatus = checkSdkStatus();
-        if (sdkStatus != null) return sdkStatus;
-
-        try {
+            SDKWrapper.makeProgram();
             CompletableFuture<String> res = SDKWrapper.transferProgram();
             return ResponseEntity.ok(res.get());
         } catch (InterruptedException | ExecutionException e) {
-            logger.log(Level.SEVERE, "Transfer Program failed", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Transfer Program failed");
+            logger.log(Level.SEVERE, "Error Publishing Message", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Set Page Program failed");
+        } finally {
+            isProcessingPublishMessage = false;
         }
     }
 
-     @PostMapping("/publishMessage")
-     public ResponseEntity<String> setPublishMessage(@RequestBody MessageRequest messageRequest) throws InterruptedException {
+    @GetMapping("/publishMessage")
+    public ResponseEntity<String> setPublishMessage(
+            @RequestParam(required = false) String info,
+            @RequestParam(required = false) String success,
+            @RequestParam(required = false) String error) throws InterruptedException {
+
         if (isProcessingPublishMessage) {
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("Previous publish message is still being processed. Please wait.");
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Previous publish message is still being processed.");
         }
 
-        // Set the flag to indicate that the processing has started
         isProcessingPublishMessage = true;
 
-        if(!login && sdkInitialized) {
-            Boolean logined = performLogin();
-            if(logined) {
-                login=true;
+        if (!login && sdkInitialized) {
+            if (!performLogin()) {
+                isProcessingPublishMessage = false;
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Initial login failed.");
             }
         }
-         ResponseEntity<String> sdkStatus = checkSdkStatus();
-         if (sdkStatus != null) return sdkStatus;
 
-         try {
-             String info = messageRequest.getInfo();
-             String success = messageRequest.getSuccess();
-             String error = messageRequest.getError();
-             if (info != null) {
-                 SDKWrapper.setPageProgram(info, "#5bc0de");
-             } else if (success != null) {
-                 SDKWrapper.setPageProgram(success, "#22bb33");
-             } else if (error != null) {
-                SDKWrapper.setPageProgram(error, "#bb2124");
-            } else {
-                SDKWrapper.setPageProgram("Incorrect Input", "#bb2124");
+        ResponseEntity<String> sdkStatus = checkSdkStatus();
+        if (sdkStatus != null) {
+            isProcessingPublishMessage = false;
+            return sdkStatus;
+        }
+
+        int retryCount = 3;
+        int attempt = 0;
+
+        try {
+            while (attempt < retryCount) {
+                try {
+                    SDKWrapper.createProgramPage();
+
+                    if (info != null) {
+                        SDKWrapper.setPageProgram(info, "#5bc0de");
+                    } else if (success != null) {
+                        SDKWrapper.setPageProgram(success, "#22bb33");
+                    } else if (error != null) {
+                        SDKWrapper.setPageProgram(error, "#bb2124");
+                    } else {
+                        SDKWrapper.setWebPageProgram(baseurl + "/page");
+                    }
+
+                    SDKWrapper.makeProgram();
+                    CompletableFuture<String> res = SDKWrapper.transferProgram();
+                    return ResponseEntity.ok(res.get());
+
+                } catch (InterruptedException | ExecutionException e) {
+                    attempt++;
+                    logger.log(Level.SEVERE, "Error Publishing Message, Attempt " + attempt, e);
+
+                    if (attempt == retryCount) {
+                        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Set Page Program failed after retries.");
+                    }
+
+                    performLogin();
+                    Thread.sleep(2000);
+                }
             }
 
-             SDKWrapper.makeProgram();
-             CompletableFuture<String> res = SDKWrapper.transferProgram();
-             return ResponseEntity.ok(res.get());
-         } catch (InterruptedException | ExecutionException e) {
-             logger.log(Level.SEVERE, "Error Publishing Message", e);
-             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Set Page Program failed");
-         } finally {
-            // Reset the flag after processing
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Unexpected error occurred.");
+        } finally {
             isProcessingPublishMessage = false;
         }
-     }
-
-     @GetMapping("/publishMessage")
-     public ResponseEntity<String> setPublishMessage(
-         @RequestParam(required = false) String info,
-         @RequestParam(required = false) String success,
-         @RequestParam(required = false) String error) {
-     
-         if (isProcessingPublishMessage) {
-             return ResponseEntity.status(HttpStatus.CONFLICT).body("Previous publish message is still being processed. Please wait.");
-         }
-     
-         // Set the flag to indicate that the processing has started
-         isProcessingPublishMessage = true;
-     
-         // Perform initial login if not logged in, and SDK is initialized
-         if (!login && sdkInitialized) {
-             Boolean logined = performLogin(); // Automatically perform login
-             if (logined) {
-                 login = true;
-             } else {
-                 isProcessingPublishMessage = false;  // Reset flag on failure
-                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Initial login failed.");
-             }
-         }
-     
-         ResponseEntity<String> sdkStatus = checkSdkStatus();
-         if (sdkStatus != null) {
-             isProcessingPublishMessage = false;  // Reset flag if SDK status check fails
-             return sdkStatus;
-         }
-     
-         int retryCount = 3; // Maximum number of retries
-         int attempt = 0;
-     
-         try {
-             while (attempt < retryCount) {
-                 try {
-                     // Re-run the entire process on every retry
-     
-                     SDKWrapper.createProgramPage();  // Recreate the program page
-     
-                     // Check which parameter is provided and set the page program accordingly
-                     if (info != null) {
-                         SDKWrapper.setPageProgram(info, "#5bc0de");
-                     } else if (success != null) {
-                         SDKWrapper.setPageProgram(success, "#22bb33");
-                     } else if (error != null) {
-                         SDKWrapper.setPageProgram(error, "#bb2124");
-                     } else {
-                         SDKWrapper.setPageProgram("Incorrect Input", "#bb2124");
-                     }
-     
-                     SDKWrapper.makeProgram();  // Create the program
-                     CompletableFuture<String> res = SDKWrapper.transferProgram();  // Transfer the program
-                     return ResponseEntity.ok(res.get());  // Return the result of the transfer
-     
-                 } catch (InterruptedException | ExecutionException e) {
-                     attempt++;
-                     logger.log(Level.SEVERE, "Error Publishing Message, Attempt " + attempt, e);
-     
-                     if (attempt == retryCount) {
-                         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Set Page Program failed after " + retryCount + " attempts.");
-                     }
-     
-                     // Attempt to login again automatically before retrying
-                     logger.log(Level.INFO, "Attempting to login before retrying...");
-                     performLogin();  // Automatically perform login again if an error occurs
-     
-                     // Retry after a small delay (optional)
-                     try {
-                         Thread.sleep(2000); // Retry delay of 2 seconds (adjust as needed)
-                     } catch (InterruptedException ie) {
-                         // Handle thread interruption
-                         Thread.currentThread().interrupt();
-                         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Thread interrupted while retrying.");
-                     }
-                 }
-             }
-     
-             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Unexpected error occurred.");
-         } finally {
-             // Reset the flag after processing
-             isProcessingPublishMessage = false;
-         }
-     }
-     
+    }
 
     @GetMapping("/getProgramInfo")
     public ResponseEntity<String> getProgramInfo() {

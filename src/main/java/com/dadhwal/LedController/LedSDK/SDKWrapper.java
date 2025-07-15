@@ -6,22 +6,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.dadhwal.LedController.LedSDK.Editor.Components.Attributes;
-import com.dadhwal.LedController.LedSDK.Editor.Components.BackgroundMusic;
-import com.dadhwal.LedController.LedSDK.Editor.Components.Constraint;
-import com.dadhwal.LedController.LedSDK.Editor.Components.Content;
-import com.dadhwal.LedController.LedSDK.Editor.Components.Contents;
-import com.dadhwal.LedController.LedSDK.Editor.Components.DisplayStyle;
-import com.dadhwal.LedController.LedSDK.Editor.Components.Effects;
-import com.dadhwal.LedController.LedSDK.Editor.Components.Font;
-import com.dadhwal.LedController.LedSDK.Editor.Components.Line;
-import com.dadhwal.LedController.LedSDK.Editor.Components.MetaData;
-import com.dadhwal.LedController.LedSDK.Editor.Components.Paragraph;
-import com.dadhwal.LedController.LedSDK.Editor.Components.ScrollAttributes;
-import com.dadhwal.LedController.LedSDK.Editor.Components.Seg;
-import com.dadhwal.LedController.LedSDK.Editor.Components.TextAttribute;
-import com.dadhwal.LedController.LedSDK.Editor.Components.Widget;
-import com.dadhwal.LedController.LedSDK.Editor.Components.WidgetContainer;
+import com.dadhwal.LedController.LedSDK.Editor.Components.*;
 import com.dadhwal.LedController.LedSDK.Editor.PageInfo;
 import com.dadhwal.LedController.LedSDK.Editor.ProgramData;
 import com.dadhwal.LedController.LedSDK.Ethernet.EthernetData;
@@ -192,14 +177,44 @@ public class SDKWrapper {
         return future;
     }
 
+    public static CompletableFuture<String> setWebPageProgram(String url) throws InterruptedException {
+        CompletableFuture<String> future = new CompletableFuture<>();
+        try {
+            Constraint constraint=new Constraint(List.of("0 0 0 ? * 1,2,3,4,5,6,7"),"4017-12-30T23:59:59Z+8:00","1970-01-01T00:00:00Z+8:00");
+            WebpageInfo pageInfo = getWebPageInfo(url, constraint);
+            String editProgram= gson.toJson(new WebPageProgramData(1,1,pageInfo));
+
+            CountDownLatch latch = new CountDownLatch(1);
+            instance.nvSetPageProgramAsync(editProgram, (code, data) -> {
+                if(code==0){
+                    future.complete(data);
+                } else {
+                    future.completeExceptionally(new Exception("Set Page Program Failed"));
+                }
+                latch.countDown();
+            });
+            waitAPIReturn(latch);
+        } catch (InterruptedException e){
+            future.completeExceptionally(e);
+        }
+        return future;
+    }
+
     private static PageInfo getPageInfo(String text, String textColor, Constraint constraint) {
         BackgroundMusic backgroundMusic=new BackgroundMusic(0,false);
         Content content = getContent(text, textColor, backgroundMusic);
         MetaData metaData=new MetaData(content);
-        Widget widget=new Widget(List.of(constraint),15000, metaData,"text","ARCH_TEXT");
+        Widget widget=new Widget(List.of(constraint),15000, metaData,"webpage","ARCH_TEXT");
         Contents contents=new Contents(List.of(widget));
         WidgetContainer widgetContainers=new WidgetContainer(contents,1 , "widgetContainers1");
         return new PageInfo("textWindow",List.of(widgetContainers));
+    }
+
+    private static WebpageInfo getWebPageInfo(String url, Constraint constraint) {
+        WebpageWidget widget=new WebpageWidget(List.of(constraint),15000, url, "", "text","HTML", true);
+        WebpageContents contents=new WebpageContents(List.of(widget));
+        WebpageWidgetContainer widgetContainers=new WebpageWidgetContainer(contents,1 , "widgetContainers1");
+        return new WebpageInfo("WebPageInfo",List.of(widgetContainers));
     }
 
     private static Content getContent(String s, String textColor, BackgroundMusic backgroundMusic) {
