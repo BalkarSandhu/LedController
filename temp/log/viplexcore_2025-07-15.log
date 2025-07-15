@@ -1184,4 +1184,830 @@
 [2025-07-15 11:36:24.739551] D [8800] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
 [2025-07-15 11:36:24.739569] D [8800] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
 [2025-07-15 11:36:26.096716] D [14808] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
-[2025-07-15 11:3
+[2025-07-15 11:3[2025-07-15 12:54:29.653288] I [16896] [datamanager.cpp:init:94] DataManager::init begin
+[2025-07-15 12:54:29.654170] I [16896] [datamanager.cpp:init:97] DataManager::init end
+[2025-07-15 12:54:29.654234] D [16896] [viplexcore.cpp:initCore:181] viplexcore db & log init ok
+[2025-07-15 12:54:29.654245] D [16896] [viplexcore.cpp:init:106] sdk version = 3.4.0.01
+[2025-07-15 12:54:29.665850] I [16896] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:54:29.799993] I [16896] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:54:29.800051] I [16896] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:54:29.800583] I [16896] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:54:29.800605] I [16896] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:54:29.800841] I [16896] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:54:29.801295] I [16896] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:54:29.801616] I [16896] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:54:29.801710] D [16896] [viplexcore.cpp:init:138] viplexcore init ok: version=3.4.0.01, path=F:/LedController/temp, credentials={"company":"FleetSafe India","phone":"9992391581","email":"balkar@fleetsafeindia.com"}
+[2025-07-15 12:54:29.801716] D [16896] [viplexcore.cpp:init:139] viplexcore  init ok
+[2025-07-15 12:54:29.801736] I [16896] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:54:29.801943] I [5512] [httpHelper.cpp:httpTimeServerRequest:25] httpTimeServerRequest --srart -- url = ,
+[2025-07-15 12:54:29.802029] I [16896] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:54:29.802046] I [5512] [httpHelper.cpp:httpNodeServerRequest:43] httpNodeServerRequest --srart -- url = ,
+[2025-07-15 12:54:29.802119] I [5512] [httpHelper.cpp:httpVnnoxNodeServerRequest:585] httpVnnoxNodeServerRequest --srart -- url = ,
+[2025-07-15 12:54:29.802203] D [5512] [viplexcore.cpp:operator ():126] getBuryPoint() return true
+[2025-07-15 12:54:29.802230] D [5512] [burypoint.cpp:uploadInit:23] BuryPoint::uploadInit begin
+[2025-07-15 12:54:30.062896] D [5512] [burypoint.cpp:getOSSUploadBuryPointInfo:30] BuryPoint::getOSSUploadBuryPointInfo begin
+[2025-07-15 12:54:30.062915] D [5512] [burypoint.cpp:getOSSUploadBuryPointInfo:35] BuryPoint::getOSSUploadBuryPointInfo getOssInfoUrl=
+[2025-07-15 12:54:30.063720] E [5512] [httpttools.cpp:HttpGet:681] httptTools::HttpGet  error, ret:3
+[2025-07-15 12:54:30.063833] D [5512] [burypoint.cpp:getOSSUploadBuryPointInfo:39] BuryPoint::getOSSUploadBuryPointInfo() get ossAuthorization empty!
+[2025-07-15 12:54:30.313881] D [16896] [viplexcoreasync.cpp:nvSearchAppointIpAsync:97] nvSearchAppointIpAsync serchAppointIp begin
+[2025-07-15 12:54:30.314006] I [16896] [udphelper.cpp:serchTerminal:63] serchTerminal:41:56:4f:4e:ff:ff:ff:ff:55:88:81:00:00:00:00:00:00:00:00:00:00:00:8e:00
+[2025-07-15 12:54:30.314144] I [16896] [udpsocket.cpp:sendData:65] send re s = 0,data = AVONˇˇˇˇUàÅ
+[2025-07-15 12:54:30.314294] I [16896] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 12:54:30.314452] I [16896] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 12:54:30.314476] I [16896] [udphelper.cpp:serchTerminal:63] serchTerminal:41:56:4f:4e:ff:ff:ff:ff:55:88:81:00:00:00:00:00:00:00:00:00:00:00:8e:00
+[2025-07-15 12:54:30.314548] I [16896] [udpsocket.cpp:sendData:65] send re s = 0,data = AVONˇˇˇˇUàÅ
+[2025-07-15 12:54:30.314601] I [16896] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 12:54:30.314642] I [16896] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 12:54:30.329607] I [11728] [udpsocket.cpp:recvdata:90] recv  ip:192.168.1.50,data:AVONˇˇˇˇUà
+[2025-07-15 12:54:30.329619] I [11728] [udpsocket.cpp:recvdata:93] UdpSocket::readyrec ipv4 : 192.168.1.50
+[2025-07-15 12:54:30.329667] I [11728] [udphelper.cpp:returnData:78] UdpHelper::returnData  ip:192.168.1.50 ,begin
+[2025-07-15 12:54:30.329806] I [11728] [datamanager.cpp:setMapValueFromSN:333] DataManager::setMapValueFromSN begin
+[2025-07-15 12:54:30.330391] I [11728] [datamanager.cpp:setMapValueFromSN:381] DataManager::setMapValueFromSN end
+[2025-07-15 12:54:30.330412] I [11728] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:54:30.330643] I [11728] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:54:30.330646] I [11728] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:54:30.330941] E [11728] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: ignoreTime,strSql=SELECT ignoreTime FROM terminalinfo
+[2025-07-15 12:54:30.330972] I [11728] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:54:30.331023] I [11728] [serchterminal.cpp:operator ():112] SerchTerminal::serchTerminal result:{"aliasName":"Taurus-10000710","ftpPort":16602,"hasPassWord":true,"height":16,"ignoreTime":0,"ip":"192.168.1.50","key":"novaStar","logined":false,"loginedUsernames":[""],"password":"SN2008@+","platform":"rk312x","privacy":true,"productName":"TCC70","sn":"2YKA04124N1A10000710","syssetFtpPort":16604,"syssetTcpPort":16605,"tcpPort":16603,"terminalState":0,"width":96}
+[2025-07-15 12:54:30.331039] D [11728] [viplexcoreasync.cpp:operator ():104] nvSearchAppointIpAsync data callback begin
+[2025-07-15 12:54:30.347605] D [11728] [viplexcoreasync.cpp:operator ():108] nvSearchAppointIpAsync data callback end
+[2025-07-15 12:54:30.347667] I [11728] [udphelper.cpp:returnData:80] UdpHelper::returnData  ip:192.168.1.50 , end
+[2025-07-15 12:54:30.349640] I [16896] [login.cpp:loginTerminal:29] loginTerminal start
+[2025-07-15 12:54:30.349651] I [16896] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:54:30.350026] I [16896] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:54:30.350031] I [16896] [login.cpp:loginTerminal:33] loginTerminal start localNetLoginTerminal
+[2025-07-15 12:54:30.350129] I [16896] [tcphelper.cpp:request:235] TcpHelper::request What=119,data={"sn":"2YKA04124N1A10000710","username":"admin","password":"SN2008@+","loginType":0,"rememberPwd":1}
+[2025-07-15 12:54:30.350140] I [16896] [tcphelper.cpp:connect:45] TcpHelper::connect begin
+[2025-07-15 12:54:30.350526] D [10820] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2025-07-15 12:54:30.350673] I [16896] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:54:30.350928] I [16896] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:54:30.350931] I [16896] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:54:30.351360] I [16896] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:54:30.351364] I [16896] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:54:30.351722] I [16896] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:54:30.351795] I [16896] [tcphelper.cpp:connect:85] TcpHelper::connect end
+[2025-07-15 12:54:30.367222] I [7896] [tcpsocket.cpp:connected:74] connected m_connectCallBack m_sn:2YKA04124N1A10000710
+[2025-07-15 12:54:30.367243] D [7896] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2025-07-15 12:54:30.367255] D [7896] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2025-07-15 12:54:30.367267] D [10820] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2025-07-15 12:54:30.367272] D [10820] [tcpsocket.cpp:operator ():278] TcpClient 2YKA04124N1A10000710,code:65297,concount:0
+[2025-07-15 12:54:30.367274] I [10820] [tcphelper.cpp:operator ():124]  TcpHelper connectCallback 2YKA04124N1A10000710
+[2025-07-15 12:54:30.367311] I [10820] [login.cpp:operator ():230]  Login::connectcallback: sn:2YKA04124N1A10000710, code:65297,recdata:Success
+[2025-07-15 12:54:30.367333] I [10820] [login.cpp:operator ():233]  m_requester ConnectionSuccess  sn:2YKA04124N1A10000710
+[2025-07-15 12:54:30.875216] I [10820] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2025-07-15 12:54:30.876466] I [10820] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2025-07-15 12:54:30.876548] I [10820] [login.cpp:login:52]   m_requester ready to login  xxxxxx sn:2YKA04124N1A10000710
+[2025-07-15 12:54:30.876570] I [10820] [login.cpp:operator ():63]   m_requester begin to login 
+[2025-07-15 12:54:30.876578] I [10820] [tcphelper.cpp:request:235] TcpHelper::request What=0,data={"loginType":0,"password":"SN2008@+","sn":"2YKA04124N1A10000710","source":{"platform":2,"type":0},"username":"admin"}
+[2025-07-15 12:54:30.876714] I [10820] [tcphelper.cpp:sendData:278] TcpHelper::request alpha.header.sequence:4
+[2025-07-15 12:54:30.876728] I [10820] [tcpsocket.cpp:sendData:101] TcpClient  sendcount begin:0,len:141
+[2025-07-15 12:54:30.876754] D [10820] [tcpsocket.cpp:operator ():280] TcpClient,concount end:0
+[2025-07-15 12:54:30.876761] D [10820] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2025-07-15 12:54:30.876939] I [7896] [tcpsocket.cpp:operator ():106] TcpClient  sendcount end:0
+[2025-07-15 12:54:30.901322] D [7896] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2025-07-15 12:54:30.901348] D [7896] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2025-07-15 12:54:30.901365] D [10820] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2025-07-15 12:54:30.901387] D [10820] [tcpsocket.cpp:operator ():289] TcpClient 2YKA04124N1A10000710,usercount:0
+[2025-07-15 12:54:30.901396] I [10820] [tcphelper.cpp:onReceiveData:140] TcpHelper onReceiveData
+[2025-07-15 12:54:30.901442] I [10820] [tcphelper.cpp:onReceiveData:163] TcpHelper onReceiveData sequence:4,sn:2YKA04124N1A10000710
+[2025-07-15 12:54:30.901478] D [10820] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2025-07-15 12:54:30.901506] I [10820] [login.cpp:operator ():69]  m_requester login success
+[2025-07-15 12:54:30.901601] I [10820] [login.cpp:loginReplyHandle:104]  Login::logincallback:login success LoginedBySelf sn:2YKA04124N1A10000710, code:0,recdata:{"logined":true,"loginedUsernames":["admin"],"password":"SN2008@+","sn":"2YKA04124N1A10000710","username":"admin","validation":true,"validition":true}
+[2025-07-15 12:54:30.901614] I [10820] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2025-07-15 12:54:30.902513] I [10820] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2025-07-15 12:54:30.902518] I [10820] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2025-07-15 12:54:30.903060] I [10820] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2025-07-15 12:54:30.903065] I [10820] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2025-07-15 12:54:30.903573] I [10820] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2025-07-15 12:54:30.903578] I [10820] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2025-07-15 12:54:30.904081] I [10820] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2025-07-15 12:54:30.926739] D [10820] [login.cpp:getMac:990] Login::getMac() wins mac =48:0F:CF:45:5E:25
+[2025-07-15 12:54:30.926757] I [10820] [login.cpp:loginReplyHandle:115]  Login::logincallback:login success mac=48:0F:CF:45:5E:25
+[2025-07-15 12:54:30.926775] D [10820] [viplexcoreasync.cpp:operator ():283] nvLoginAsync data callback begin
+[2025-07-15 12:54:30.928022] D [10820] [viplexcoreasync.cpp:operator ():305] nvLoginAsync data callback end
+[2025-07-15 12:54:30.928065] D [10820] [tcpsocket.cpp:operator ():291] TcpClient usercount end:0
+[2025-07-15 12:54:30.928075] D [10820] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2025-07-15 12:54:30.937556] I [16896] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvCreateProgramAsync,data:{"name":"Program1","width":100,"height":100,"tplID":1,"winInfo":{"height":50,"width":50,"left":0,"top":0,"zindex":0,"index":0}}
+[2025-07-15 12:54:30.937641] I [16896] [programeditor.cpp:operator ():70] EditProgram::createProgram start createProgram
+[2025-07-15 12:54:30.937647] I [16896] [programeditor.cpp:operator ():71] ProgramEditor::createProgram data {"name":"Program1","width":100,"height":100,"tplID":1,"winInfo":{"height":50,"width":50,"left":0,"top":0,"zindex":0,"index":0}}
+[2025-07-15 12:54:30.937737] I [16896] [datamanager.cpp:getMaxProgramID:495] DataManager::getMaxProgramID begin
+[2025-07-15 12:54:30.938105] I [16896] [datamanager.cpp:getMaxProgramID:507] DataManager::getMaxProgramID end
+[2025-07-15 12:54:30.938398] I [16896] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:54:31.030165] I [16896] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:54:31.030458] I [16896] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:54:31.088368] I [16896] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:54:31.088493] I [16896] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:54:31.146508] I [16896] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:54:31.146605] I [16896] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:54:31.208123] I [16896] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:54:31.208149] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.209693] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.209823] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.210497] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.210513] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.210901] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.210916] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.211282] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.211374] I [16896] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:54:31.271474] I [16896] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:54:31.271535] I [16896] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:54:31.321976] I [1304] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:54:31.322013] I [11168] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:54:31.322015] I [11472] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:54:31.342588] I [16896] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:54:31.342625] I [16896] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:54:31.343211] I [1304] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:54:31.343226] I [1304] [httpHelper.cpp:operator ():596] httpNodeServerRequest request error ,3
+[2025-07-15 12:54:31.345463] I [11168] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:54:31.345486] I [11168] [httpHelper.cpp:operator ():36] httpTimeServerRequest request error ,3
+[2025-07-15 12:54:31.346137] I [11472] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:54:31.346156] I [11472] [httpHelper.cpp:operator ():54] httpNodeServerRequest request error ,3
+[2025-07-15 12:54:31.487979] I [16896] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:54:31.488030] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.488490] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.488648] I [16896] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:54:31.489050] I [16896] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:54:31.489612] I [16896] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:54:31.554995] I [16896] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:54:31.555083] I [16896] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvCreateProgramAsync
+[2025-07-15 12:54:31.555227] I [16896] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2025-07-15 12:54:31.555266] I [16896] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvCreateProgramAsync
+[2025-07-15 12:54:31.562669] I [16896] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvSetPageProgramAsync,data:{"programID":1,"pageID":1,"pageInfo":{"name":"WebPageInfo","widgetContainers":[{"contents":{"widgets":[{"constraints":[{"cron":["0 0 0 ? * 1,2,3,4,5,6,7"],"endTime":"4017-12-30T23:59:59Z+8:00","startTime":"1970-01-01T00:00:00Z+8:00"}],"duration":15000,"dataSource":"http://192.168.1.10:8081/page","originalDataSource":"","name":"text","type":"HTML","isSupportSpecialEffects":true}]},"id":1,"name":"widgetContainers1"}]}}
+[2025-07-15 12:54:31.562710] I [16896] [programeditor.cpp:operator ():2251] ProgramEditor::setPageParam data {"programID":1,"pageID":1,"pageInfo":{"name":"WebPageInfo","widgetContainers":[{"contents":{"widgets":[{"constraints":[{"cron":["0 0 0 ? * 1,2,3,4,5,6,7"],"endTime":"4017-12-30T23:59:59Z+8:00","startTime":"1970-01-01T00:00:00Z+8:00"}],"duration":15000,"dataSource":"http://192.168.1.10:8081/page","originalDataSource":"","name":"text","type":"HTML","isSupportSpecialEffects":true}]},"id":1,"name":"widgetContainers1"}]}}
+[2025-07-15 12:54:31.563211] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.563722] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.564367] I [16896] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:54:31.564906] I [16896] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:54:31.564944] I [16896] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvSetPageProgramAsync
+[2025-07-15 12:54:31.565067] I [16896] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2025-07-15 12:54:31.565086] I [16896] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvSetPageProgramAsync
+[2025-07-15 12:54:31.566888] I [16896] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvMakeProgramAsync,data:{"programID":1,"outPutPath":"F:/LedController/temp"}
+[2025-07-15 12:54:31.566950] I [16896] [programeditor.cpp:operator ():142] EditProgram::makeProgram start makeProgram
+[2025-07-15 12:54:31.566964] I [16896] [programeditor.cpp:operator ():143] ProgramEditor::makeProgram data {"programID":1,"outPutPath":"F:/LedController/temp"}
+[2025-07-15 12:54:31.567014] I [16896] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:54:31.637956] I [16896] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:54:31.638054] I [16896] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:54:31.638413] I [16896] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:54:31.638438] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.638682] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.638695] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.638886] E [16896] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2025-07-15 12:54:31.638932] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.640229] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.640695] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.641343] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.641713] E [16896] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2025-07-15 12:54:31.641757] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.642182] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.642621] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.642627] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.642867] E [16896] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2025-07-15 12:54:31.642895] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.643148] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.643543] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.643550] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.643779] E [16896] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2025-07-15 12:54:31.643805] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.644042] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.644433] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.644439] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.644671] E [16896] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2025-07-15 12:54:31.644695] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.644705] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.644939] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.644941] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.645166] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.645281] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.645583] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.646684] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.647036] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.647491] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.647784] E [16896] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2025-07-15 12:54:31.647819] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.647837] I [16896] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvMakeProgramAsync
+[2025-07-15 12:54:31.647959] I [16896] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2025-07-15 12:54:31.647987] I [16896] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvMakeProgramAsync
+[2025-07-15 12:54:31.661810] D [16896] [viplexcoreasync.cpp:nvStartTransferProgramAsync:1454] nvStartTransferProgramAsync begin
+[2025-07-15 12:54:31.661826] I [16896] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvStartTransferProgramAsync,data:{"sn":"2YKA04124N1A10000710","iconPath":"","iconName":"","programName":"program1","sendProgramFilePaths":{"programPath":"F:/LedController/temp/program1","mediasPath":{}},"deviceIdentifier":"Demo","startPlayAfterTransferred":true,"insertPlay":true}
+[2025-07-15 12:54:31.661864] I [16896] [programeditor.cpp:startTransferProgram:785] EditProgram::startTransferProgram data={"sn":"2YKA04124N1A10000710","iconPath":"","iconName":"","programName":"program1","sendProgramFilePaths":{"programPath":"F:/LedController/temp/program1","mediasPath":{}},"deviceIdentifier":"Demo","startPlayAfterTransferred":true,"insertPlay":true}
+[2025-07-15 12:54:31.661879] I [16896] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:54:31.662376] I [16896] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:54:31.662383] I [16896] [programeditor.cpp:startTransferProgram:788] EditProgram::startTransferProgram startTransferProgramLocal
+[2025-07-15 12:54:31.662416] I [16896] [programeditor.cpp:operator ():801] EditProgram::startTransferProgram start startTransferProgram
+[2025-07-15 12:54:31.662421] I [16896] [programeditor.cpp:operator ():802] ProgramEditor::startTransferProgram data {"sn":"2YKA04124N1A10000710","iconPath":"","iconName":"","programName":"program1","sendProgramFilePaths":{"programPath":"F:/LedController/temp/program1","mediasPath":{}},"deviceIdentifier":"Demo","startPlayAfterTransferred":true,"insertPlay":true}
+[2025-07-15 12:54:31.662616] I [16896] [programeditor.cpp:operator ():832] ProgramEditor::startTransferProgram m_ftphelper.clients.zise 1
+[2025-07-15 12:54:31.662652] I [16896] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:54:31.663023] I [16896] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:54:31.663103] I [16896] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:54:31.663439] I [16896] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:54:31.663571] I [16896] [programeditor.cpp:operator ():852] Tcard status3
+[2025-07-15 12:54:31.663575] I [16896] [programeditor.cpp:operator ():863] EditProgram::startTransferProgram start getTransferProgramUrl,get medias Url
+[2025-07-15 12:54:31.663656] I [16896] [tcphelper.cpp:request:235] TcpHelper::request What=30,data={"deviceIdentifier":"Demo","local":false,"solutions":{"identifier":"c0d0177afe5820780247f7f45d9272e51752564271","name":"program1"},"source":0,"totalSize":0,"type":"DEFAULT"}
+[2025-07-15 12:54:31.663674] I [16896] [tcphelper.cpp:sendData:278] TcpHelper::request alpha.header.sequence:5
+[2025-07-15 12:54:31.663683] I [16896] [tcpsocket.cpp:sendData:101] TcpClient  sendcount begin:1,len:197
+[2025-07-15 12:54:31.663732] I [16896] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvStartTransferProgramAsync
+[2025-07-15 12:54:31.663813] I [7896] [tcpsocket.cpp:operator ():106] TcpClient  sendcount end:1
+[2025-07-15 12:54:31.704775] D [7896] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2025-07-15 12:54:31.704801] D [7896] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2025-07-15 12:54:31.704814] D [10820] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2025-07-15 12:54:31.704865] D [10820] [tcpsocket.cpp:operator ():289] TcpClient 2YKA04124N1A10000710,usercount:1
+[2025-07-15 12:54:31.704869] I [10820] [tcphelper.cpp:onReceiveData:140] TcpHelper onReceiveData
+[2025-07-15 12:54:31.704883] I [10820] [tcphelper.cpp:onReceiveData:163] TcpHelper onReceiveData sequence:5,sn:2YKA04124N1A10000710
+[2025-07-15 12:54:31.705025] I [10820] [programeditor.cpp:operator ():875] getTransferProgramUrl data{"appliedInfos":{"statusCode":0,"uploadUrl":"sdcard/nova/viplex_terminal/program/program_Demo/temp_program1","identifier":"c0d0177afe5820780247f7f45d9272e51752564271","name":"program1"},"canTranster":true,"directoryInfos":[{"availableSize":3925196800,"criticalSize":524288000,"directoryUrl":"sdcard/nova/viplex_terminal/media","reserveSize":0,"totalSize":4081238016,"type":"LOCAL"}],"errorCode":0,"uploadMediaUrl":"sdcard/nova/viplex_terminal/media"}
+[2025-07-15 12:54:31.705183] D [10820] [tcpsocket.cpp:operator ():291] TcpClient usercount end:1
+[2025-07-15 12:54:31.705189] D [10820] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2025-07-15 12:54:31.705438] I [15996] [programeditor.cpp:operator ():941] EditProgram::startTransferProgram,update media thread run
+[2025-07-15 12:54:31.705454] I [15996] [programeditor.cpp:operator ():945] EditProgram::startTransferProgram start upLoadJsonAndIcon
+[2025-07-15 12:54:31.705564] I [15996] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:54:31.709175] I [15996] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:54:31.709190] I [15996] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:54:31.709857] I [15996] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:54:31.709911] E [15996] [ftpclient.cpp:connect:206] ftp connect1 this:0x25a050f61a0
+[2025-07-15 12:54:31.709986] E [15996] [ftpclient.cpp:connect:232] ftp curl_easy_setopt this:0x25a050f61a0
+[2025-07-15 12:54:31.710013] I [15996] [ftpclient.cpp:connect:237] FtpClient::connect  port:16602
+[2025-07-15 12:54:31.710028] I [15996] [ftpclient.cpp:connect:260] ftp  CURLOPT_URL url:ftp://192.168.1.50:16602
+[2025-07-15 12:54:31.791378] I [15996] [ftpclient.cpp:connect:278] ftp connect success this:0x25a050f61a0
+[2025-07-15 12:54:31.791625] I [15996] [programeditor.cpp:upLoadJsonAndIcon:1398] EditProgram::upLoadJsonAndIcon end connect FTP
+[2025-07-15 12:54:31.791635] I [15996] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:54:31.792988] I [15996] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:54:31.792995] I [15996] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:54:31.793522] I [15996] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:54:31.793542] I [15996] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/
+[2025-07-15 12:54:31.793579] I [15996] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2025-07-15 12:54:31.793584] I [15996] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2025-07-15 12:54:31.793701] I [15996] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=
+[2025-07-15 12:54:31.793813] I [15996] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=
+[2025-07-15 12:54:31.793818] E [15996] [ftpclient.cpp:FtpUpload:408] FtpClient::FtpUpload FTP_LOCAL_FILE_NOT_EXIST 
+[2025-07-15 12:54:31.793957] I [15996] [programeditor.cpp:operator ():1411] EditProgram::upLoadJsonAndIcon-icon,code=2105,data=FTP_LOCAL_FILE_NOT_EXIST
+[2025-07-15 12:54:31.794424] I [15996] [programeditor.cpp:upLoadJsonAndIcon:1418] EditProgram::upLoadJsonAndIcon-json,json file size=5
+[2025-07-15 12:54:31.794439] I [15996] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=planlist.json
+[2025-07-15 12:54:31.794450] I [15996] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json
+[2025-07-15 12:54:31.794453] I [15996] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2025-07-15 12:54:31.794455] I [15996] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2025-07-15 12:54:31.794457] I [15996] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=F:/LedController/temp/program1/planlist.json
+[2025-07-15 12:54:31.794463] I [15996] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=F:/LedController/temp/program1/planlist.json
+[2025-07-15 12:54:31.794590] I [15996] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2025-07-15 12:54:31.794610] E [15996] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x25a050f61a0
+[2025-07-15 12:54:32.102916] I [15996] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2025-07-15 12:54:32.103019] I [15996] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: F:/LedController/temp/program1/planlist.json
+[2025-07-15 12:54:32.103024] I [15996] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2025-07-15 12:54:32.103107] I [15996] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=planlist.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.50","localPath":"F:/LedController/temp/program1/planlist.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2025-07-15 12:54:32.103116] I [15996] [ftpclient.cpp:put:60] FtpClient::put end
+[2025-07-15 12:54:32.103122] I [15996] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=play_solution1.json
+[2025-07-15 12:54:32.103132] I [15996] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/play_solution1.json
+[2025-07-15 12:54:32.103136] I [15996] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2025-07-15 12:54:32.103138] I [15996] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2025-07-15 12:54:32.103140] I [15996] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=F:/LedController/temp/program1/play_solution1.json
+[2025-07-15 12:54:32.103155] I [15996] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=F:/LedController/temp/program1/play_solution1.json
+[2025-07-15 12:54:32.103322] I [15996] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2025-07-15 12:54:32.103327] E [15996] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x25a050f61a0
+[2025-07-15 12:54:32.299595] I [15996] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2025-07-15 12:54:32.299698] I [15996] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: F:/LedController/temp/program1/play_solution1.json
+[2025-07-15 12:54:32.299703] I [15996] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2025-07-15 12:54:32.299776] I [15996] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=play_solution1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.50","localPath":"F:/LedController/temp/program1/play_solution1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/play_solution1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2025-07-15 12:54:32.299783] I [15996] [ftpclient.cpp:put:60] FtpClient::put end
+[2025-07-15 12:54:32.299788] I [15996] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=playlist1.json
+[2025-07-15 12:54:32.299796] I [15996] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playlist1.json
+[2025-07-15 12:54:32.299799] I [15996] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2025-07-15 12:54:32.299801] I [15996] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2025-07-15 12:54:32.299803] I [15996] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=F:/LedController/temp/program1/playlist1.json
+[2025-07-15 12:54:32.299814] I [15996] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=F:/LedController/temp/program1/playlist1.json
+[2025-07-15 12:54:32.299992] I [15996] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2025-07-15 12:54:32.299996] E [15996] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x25a050f61a0
+[2025-07-15 12:54:32.449912] I [15996] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2025-07-15 12:54:32.450018] I [15996] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: F:/LedController/temp/program1/playlist1.json
+[2025-07-15 12:54:32.450024] I [15996] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2025-07-15 12:54:32.450078] I [15996] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=playlist1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.50","localPath":"F:/LedController/temp/program1/playlist1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playlist1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2025-07-15 12:54:32.450085] I [15996] [ftpclient.cpp:put:60] FtpClient::put end
+[2025-07-15 12:54:32.450089] I [15996] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=playSolutionRelation1.json
+[2025-07-15 12:54:32.450098] I [15996] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playSolutionRelation1.json
+[2025-07-15 12:54:32.450101] I [15996] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2025-07-15 12:54:32.450103] I [15996] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2025-07-15 12:54:32.450105] I [15996] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=F:/LedController/temp/program1/playSolutionRelation1.json
+[2025-07-15 12:54:32.450118] I [15996] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=F:/LedController/temp/program1/playSolutionRelation1.json
+[2025-07-15 12:54:32.450279] I [15996] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2025-07-15 12:54:32.450284] E [15996] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x25a050f61a0
+[2025-07-15 12:54:32.625745] I [15996] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2025-07-15 12:54:32.625855] I [15996] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: F:/LedController/temp/program1/playSolutionRelation1.json
+[2025-07-15 12:54:32.625862] I [15996] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2025-07-15 12:54:32.625932] I [15996] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=playSolutionRelation1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.50","localPath":"F:/LedController/temp/program1/playSolutionRelation1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playSolutionRelation1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2025-07-15 12:54:32.625941] I [15996] [ftpclient.cpp:put:60] FtpClient::put end
+[2025-07-15 12:54:32.625945] I [15996] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=schedule_constraint1.json
+[2025-07-15 12:54:32.625954] I [15996] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/schedule_constraint1.json
+[2025-07-15 12:54:32.625957] I [15996] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2025-07-15 12:54:32.625959] I [15996] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2025-07-15 12:54:32.625961] I [15996] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=F:/LedController/temp/program1/schedule_constraint1.json
+[2025-07-15 12:54:32.625978] I [15996] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=F:/LedController/temp/program1/schedule_constraint1.json
+[2025-07-15 12:54:32.626176] I [15996] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2025-07-15 12:54:32.626181] E [15996] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x25a050f61a0
+[2025-07-15 12:54:32.812841] I [15996] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2025-07-15 12:54:32.813881] I [15996] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: F:/LedController/temp/program1/schedule_constraint1.json
+[2025-07-15 12:54:32.813891] I [15996] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2025-07-15 12:54:32.813966] I [15996] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=schedule_constraint1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.50","localPath":"F:/LedController/temp/program1/schedule_constraint1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/schedule_constraint1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2025-07-15 12:54:32.813976] I [15996] [ftpclient.cpp:put:60] FtpClient::put end
+[2025-07-15 12:54:32.813981] I [15996] [programeditor.cpp:upLoadJsonAndIcon:1439] EditProgram::upLoadJsonAndIcon start close FTP
+[2025-07-15 12:54:32.813986] E [15996] [ftpclient.cpp:closeFtp:288] FtpClient::closeFtp() 1111 this:0x25a050f61a0
+[2025-07-15 12:54:32.818211] E [15996] [ftpclient.cpp:closeFtp:295] FtpClient::closeFtp() 2222 this:0x25a050f61a0
+[2025-07-15 12:54:32.818286] I [15996] [programeditor.cpp:upLoadJsonAndIcon:1441] EditProgram::upLoadJsonAndIcon end close FTP
+[2025-07-15 12:54:32.818310] I [15996] [programeditor.cpp:operator ():953] EditProgram::startTransferProgram end upLoadJsonAndIcon
+[2025-07-15 12:54:32.818427] I [15996] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:54:32.818893] I [15996] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:54:32.818897] I [15996] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:54:32.819190] I [15996] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:54:32.819198] I [15996] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:54:32.819492] I [15996] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:54:32.819498] I [15996] [ftpclient.cpp:getFileLists:86] FtpClient::getFileLists
+[2025-07-15 12:54:32.819772] I [15996] [ftpclient.cpp:getFileLists:109] FtpClient::getFileLists tempBodyPath=F:/LedController/temp/filelist.txt
+[2025-07-15 12:54:32.819777] I [15996] [ftpclient.cpp:getFileLists:110] FtpClient::getFileLists tempRespPath=F:/LedController/temp/filelistresult.txt
+[2025-07-15 12:54:32.819785] I [15996] [ftpclient.cpp:getFileLists:144] FtpClient::getFileLists -----------url:ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/media/--------------
+[2025-07-15 12:54:32.820049] I [16592] [programeditor.cpp:operator ():959] EditProgram::startTransferProgram,update media progress thread run
+[2025-07-15 12:54:32.927760] I [15996] [ftpclient.cpp:getFileLists:172] FtpClient::getFileLists fileInfos.size=5
+[2025-07-15 12:54:32.927779] I [15996] [programeditor.cpp:operator ():1022] EditProgram::startTransferProgram start upload media connect FTP
+[2025-07-15 12:54:32.927784] E [15996] [ftpclient.cpp:connect:206] ftp connect1 this:0x25a050f4c60
+[2025-07-15 12:54:32.927825] E [15996] [ftpclient.cpp:connect:232] ftp curl_easy_setopt this:0x25a050f4c60
+[2025-07-15 12:54:32.927855] I [15996] [ftpclient.cpp:connect:237] FtpClient::connect  port:16602
+[2025-07-15 12:54:32.927873] I [15996] [ftpclient.cpp:connect:260] ftp  CURLOPT_URL url:ftp://192.168.1.50:16602
+[2025-07-15 12:54:33.016006] I [15996] [ftpclient.cpp:connect:278] ftp connect success this:0x25a050f4c60
+[2025-07-15 12:54:33.016025] I [15996] [programeditor.cpp:operator ():1024] EditProgram::startTransferProgram end upload media connect FTP
+[2025-07-15 12:54:33.016059] E [15996] [ftpclient.cpp:closeFtp:288] FtpClient::closeFtp() 1111 this:0x25a050f4c60
+[2025-07-15 12:54:33.020668] E [15996] [ftpclient.cpp:closeFtp:295] FtpClient::closeFtp() 2222 this:0x25a050f4c60
+[2025-07-15 12:55:44.740041] I [17612] [datamanager.cpp:init:94] DataManager::init begin
+[2025-07-15 12:55:44.740704] I [17612] [datamanager.cpp:init:97] DataManager::init end
+[2025-07-15 12:55:44.740750] D [17612] [viplexcore.cpp:initCore:181] viplexcore db & log init ok
+[2025-07-15 12:55:44.740758] D [17612] [viplexcore.cpp:init:106] sdk version = 3.4.0.01
+[2025-07-15 12:55:44.748338] I [17612] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:55:44.749281] I [17612] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:55:44.749307] I [17612] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:55:44.749565] I [17612] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:55:44.749576] I [17612] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:55:44.749799] I [17612] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:55:44.750146] I [17612] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:55:44.750460] I [17612] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:55:44.750539] D [17612] [viplexcore.cpp:init:138] viplexcore init ok: version=3.4.0.01, path=F:/LedController/temp, credentials={"company":"FleetSafe India","phone":"9992391581","email":"balkar@fleetsafeindia.com"}
+[2025-07-15 12:55:44.750545] D [17612] [viplexcore.cpp:init:139] viplexcore  init ok
+[2025-07-15 12:55:44.750557] I [17612] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:55:44.750652] I [6256] [httpHelper.cpp:httpTimeServerRequest:25] httpTimeServerRequest --srart -- url = ,
+[2025-07-15 12:55:44.750721] I [6256] [httpHelper.cpp:httpNodeServerRequest:43] httpNodeServerRequest --srart -- url = ,
+[2025-07-15 12:55:44.750780] I [6256] [httpHelper.cpp:httpVnnoxNodeServerRequest:585] httpVnnoxNodeServerRequest --srart -- url = ,
+[2025-07-15 12:55:44.750843] D [6256] [viplexcore.cpp:operator ():126] getBuryPoint() return true
+[2025-07-15 12:55:44.750873] D [6256] [burypoint.cpp:uploadInit:23] BuryPoint::uploadInit begin
+[2025-07-15 12:55:44.750963] I [17612] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:55:45.016641] D [6256] [burypoint.cpp:getOSSUploadBuryPointInfo:30] BuryPoint::getOSSUploadBuryPointInfo begin
+[2025-07-15 12:55:45.016687] D [6256] [burypoint.cpp:getOSSUploadBuryPointInfo:35] BuryPoint::getOSSUploadBuryPointInfo getOssInfoUrl=
+[2025-07-15 12:55:45.018269] E [6256] [httpttools.cpp:HttpGet:681] httptTools::HttpGet  error, ret:3
+[2025-07-15 12:55:45.018423] D [6256] [burypoint.cpp:getOSSUploadBuryPointInfo:39] BuryPoint::getOSSUploadBuryPointInfo() get ossAuthorization empty!
+[2025-07-15 12:55:45.180323] D [17612] [viplexcoreasync.cpp:nvSearchAppointIpAsync:97] nvSearchAppointIpAsync serchAppointIp begin
+[2025-07-15 12:55:45.180488] I [17612] [udphelper.cpp:serchTerminal:63] serchTerminal:41:56:4f:4e:ff:ff:ff:ff:55:88:81:00:00:00:00:00:00:00:00:00:00:00:8e:00
+[2025-07-15 12:55:45.180611] I [17612] [udpsocket.cpp:sendData:65] send re s = 0,data = AVONˇˇˇˇUàÅ
+[2025-07-15 12:55:45.180730] I [17612] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 12:55:45.180781] I [17612] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 12:55:45.180801] I [17612] [udphelper.cpp:serchTerminal:63] serchTerminal:41:56:4f:4e:ff:ff:ff:ff:55:88:81:00:00:00:00:00:00:00:00:00:00:00:8e:00
+[2025-07-15 12:55:45.180870] I [17612] [udpsocket.cpp:sendData:65] send re s = 0,data = AVONˇˇˇˇUàÅ
+[2025-07-15 12:55:45.180925] I [17612] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 12:55:45.180974] I [17612] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 12:55:45.196003] I [16392] [udpsocket.cpp:recvdata:90] recv  ip:192.168.1.50,data:AVONˇˇˇˇUà
+[2025-07-15 12:55:45.196019] I [16392] [udpsocket.cpp:recvdata:93] UdpSocket::readyrec ipv4 : 192.168.1.50
+[2025-07-15 12:55:45.196131] I [16392] [udphelper.cpp:returnData:78] UdpHelper::returnData  ip:192.168.1.50 ,begin
+[2025-07-15 12:55:45.196337] I [16392] [datamanager.cpp:setMapValueFromSN:333] DataManager::setMapValueFromSN begin
+[2025-07-15 12:55:45.197000] I [16392] [datamanager.cpp:setMapValueFromSN:381] DataManager::setMapValueFromSN end
+[2025-07-15 12:55:45.197016] I [16392] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:55:45.197310] I [16392] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:55:45.197324] I [16392] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:55:45.197722] E [16392] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: ignoreTime,strSql=SELECT ignoreTime FROM terminalinfo
+[2025-07-15 12:55:45.197837] I [16392] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:55:45.197908] I [16392] [serchterminal.cpp:operator ():112] SerchTerminal::serchTerminal result:{"aliasName":"Taurus-10000710","ftpPort":16602,"hasPassWord":true,"height":16,"ignoreTime":0,"ip":"192.168.1.50","key":"novaStar","logined":false,"loginedUsernames":[""],"password":"SN2008@+","platform":"rk312x","privacy":true,"productName":"TCC70","sn":"2YKA04124N1A10000710","syssetFtpPort":16604,"syssetTcpPort":16605,"tcpPort":16603,"terminalState":0,"width":96}
+[2025-07-15 12:55:45.197926] D [16392] [viplexcoreasync.cpp:operator ():104] nvSearchAppointIpAsync data callback begin
+[2025-07-15 12:55:45.225727] D [16392] [viplexcoreasync.cpp:operator ():108] nvSearchAppointIpAsync data callback end
+[2025-07-15 12:55:45.225772] I [16392] [udphelper.cpp:returnData:80] UdpHelper::returnData  ip:192.168.1.50 , end
+[2025-07-15 12:55:45.229109] I [17612] [login.cpp:loginTerminal:29] loginTerminal start
+[2025-07-15 12:55:45.229126] I [17612] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:55:45.229572] I [17612] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:55:45.229577] I [17612] [login.cpp:loginTerminal:33] loginTerminal start localNetLoginTerminal
+[2025-07-15 12:55:45.229673] I [17612] [tcphelper.cpp:request:235] TcpHelper::request What=119,data={"sn":"2YKA04124N1A10000710","username":"admin","password":"SN2008@+","loginType":0,"rememberPwd":1}
+[2025-07-15 12:55:45.229686] I [17612] [tcphelper.cpp:connect:45] TcpHelper::connect begin
+[2025-07-15 12:55:45.230021] D [5876] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2025-07-15 12:55:45.230044] I [17612] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:55:45.230391] I [17612] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:55:45.230396] I [17612] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:55:45.230654] I [17612] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:55:45.230657] I [17612] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:55:45.230950] I [17612] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:55:45.231032] I [17612] [tcphelper.cpp:connect:85] TcpHelper::connect end
+[2025-07-15 12:55:45.244403] I [4852] [tcpsocket.cpp:connected:74] connected m_connectCallBack m_sn:2YKA04124N1A10000710
+[2025-07-15 12:55:45.244428] D [4852] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2025-07-15 12:55:45.244447] D [4852] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2025-07-15 12:55:45.244460] D [5876] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2025-07-15 12:55:45.244467] D [5876] [tcpsocket.cpp:operator ():278] TcpClient 2YKA04124N1A10000710,code:65297,concount:0
+[2025-07-15 12:55:45.244470] I [5876] [tcphelper.cpp:operator ():124]  TcpHelper connectCallback 2YKA04124N1A10000710
+[2025-07-15 12:55:45.244506] I [5876] [login.cpp:operator ():230]  Login::connectcallback: sn:2YKA04124N1A10000710, code:65297,recdata:Success
+[2025-07-15 12:55:45.244527] I [5876] [login.cpp:operator ():233]  m_requester ConnectionSuccess  sn:2YKA04124N1A10000710
+[2025-07-15 12:55:45.748548] I [5876] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2025-07-15 12:55:45.749513] I [5876] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2025-07-15 12:55:45.749597] I [5876] [login.cpp:login:52]   m_requester ready to login  xxxxxx sn:2YKA04124N1A10000710
+[2025-07-15 12:55:45.749622] I [5876] [login.cpp:operator ():63]   m_requester begin to login 
+[2025-07-15 12:55:45.749629] I [5876] [tcphelper.cpp:request:235] TcpHelper::request What=0,data={"loginType":0,"password":"SN2008@+","sn":"2YKA04124N1A10000710","source":{"platform":2,"type":0},"username":"admin"}
+[2025-07-15 12:55:45.749705] I [5876] [tcphelper.cpp:sendData:278] TcpHelper::request alpha.header.sequence:4
+[2025-07-15 12:55:45.749718] I [5876] [tcpsocket.cpp:sendData:101] TcpClient  sendcount begin:0,len:141
+[2025-07-15 12:55:45.749745] D [5876] [tcpsocket.cpp:operator ():280] TcpClient,concount end:0
+[2025-07-15 12:55:45.749751] D [5876] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2025-07-15 12:55:45.749853] I [4852] [tcpsocket.cpp:operator ():106] TcpClient  sendcount end:0
+[2025-07-15 12:55:45.771360] D [4852] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2025-07-15 12:55:45.771379] D [4852] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2025-07-15 12:55:45.771414] D [5876] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2025-07-15 12:55:45.771430] D [5876] [tcpsocket.cpp:operator ():289] TcpClient 2YKA04124N1A10000710,usercount:0
+[2025-07-15 12:55:45.771432] I [5876] [tcphelper.cpp:onReceiveData:140] TcpHelper onReceiveData
+[2025-07-15 12:55:45.771451] I [5876] [tcphelper.cpp:onReceiveData:163] TcpHelper onReceiveData sequence:4,sn:2YKA04124N1A10000710
+[2025-07-15 12:55:45.771470] D [5876] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2025-07-15 12:55:45.771491] I [5876] [login.cpp:operator ():69]  m_requester login success
+[2025-07-15 12:55:45.771536] I [5876] [login.cpp:loginReplyHandle:104]  Login::logincallback:login success LoginedBySelf sn:2YKA04124N1A10000710, code:0,recdata:{"logined":true,"loginedUsernames":["admin"],"password":"SN2008@+","sn":"2YKA04124N1A10000710","username":"admin","validation":true,"validition":true}
+[2025-07-15 12:55:45.771541] I [5876] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2025-07-15 12:55:45.772015] I [5876] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2025-07-15 12:55:45.772018] I [5876] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2025-07-15 12:55:45.772331] I [5876] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2025-07-15 12:55:45.772333] I [5876] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2025-07-15 12:55:45.772638] I [5876] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2025-07-15 12:55:45.772641] I [5876] [datamanager.cpp:setStringWithSN:212] DataManager::setStringWithSN begin
+[2025-07-15 12:55:45.772945] I [5876] [datamanager.cpp:setStringWithSN:275] DataManager::setStringWithSN end
+[2025-07-15 12:55:45.778768] D [5876] [login.cpp:getMac:990] Login::getMac() wins mac =48:0F:CF:45:5E:25
+[2025-07-15 12:55:45.778778] I [5876] [login.cpp:loginReplyHandle:115]  Login::logincallback:login success mac=48:0F:CF:45:5E:25
+[2025-07-15 12:55:45.778787] D [5876] [viplexcoreasync.cpp:operator ():283] nvLoginAsync data callback begin
+[2025-07-15 12:55:45.779617] D [5876] [viplexcoreasync.cpp:operator ():305] nvLoginAsync data callback end
+[2025-07-15 12:55:45.779634] D [5876] [tcpsocket.cpp:operator ():291] TcpClient usercount end:0
+[2025-07-15 12:55:45.779651] D [5876] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2025-07-15 12:55:45.786466] I [17612] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvCreateProgramAsync,data:{"name":"Program1","width":100,"height":100,"tplID":1,"winInfo":{"height":50,"width":50,"left":0,"top":0,"zindex":0,"index":0}}
+[2025-07-15 12:55:45.786521] I [17612] [programeditor.cpp:operator ():70] EditProgram::createProgram start createProgram
+[2025-07-15 12:55:45.786523] I [17612] [programeditor.cpp:operator ():71] ProgramEditor::createProgram data {"name":"Program1","width":100,"height":100,"tplID":1,"winInfo":{"height":50,"width":50,"left":0,"top":0,"zindex":0,"index":0}}
+[2025-07-15 12:55:45.786572] I [17612] [datamanager.cpp:getMaxProgramID:495] DataManager::getMaxProgramID begin
+[2025-07-15 12:55:45.786786] I [17612] [datamanager.cpp:getMaxProgramID:507] DataManager::getMaxProgramID end
+[2025-07-15 12:55:45.786884] I [17612] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:55:45.877088] I [17612] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:55:45.877410] I [17612] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:55:45.952060] I [17612] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:55:45.952389] I [17612] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:55:46.018757] I [17612] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:55:46.018926] I [17612] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:55:46.101559] I [17612] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:55:46.101597] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.102338] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.102422] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.102968] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.102986] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.103575] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.103601] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.104454] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.104597] I [17612] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:55:46.158976] I [17612] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:55:46.159030] I [17612] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:55:46.233226] I [17612] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:55:46.233242] I [17612] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:55:46.279901] I [11832] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:55:46.279925] I [6496] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:55:46.279926] I [5748] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:55:46.300334] I [17612] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:55:46.300372] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.300852] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.300974] I [17612] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:55:46.301480] I [6496] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:55:46.301506] I [6496] [httpHelper.cpp:operator ():596] httpNodeServerRequest request error ,3
+[2025-07-15 12:55:46.301890] I [5748] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:55:46.301901] I [5748] [httpHelper.cpp:operator ():54] httpNodeServerRequest request error ,3
+[2025-07-15 12:55:46.302327] I [11832] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:55:46.302340] I [11832] [httpHelper.cpp:operator ():36] httpTimeServerRequest request error ,3
+[2025-07-15 12:55:46.302674] I [17612] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:55:46.302991] I [17612] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:55:46.386442] I [17612] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:55:46.386503] I [17612] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvCreateProgramAsync
+[2025-07-15 12:55:46.386644] I [17612] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2025-07-15 12:55:46.386667] I [17612] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvCreateProgramAsync
+[2025-07-15 12:55:46.393109] I [17612] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvSetPageProgramAsync,data:{"programID":1,"pageID":1,"pageInfo":{"name":"WebPageInfo","widgetContainers":[{"contents":{"widgets":[{"constraints":[{"cron":["0 0 0 ? * 1,2,3,4,5,6,7"],"endTime":"4017-12-30T23:59:59Z+8:00","startTime":"1970-01-01T00:00:00Z+8:00"}],"duration":15000,"dataSource":"http://192.168.1.10:8081/page","originalDataSource":"","name":"text","type":"HTML","isSupportSpecialEffects":true}]},"id":1,"name":"widgetContainers1"}]}}
+[2025-07-15 12:55:46.393127] I [17612] [programeditor.cpp:operator ():2251] ProgramEditor::setPageParam data {"programID":1,"pageID":1,"pageInfo":{"name":"WebPageInfo","widgetContainers":[{"contents":{"widgets":[{"constraints":[{"cron":["0 0 0 ? * 1,2,3,4,5,6,7"],"endTime":"4017-12-30T23:59:59Z+8:00","startTime":"1970-01-01T00:00:00Z+8:00"}],"duration":15000,"dataSource":"http://192.168.1.10:8081/page","originalDataSource":"","name":"text","type":"HTML","isSupportSpecialEffects":true}]},"id":1,"name":"widgetContainers1"}]}}
+[2025-07-15 12:55:46.393371] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.393703] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.394134] I [17612] [datamanager.cpp:setStringWithProgramID:394] DataManager::setStringWithProgramID begin
+[2025-07-15 12:55:46.394504] I [17612] [datamanager.cpp:setStringWithProgramID:453] DataManager::setStringWithProgramID end
+[2025-07-15 12:55:46.394531] I [17612] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvSetPageProgramAsync
+[2025-07-15 12:55:46.394583] I [17612] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2025-07-15 12:55:46.394592] I [17612] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvSetPageProgramAsync
+[2025-07-15 12:55:46.395660] I [17612] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvMakeProgramAsync,data:{"programID":1,"outPutPath":"F:/LedController/temp"}
+[2025-07-15 12:55:46.395685] I [17612] [programeditor.cpp:operator ():142] EditProgram::makeProgram start makeProgram
+[2025-07-15 12:55:46.395691] I [17612] [programeditor.cpp:operator ():143] ProgramEditor::makeProgram data {"programID":1,"outPutPath":"F:/LedController/temp"}
+[2025-07-15 12:55:46.395716] I [17612] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 12:55:46.396008] I [17612] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 12:55:46.396056] I [17612] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:55:46.396284] I [17612] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:55:46.396296] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.396512] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.396520] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.396693] E [17612] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2025-07-15 12:55:46.396738] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.396974] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.397272] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.397626] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.397805] E [17612] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2025-07-15 12:55:46.397826] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.398052] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.398353] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.398356] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.398561] E [17612] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2025-07-15 12:55:46.398581] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.398766] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.399053] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.399056] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.399246] E [17612] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2025-07-15 12:55:46.399266] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.399445] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.399733] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.399736] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.399925] E [17612] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2025-07-15 12:55:46.399944] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.399953] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.400166] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.400169] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.400376] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.400440] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.400659] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.400749] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.400974] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.401194] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.401409] E [17612] [sqloperation.cpp:isFieldExist:96] isFieldExist :no such column: AUDIOLIST,strSql=SELECT AUDIOLIST FROM programinfo
+[2025-07-15 12:55:46.401434] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.401445] I [17612] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvMakeProgramAsync
+[2025-07-15 12:55:46.401528] I [17612] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2025-07-15 12:55:46.401540] I [17612] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvMakeProgramAsync
+[2025-07-15 12:55:46.403879] D [17612] [viplexcoreasync.cpp:nvStartTransferProgramAsync:1454] nvStartTransferProgramAsync begin
+[2025-07-15 12:55:46.403885] I [17612] [viplexcoreasync.cpp:exportFuncAPIAsync:223] exportFuncAPIAsync begin funcName:nvStartTransferProgramAsync,data:{"sn":"2YKA04124N1A10000710","iconPath":"","iconName":"","programName":"program1","sendProgramFilePaths":{"programPath":"F:/LedController/temp/program1","mediasPath":{}},"deviceIdentifier":"Demo","startPlayAfterTransferred":true,"insertPlay":true}
+[2025-07-15 12:55:46.403898] I [17612] [programeditor.cpp:startTransferProgram:785] EditProgram::startTransferProgram data={"sn":"2YKA04124N1A10000710","iconPath":"","iconName":"","programName":"program1","sendProgramFilePaths":{"programPath":"F:/LedController/temp/program1","mediasPath":{}},"deviceIdentifier":"Demo","startPlayAfterTransferred":true,"insertPlay":true}
+[2025-07-15 12:55:46.403901] I [17612] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:55:46.404303] I [17612] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:55:46.404307] I [17612] [programeditor.cpp:startTransferProgram:788] EditProgram::startTransferProgram startTransferProgramLocal
+[2025-07-15 12:55:46.404331] I [17612] [programeditor.cpp:operator ():801] EditProgram::startTransferProgram start startTransferProgram
+[2025-07-15 12:55:46.404333] I [17612] [programeditor.cpp:operator ():802] ProgramEditor::startTransferProgram data {"sn":"2YKA04124N1A10000710","iconPath":"","iconName":"","programName":"program1","sendProgramFilePaths":{"programPath":"F:/LedController/temp/program1","mediasPath":{}},"deviceIdentifier":"Demo","startPlayAfterTransferred":true,"insertPlay":true}
+[2025-07-15 12:55:46.404414] I [17612] [programeditor.cpp:operator ():832] ProgramEditor::startTransferProgram m_ftphelper.clients.zise 1
+[2025-07-15 12:55:46.404430] I [17612] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:55:46.404653] I [17612] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:55:46.404695] I [17612] [datamanager.cpp:getStringFromProgramID:458] DataManager::getStringFromProgramID begin
+[2025-07-15 12:55:46.404939] I [17612] [datamanager.cpp:getStringFromProgramID:480] DataManager::getStringFromProgramID end
+[2025-07-15 12:55:46.405040] I [17612] [programeditor.cpp:operator ():852] Tcard status3
+[2025-07-15 12:55:46.405044] I [17612] [programeditor.cpp:operator ():863] EditProgram::startTransferProgram start getTransferProgramUrl,get medias Url
+[2025-07-15 12:55:46.405088] I [17612] [tcphelper.cpp:request:235] TcpHelper::request What=30,data={"deviceIdentifier":"Demo","local":false,"solutions":{"identifier":"c0d0177afe5820780247f7f45d9272e51752564346","name":"program1"},"source":0,"totalSize":0,"type":"DEFAULT"}
+[2025-07-15 12:55:46.405099] I [17612] [tcphelper.cpp:sendData:278] TcpHelper::request alpha.header.sequence:5
+[2025-07-15 12:55:46.405105] I [17612] [tcpsocket.cpp:sendData:101] TcpClient  sendcount begin:1,len:197
+[2025-07-15 12:55:46.405140] I [17612] [viplexcoreasync.cpp:exportFuncAPIAsync:246] exportFuncAPIAsync end funcName:nvStartTransferProgramAsync
+[2025-07-15 12:55:46.405218] I [4852] [tcpsocket.cpp:operator ():106] TcpClient  sendcount end:1
+[2025-07-15 12:55:46.447889] D [4852] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2025-07-15 12:55:46.447912] D [4852] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2025-07-15 12:55:46.447951] D [5876] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2025-07-15 12:55:46.448001] D [5876] [tcpsocket.cpp:operator ():289] TcpClient 2YKA04124N1A10000710,usercount:1
+[2025-07-15 12:55:46.448004] I [5876] [tcphelper.cpp:onReceiveData:140] TcpHelper onReceiveData
+[2025-07-15 12:55:46.448013] I [5876] [tcphelper.cpp:onReceiveData:163] TcpHelper onReceiveData sequence:5,sn:2YKA04124N1A10000710
+[2025-07-15 12:55:46.448101] I [5876] [programeditor.cpp:operator ():875] getTransferProgramUrl data{"appliedInfos":{"statusCode":0,"uploadUrl":"sdcard/nova/viplex_terminal/program/program_Demo/temp_program1","identifier":"c0d0177afe5820780247f7f45d9272e51752564346","name":"program1"},"canTranster":true,"directoryInfos":[{"availableSize":3925114880,"criticalSize":524288000,"directoryUrl":"sdcard/nova/viplex_terminal/media","reserveSize":0,"totalSize":4081238016,"type":"LOCAL"}],"errorCode":0,"uploadMediaUrl":"sdcard/nova/viplex_terminal/media"}
+[2025-07-15 12:55:46.448221] D [5876] [tcpsocket.cpp:operator ():291] TcpClient usercount end:1
+[2025-07-15 12:55:46.448226] D [5876] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2025-07-15 12:55:46.448456] I [3472] [programeditor.cpp:operator ():941] EditProgram::startTransferProgram,update media thread run
+[2025-07-15 12:55:46.448465] I [3472] [programeditor.cpp:operator ():945] EditProgram::startTransferProgram start upLoadJsonAndIcon
+[2025-07-15 12:55:46.448542] I [3472] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:55:46.448898] I [3472] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:55:46.448901] I [3472] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:55:46.449135] I [3472] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:55:46.449166] E [3472] [ftpclient.cpp:connect:206] ftp connect1 this:0x26a72f46f50
+[2025-07-15 12:55:46.449202] E [3472] [ftpclient.cpp:connect:232] ftp curl_easy_setopt this:0x26a72f46f50
+[2025-07-15 12:55:46.449219] I [3472] [ftpclient.cpp:connect:237] FtpClient::connect  port:16602
+[2025-07-15 12:55:46.449230] I [3472] [ftpclient.cpp:connect:260] ftp  CURLOPT_URL url:ftp://192.168.1.50:16602
+[2025-07-15 12:55:46.538625] I [3472] [ftpclient.cpp:connect:278] ftp connect success this:0x26a72f46f50
+[2025-07-15 12:55:46.538651] I [3472] [programeditor.cpp:upLoadJsonAndIcon:1398] EditProgram::upLoadJsonAndIcon end connect FTP
+[2025-07-15 12:55:46.538657] I [3472] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:55:46.539323] I [3472] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:55:46.539328] I [3472] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:55:46.539720] I [3472] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:55:46.539734] I [3472] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/
+[2025-07-15 12:55:46.539749] I [3472] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2025-07-15 12:55:46.539752] I [3472] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2025-07-15 12:55:46.539762] I [3472] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=
+[2025-07-15 12:55:46.539866] I [3472] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=
+[2025-07-15 12:55:46.539874] E [3472] [ftpclient.cpp:FtpUpload:408] FtpClient::FtpUpload FTP_LOCAL_FILE_NOT_EXIST 
+[2025-07-15 12:55:46.539990] I [3472] [programeditor.cpp:operator ():1411] EditProgram::upLoadJsonAndIcon-icon,code=2105,data=FTP_LOCAL_FILE_NOT_EXIST
+[2025-07-15 12:55:46.540622] I [3472] [programeditor.cpp:upLoadJsonAndIcon:1418] EditProgram::upLoadJsonAndIcon-json,json file size=5
+[2025-07-15 12:55:46.540637] I [3472] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=planlist.json
+[2025-07-15 12:55:46.540645] I [3472] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json
+[2025-07-15 12:55:46.540648] I [3472] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2025-07-15 12:55:46.540650] I [3472] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2025-07-15 12:55:46.540651] I [3472] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=F:/LedController/temp/program1/planlist.json
+[2025-07-15 12:55:46.540657] I [3472] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=F:/LedController/temp/program1/planlist.json
+[2025-07-15 12:55:46.540785] I [3472] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2025-07-15 12:55:46.540799] E [3472] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x26a72f46f50
+[2025-07-15 12:55:46.760205] I [3472] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2025-07-15 12:55:46.760408] I [3472] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: F:/LedController/temp/program1/planlist.json
+[2025-07-15 12:55:46.760424] I [3472] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2025-07-15 12:55:46.760561] I [3472] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=planlist.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.50","localPath":"F:/LedController/temp/program1/planlist.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2025-07-15 12:55:46.760585] I [3472] [ftpclient.cpp:put:60] FtpClient::put end
+[2025-07-15 12:55:46.760598] I [3472] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=play_solution1.json
+[2025-07-15 12:55:46.760620] I [3472] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/play_solution1.json
+[2025-07-15 12:55:46.760630] I [3472] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2025-07-15 12:55:46.760646] I [3472] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2025-07-15 12:55:46.760655] I [3472] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=F:/LedController/temp/program1/play_solution1.json
+[2025-07-15 12:55:46.760680] I [3472] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=F:/LedController/temp/program1/play_solution1.json
+[2025-07-15 12:55:46.760949] I [3472] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2025-07-15 12:55:46.760960] E [3472] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x26a72f46f50
+[2025-07-15 12:55:46.921306] I [3472] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2025-07-15 12:55:46.921383] I [3472] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: F:/LedController/temp/program1/play_solution1.json
+[2025-07-15 12:55:46.921388] I [3472] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2025-07-15 12:55:46.921435] I [3472] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=play_solution1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.50","localPath":"F:/LedController/temp/program1/play_solution1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/play_solution1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2025-07-15 12:55:46.921444] I [3472] [ftpclient.cpp:put:60] FtpClient::put end
+[2025-07-15 12:55:46.921448] I [3472] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=playlist1.json
+[2025-07-15 12:55:46.921457] I [3472] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playlist1.json
+[2025-07-15 12:55:46.921461] I [3472] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2025-07-15 12:55:46.921463] I [3472] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2025-07-15 12:55:46.921464] I [3472] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=F:/LedController/temp/program1/playlist1.json
+[2025-07-15 12:55:46.921478] I [3472] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=F:/LedController/temp/program1/playlist1.json
+[2025-07-15 12:55:46.921620] I [3472] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2025-07-15 12:55:46.921627] E [3472] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x26a72f46f50
+[2025-07-15 12:55:47.058347] I [3472] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2025-07-15 12:55:47.058542] I [3472] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: F:/LedController/temp/program1/playlist1.json
+[2025-07-15 12:55:47.058547] I [3472] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2025-07-15 12:55:47.058588] I [3472] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=playlist1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.50","localPath":"F:/LedController/temp/program1/playlist1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playlist1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2025-07-15 12:55:47.058595] I [3472] [ftpclient.cpp:put:60] FtpClient::put end
+[2025-07-15 12:55:47.058599] I [3472] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=playSolutionRelation1.json
+[2025-07-15 12:55:47.058608] I [3472] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playSolutionRelation1.json
+[2025-07-15 12:55:47.058612] I [3472] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2025-07-15 12:55:47.058615] I [3472] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2025-07-15 12:55:47.058617] I [3472] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=F:/LedController/temp/program1/playSolutionRelation1.json
+[2025-07-15 12:55:47.058633] I [3472] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=F:/LedController/temp/program1/playSolutionRelation1.json
+[2025-07-15 12:55:47.058837] I [3472] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2025-07-15 12:55:47.058842] E [3472] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x26a72f46f50
+[2025-07-15 12:55:47.203506] I [3472] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2025-07-15 12:55:47.203836] I [3472] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: F:/LedController/temp/program1/playSolutionRelation1.json
+[2025-07-15 12:55:47.203844] I [3472] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2025-07-15 12:55:47.203888] I [3472] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=playSolutionRelation1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.50","localPath":"F:/LedController/temp/program1/playSolutionRelation1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/playSolutionRelation1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2025-07-15 12:55:47.203896] I [3472] [ftpclient.cpp:put:60] FtpClient::put end
+[2025-07-15 12:55:47.203902] I [3472] [programeditor.cpp:upLoadJsonAndIcon:1421] EditProgram::upLoadJsonAndIcon-json,jsonName=schedule_constraint1.json
+[2025-07-15 12:55:47.203911] I [3472] [ftpclient.cpp:put:49] FtpClient::put remoteFilePathWithIpAndPort=ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/schedule_constraint1.json
+[2025-07-15 12:55:47.203920] I [3472] [ftpclient.cpp:FtpUpload:378] FtpClient::FtpUpload func begin
+[2025-07-15 12:55:47.203922] I [3472] [ftpclient.cpp:FtpUpload:380] FtpClient::FtpUpload func lock 
+[2025-07-15 12:55:47.203925] I [3472] [ftpclient.cpp:FtpUpload:392] FtpClient::FtpUpload upload filePath before Unicode=F:/LedController/temp/program1/schedule_constraint1.json
+[2025-07-15 12:55:47.203944] I [3472] [ftpclient.cpp:FtpUpload:402] FtpClient::FtpUpload upload filePath=F:/LedController/temp/program1/schedule_constraint1.json
+[2025-07-15 12:55:47.204336] I [3472] [ftpclient.cpp:FtpUpload:472] curl_easy_perform start
+[2025-07-15 12:55:47.204423] E [3472] [ftpclient.cpp:FtpUpload:473] FtpUpload curl_easy_perform begin this:0x26a72f46f50
+[2025-07-15 12:55:47.354107] I [3472] [ftpclient.cpp:FtpUpload:478] passive mode:curl_easy_perform end : 0
+[2025-07-15 12:55:47.354202] I [3472] [ftpclient.cpp:FtpUpload:525] FtpClient::FtpUpload file close success ,filePath: F:/LedController/temp/program1/schedule_constraint1.json
+[2025-07-15 12:55:47.354207] I [3472] [ftpclient.cpp:FtpUpload:547] FtpClient::FtpUpload func end:0
+[2025-07-15 12:55:47.354248] I [3472] [programeditor.cpp:operator ():1436] EditProgram::upLoadJsonAndIcon-json,jsonName=schedule_constraint1.json,code=0,data={"fileInfo":{"fileName":"","tag":0},"hostIp":"192.168.1.50","localPath":"F:/LedController/temp/program1/schedule_constraint1.json","port":16602,"remotePath":"/sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/schedule_constraint1.json","sn":"2YKA04124N1A10000710","username":"admin"}
+[2025-07-15 12:55:47.354255] I [3472] [ftpclient.cpp:put:60] FtpClient::put end
+[2025-07-15 12:55:47.354261] I [3472] [programeditor.cpp:upLoadJsonAndIcon:1439] EditProgram::upLoadJsonAndIcon start close FTP
+[2025-07-15 12:55:47.354265] E [3472] [ftpclient.cpp:closeFtp:288] FtpClient::closeFtp() 1111 this:0x26a72f46f50
+[2025-07-15 12:55:47.358555] E [3472] [ftpclient.cpp:closeFtp:295] FtpClient::closeFtp() 2222 this:0x26a72f46f50
+[2025-07-15 12:55:47.358772] I [3472] [programeditor.cpp:upLoadJsonAndIcon:1441] EditProgram::upLoadJsonAndIcon end close FTP
+[2025-07-15 12:55:47.358797] I [3472] [programeditor.cpp:operator ():953] EditProgram::startTransferProgram end upLoadJsonAndIcon
+[2025-07-15 12:55:47.358938] I [3472] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:55:47.359173] I [18028] [programeditor.cpp:operator ():959] EditProgram::startTransferProgram,update media progress thread run
+[2025-07-15 12:55:47.359443] I [3472] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:55:47.359447] I [3472] [datamanager.cpp:getStringFromSN:306] DataManager::getStringFromSN begin
+[2025-07-15 12:55:47.359768] I [3472] [datamanager.cpp:getStringFromSN:327] DataManager::getStringFromSN end
+[2025-07-15 12:55:47.359776] I [3472] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 12:55:47.360135] I [3472] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 12:55:47.360142] I [3472] [ftpclient.cpp:getFileLists:86] FtpClient::getFileLists
+[2025-07-15 12:55:47.360378] I [3472] [ftpclient.cpp:getFileLists:109] FtpClient::getFileLists tempBodyPath=F:/LedController/temp/filelist.txt
+[2025-07-15 12:55:47.360383] I [3472] [ftpclient.cpp:getFileLists:110] FtpClient::getFileLists tempRespPath=F:/LedController/temp/filelistresult.txt
+[2025-07-15 12:55:47.360393] I [3472] [ftpclient.cpp:getFileLists:144] FtpClient::getFileLists -----------url:ftp://192.168.1.50:16602/sdcard/nova/viplex_terminal/media/--------------
+[2025-07-15 12:55:47.461900] I [3472] [ftpclient.cpp:getFileLists:172] FtpClient::getFileLists fileInfos.size=5
+[2025-07-15 12:55:47.461924] I [3472] [programeditor.cpp:operator ():1022] EditProgram::startTransferProgram start upload media connect FTP
+[2025-07-15 12:55:47.461929] E [3472] [ftpclient.cpp:connect:206] ftp connect1 this:0x26a72f468f0
+[2025-07-15 12:55:47.461973] E [3472] [ftpclient.cpp:connect:232] ftp curl_easy_setopt this:0x26a72f468f0
+[2025-07-15 12:55:47.462013] I [3472] [ftpclient.cpp:connect:237] FtpClient::connect  port:16602
+[2025-07-15 12:55:47.462034] I [3472] [ftpclient.cpp:connect:260] ftp  CURLOPT_URL url:ftp://192.168.1.50:16602
+[2025-07-15 12:55:47.555701] I [3472] [ftpclient.cpp:connect:278] ftp connect success this:0x26a72f468f0
+[2025-07-15 12:55:47.555718] I [3472] [programeditor.cpp:operator ():1024] EditProgram::startTransferProgram end upload media connect FTP
+[2025-07-15 12:55:47.555739] E [3472] [ftpclient.cpp:closeFtp:288] FtpClient::closeFtp() 1111 this:0x26a72f468f0
+[2025-07-15 12:55:47.559721] E [3472] [ftpclient.cpp:closeFtp:295] FtpClient::closeFtp() 2222 this:0x26a72f468f0
+[2025-07-15 12:55:47.864140] I [3472] [programeditor.cpp:operator ():1117] EditProgram::startTransferProgram start finishTransferProgram
+[2025-07-15 12:55:47.864319] I [3472] [tcphelper.cpp:request:235] TcpHelper::request What=30,data={"confirmedInfos":{"identifier":"c0d0177afe5820780247f7f45d9272e51752564346","isSupportMd5Checkout":false,"name":"program1","planListUrl":"sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/planlist.json","source":0,"thumbnailUrl":"sdcard/nova/viplex_terminal/program/program_Demo/temp_program1/"},"playImmediately":true}
+[2025-07-15 12:55:47.864336] I [3472] [tcphelper.cpp:sendData:278] TcpHelper::request alpha.header.sequence:6
+[2025-07-15 12:55:47.864344] I [3472] [tcpsocket.cpp:sendData:101] TcpClient  sendcount begin:2,len:357
+[2025-07-15 12:55:47.864407] I [4852] [tcpsocket.cpp:operator ():106] TcpClient  sendcount end:2
+[2025-07-15 12:55:48.156346] D [4852] [tcpsocket.cpp:pushqueueAndNotify:302] notify begin sn:2YKA04124N1A10000710,size;0
+[2025-07-15 12:55:48.156371] D [4852] [tcpsocket.cpp:pushqueueAndNotify:306] notify end size;1
+[2025-07-15 12:55:48.156413] D [5876] [tcpsocket.cpp:operator ():267] wait end sn:2YKA04124N1A10000710
+[2025-07-15 12:55:48.156420] D [5876] [tcpsocket.cpp:operator ():289] TcpClient 2YKA04124N1A10000710,usercount:2
+[2025-07-15 12:55:48.156423] I [5876] [tcphelper.cpp:onReceiveData:140] TcpHelper onReceiveData
+[2025-07-15 12:55:48.156432] I [5876] [tcphelper.cpp:onReceiveData:163] TcpHelper onReceiveData sequence:6,sn:2YKA04124N1A10000710
+[2025-07-15 12:55:48.156457] I [5876] [programeditor.cpp:operator ():1119] callback finishTransferProgram info errorCode = 0 result = {"errorStr":"SUCCESS","errorType":0}
+[2025-07-15 12:55:48.156482] I [5876] [programeditor.cpp:operator ():1143] EditProgram::startTransferProgram end finishTransferProgram
+[2025-07-15 12:55:48.156492] I [5876] [viplexcoreasync.cpp:operator ():240] exportFuncAPIAsync to user callback begin funcNameÔºönvStartTransferProgramAsync
+[2025-07-15 12:55:48.156904] I [5876] [viplexcoreasync.cpp:operator ():243] exportFuncAPIAsync to user callback end
+[2025-07-15 12:55:48.156912] D [5876] [tcpsocket.cpp:operator ():291] TcpClient usercount end:2
+[2025-07-15 12:55:48.156915] D [5876] [tcpsocket.cpp:operator ():261] wait begin sn:2YKA04124N1A10000710
+[2025-07-15 12:55:49.751376] D [15956] [tcpsocket.cpp:sendHeartbeat:253] TcpClient::sendHeartbeat  send heartbeat
+[2025-07-15 12:55:52.206071] W [8908] [ftphelper.cpp:~FtpHelper:18] FtpHelper::~FtpHelper()
+[2025-07-15 12:55:52.236385] I [8908] [udpsocket.cpp:~UdpSocket:52] ~UdpSocket() end
+[2025-07-15 12:55:52.275474] I [8908] [udpsocket.cpp:~UdpSocket:52] ~UdpSocket() end
+[2025-07-15 12:55:52.275690] W [8908] [tcphelper.cpp:~TcpHelper:40] TcpHelper::~TcpHelper()
+[2025-07-15 17:11:03.549691] I [18360] [datamanager.cpp:init:94] DataManager::init begin
+[2025-07-15 17:11:03.584300] I [18360] [datamanager.cpp:init:97] DataManager::init end
+[2025-07-15 17:11:03.596900] D [18360] [viplexcore.cpp:initCore:181] viplexcore db & log init ok
+[2025-07-15 17:11:03.599105] D [18360] [viplexcore.cpp:init:106] sdk version = 3.4.0.01
+[2025-07-15 17:11:03.633124] I [18360] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 17:11:03.635200] I [18360] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 17:11:03.642238] I [18360] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 17:11:03.642519] I [18360] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 17:11:03.642712] I [18360] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 17:11:03.642983] I [18360] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 17:11:03.676195] I [18360] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 17:11:03.676987] I [18360] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 17:11:03.677128] D [18360] [viplexcore.cpp:init:138] viplexcore init ok: version=3.4.0.01, path=F:/LedController/temp, credentials={"company":"FleetSafe India","phone":"9992391581","email":"balkar@fleetsafeindia.com"}
+[2025-07-15 17:11:03.677134] D [18360] [viplexcore.cpp:init:139] viplexcore  init ok
+[2025-07-15 17:11:03.677151] I [18360] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 17:11:03.677733] I [6308] [httpHelper.cpp:httpTimeServerRequest:25] httpTimeServerRequest --srart -- url = ,
+[2025-07-15 17:11:03.677736] I [18360] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 17:11:03.677878] I [6308] [httpHelper.cpp:httpNodeServerRequest:43] httpNodeServerRequest --srart -- url = ,
+[2025-07-15 17:11:03.677983] I [6308] [httpHelper.cpp:httpVnnoxNodeServerRequest:585] httpVnnoxNodeServerRequest --srart -- url = ,
+[2025-07-15 17:11:03.678123] D [6308] [viplexcore.cpp:operator ():126] getBuryPoint() return true
+[2025-07-15 17:11:03.678167] D [6308] [burypoint.cpp:uploadInit:23] BuryPoint::uploadInit begin
+[2025-07-15 17:11:04.001332] D [6308] [burypoint.cpp:getOSSUploadBuryPointInfo:30] BuryPoint::getOSSUploadBuryPointInfo begin
+[2025-07-15 17:11:04.172190] D [18360] [viplexcoreasync.cpp:nvSearchAppointIpAsync:97] nvSearchAppointIpAsync serchAppointIp begin
+[2025-07-15 17:11:04.180745] D [6308] [burypoint.cpp:getOSSUploadBuryPointInfo:35] BuryPoint::getOSSUploadBuryPointInfo getOssInfoUrl=
+[2025-07-15 17:11:04.181620] E [6308] [httpttools.cpp:HttpGet:681] httptTools::HttpGet  error, ret:3
+[2025-07-15 17:11:04.196249] D [6308] [burypoint.cpp:getOSSUploadBuryPointInfo:39] BuryPoint::getOSSUploadBuryPointInfo() get ossAuthorization empty!
+[2025-07-15 17:11:04.196456] I [18360] [udphelper.cpp:serchTerminal:63] serchTerminal:41:56:4f:4e:ff:ff:ff:ff:55:88:81:00:00:00:00:00:00:00:00:00:00:00:8e:00
+[2025-07-15 17:11:04.196802] I [18360] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:11:04.196952] I [18360] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:11:04.197047] I [18360] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:11:04.197080] I [18360] [udphelper.cpp:serchTerminal:63] serchTerminal:41:56:4f:4e:ff:ff:ff:ff:55:88:81:00:00:00:00:00:00:00:00:00:00:00:8e:00
+[2025-07-15 17:11:04.197308] I [18360] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:11:04.197405] I [18360] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:11:04.197479] I [18360] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:11:04.213276] I [9344] [udpsocket.cpp:recvdata:90] recv  ip:192.168.1.53,data:AVONˇˇˇˇUà
+[2025-07-15 17:11:04.213290] I [9344] [udpsocket.cpp:recvdata:93] UdpSocket::readyrec ipv4 : 192.168.1.53
+[2025-07-15 17:11:04.213330] E [9344] [udphelper.cpp:returnData:89] UdpHelper::returnData m_serchResultCallBack is empty
+[2025-07-15 17:12:40.172122] I [6324] [datamanager.cpp:init:94] DataManager::init begin
+[2025-07-15 17:12:40.173045] I [6324] [datamanager.cpp:init:97] DataManager::init end
+[2025-07-15 17:12:40.173099] D [6324] [viplexcore.cpp:initCore:181] viplexcore db & log init ok
+[2025-07-15 17:12:40.173115] D [6324] [viplexcore.cpp:init:106] sdk version = 3.4.0.01
+[2025-07-15 17:12:40.182774] I [6324] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 17:12:40.184628] I [6324] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 17:12:40.184654] I [6324] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 17:12:40.186650] I [6324] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 17:12:40.186725] I [6324] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 17:12:40.187447] I [6324] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 17:12:40.187986] I [6324] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 17:12:40.188452] I [6324] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 17:12:40.188541] D [6324] [viplexcore.cpp:init:138] viplexcore init ok: version=3.4.0.01, path=F:/LedController/temp, credentials={"company":"FleetSafe India","phone":"9992391581","email":"balkar@fleetsafeindia.com"}
+[2025-07-15 17:12:40.188547] D [6324] [viplexcore.cpp:init:139] viplexcore  init ok
+[2025-07-15 17:12:40.188558] I [6324] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 17:12:40.188921] I [6324] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 17:12:40.189265] I [6108] [httpHelper.cpp:httpTimeServerRequest:25] httpTimeServerRequest --srart -- url = ,
+[2025-07-15 17:12:40.189353] I [6108] [httpHelper.cpp:httpNodeServerRequest:43] httpNodeServerRequest --srart -- url = ,
+[2025-07-15 17:12:40.189418] I [6108] [httpHelper.cpp:httpVnnoxNodeServerRequest:585] httpVnnoxNodeServerRequest --srart -- url = ,
+[2025-07-15 17:12:40.189489] D [6108] [viplexcore.cpp:operator ():126] getBuryPoint() return true
+[2025-07-15 17:12:40.189509] D [6108] [burypoint.cpp:uploadInit:23] BuryPoint::uploadInit begin
+[2025-07-15 17:12:40.538127] D [6108] [burypoint.cpp:getOSSUploadBuryPointInfo:30] BuryPoint::getOSSUploadBuryPointInfo begin
+[2025-07-15 17:12:40.538150] D [6108] [burypoint.cpp:getOSSUploadBuryPointInfo:35] BuryPoint::getOSSUploadBuryPointInfo getOssInfoUrl=
+[2025-07-15 17:12:40.539566] E [6108] [httpttools.cpp:HttpGet:681] httptTools::HttpGet  error, ret:3
+[2025-07-15 17:12:40.539671] D [6108] [burypoint.cpp:getOSSUploadBuryPointInfo:39] BuryPoint::getOSSUploadBuryPointInfo() get ossAuthorization empty!
+[2025-07-15 17:12:40.708495] D [6324] [viplexcoreasync.cpp:nvSearchAppointIpAsync:97] nvSearchAppointIpAsync serchAppointIp begin
+[2025-07-15 17:12:40.708609] I [6324] [udphelper.cpp:serchTerminal:63] serchTerminal:41:56:4f:4e:ff:ff:ff:ff:55:88:81:00:00:00:00:00:00:00:00:00:00:00:8e:00
+[2025-07-15 17:12:40.708843] I [6324] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:12:40.708925] I [6324] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:12:40.708998] I [6324] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:12:40.709015] I [6324] [udphelper.cpp:serchTerminal:63] serchTerminal:41:56:4f:4e:ff:ff:ff:ff:55:88:81:00:00:00:00:00:00:00:00:00:00:00:8e:00
+[2025-07-15 17:12:40.709097] I [6324] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:12:40.709152] I [6324] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:12:40.709211] I [6324] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:12:40.725826] I [19080] [udpsocket.cpp:recvdata:90] recv  ip:192.168.1.53,data:AVONˇˇˇˇUà
+[2025-07-15 17:12:40.725837] I [19080] [udpsocket.cpp:recvdata:93] UdpSocket::readyrec ipv4 : 192.168.1.53
+[2025-07-15 17:12:40.725867] E [19080] [udphelper.cpp:returnData:89] UdpHelper::returnData m_serchResultCallBack is empty
+[2025-07-15 17:12:49.665672] I [19288] [datamanager.cpp:init:94] DataManager::init begin
+[2025-07-15 17:12:49.666666] I [19288] [datamanager.cpp:init:97] DataManager::init end
+[2025-07-15 17:12:49.666761] D [19288] [viplexcore.cpp:initCore:181] viplexcore db & log init ok
+[2025-07-15 17:12:49.666773] D [19288] [viplexcore.cpp:init:106] sdk version = 3.4.0.01
+[2025-07-15 17:12:49.674558] I [19288] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 17:12:49.675586] I [19288] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 17:12:49.675600] I [19288] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 17:12:49.675827] I [19288] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 17:12:49.675836] I [19288] [datamanager.cpp:getString:174] DataManager::getString begin
+[2025-07-15 17:12:49.676054] I [19288] [datamanager.cpp:getString:195] DataManager::getString end
+[2025-07-15 17:12:49.676408] I [19288] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 17:12:49.676684] I [19288] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 17:12:49.676739] D [19288] [viplexcore.cpp:init:138] viplexcore init ok: version=3.4.0.01, path=F:/LedController/temp, credentials={"company":"FleetSafe India","phone":"9992391581","email":"balkar@fleetsafeindia.com"}
+[2025-07-15 17:12:49.676742] D [19288] [viplexcore.cpp:init:139] viplexcore  init ok
+[2025-07-15 17:12:49.676750] I [19288] [datamanager.cpp:setString:121] DataManager::setString begin
+[2025-07-15 17:12:49.676842] I [18328] [httpHelper.cpp:httpTimeServerRequest:25] httpTimeServerRequest --srart -- url = ,
+[2025-07-15 17:12:49.676906] I [18328] [httpHelper.cpp:httpNodeServerRequest:43] httpNodeServerRequest --srart -- url = ,
+[2025-07-15 17:12:49.676962] I [18328] [httpHelper.cpp:httpVnnoxNodeServerRequest:585] httpVnnoxNodeServerRequest --srart -- url = ,
+[2025-07-15 17:12:49.677015] I [19288] [datamanager.cpp:setString:169] DataManager::setString end
+[2025-07-15 17:12:49.677034] D [18328] [viplexcore.cpp:operator ():126] getBuryPoint() return true
+[2025-07-15 17:12:49.677058] D [18328] [burypoint.cpp:uploadInit:23] BuryPoint::uploadInit begin
+[2025-07-15 17:12:49.923139] D [18328] [burypoint.cpp:getOSSUploadBuryPointInfo:30] BuryPoint::getOSSUploadBuryPointInfo begin
+[2025-07-15 17:12:49.923180] D [18328] [burypoint.cpp:getOSSUploadBuryPointInfo:35] BuryPoint::getOSSUploadBuryPointInfo getOssInfoUrl=
+[2025-07-15 17:12:49.925642] E [18328] [httpttools.cpp:HttpGet:681] httptTools::HttpGet  error, ret:3
+[2025-07-15 17:12:49.925793] D [18328] [burypoint.cpp:getOSSUploadBuryPointInfo:39] BuryPoint::getOSSUploadBuryPointInfo() get ossAuthorization empty!
+[2025-07-15 17:12:50.093348] D [19288] [viplexcoreasync.cpp:nvSearchAppointIpAsync:97] nvSearchAppointIpAsync serchAppointIp begin
+[2025-07-15 17:12:50.093459] I [19288] [udphelper.cpp:serchTerminal:63] serchTerminal:41:56:4f:4e:ff:ff:ff:ff:55:88:81:00:00:00:00:00:00:00:00:00:00:00:8e:00
+[2025-07-15 17:12:50.093695] I [19288] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:12:50.093801] I [19288] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:12:50.093881] I [19288] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:12:50.093913] I [19288] [udphelper.cpp:serchTerminal:63] serchTerminal:41:56:4f:4e:ff:ff:ff:ff:55:88:81:00:00:00:00:00:00:00:00:00:00:00:8e:00
+[2025-07-15 17:12:50.094023] I [19288] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:12:50.094095] I [19288] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:12:50.094170] I [19288] [udpsocket.cpp:sendData:65] send re s = 24,data = AVONˇˇˇˇUàÅ
+[2025-07-15 17:12:50.110307] I [16556] [udpsocket.cpp:recvdata:90] recv  ip:192.168.1.53,data:AVONˇˇˇˇUà
+[2025-07-15 17:12:50.110341] I [16556] [udpsocket.cpp:recvdata:93] UdpSocket::readyrec ipv4 : 192.168.1.53
+[2025-07-15 17:12:50.110372] E [16556] [udphelper.cpp:returnData:89] UdpHelper::returnData m_serchResultCallBack is empty
