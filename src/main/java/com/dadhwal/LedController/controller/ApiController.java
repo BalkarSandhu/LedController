@@ -1,5 +1,7 @@
 package com.dadhwal.LedController.controller;
 
+import com.dadhwal.LedController.config.Config;
+import com.dadhwal.LedController.controller.requests.EthernetConfig;
 import com.dadhwal.LedController.controller.requests.MessageRequest;
 import com.dadhwal.LedController.services.SdkService;
 import com.google.gson.Gson;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -41,14 +44,22 @@ public class ApiController {
                 : ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("SDK not initialized yet.");
     }
 
-    @PostMapping("/updateConfig")
-    public ResponseEntity<String> updateConfig(
-            @RequestParam(required = false) String newIp,
-            @RequestParam(required = false) String newWbFile,
-            @RequestParam(required = false) String newBaseUrl) {
+    @PostMapping("/config")
+    public ResponseEntity<String> updateConfig(@RequestBody Config request) {
         try {
-            sdkService.updateConfig(newIp, newWbFile, newBaseUrl);
+            sdkService.updateConfig(request.getControllerIp(), request.getWbFile(), request.getBaseUrl());
             return ResponseEntity.ok("Configuration updated successfully.");
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, "Failed to update configuration", e);
+            return ResponseEntity.status(500).body("Failed to update configuration");
+        }
+    }
+
+    @GetMapping("/config")
+    public ResponseEntity<String> getConfig() {
+        try {
+            String config = sdkService.readConfig();
+            return ResponseEntity.ok(config);
         } catch (Exception e) {
             logger.log(Level.SEVERE, "Failed to update configuration", e);
             return ResponseEntity.status(500).body("Failed to update configuration");
@@ -68,7 +79,8 @@ public class ApiController {
     @GetMapping("/login")
     public ResponseEntity<String> login() {
         ResponseEntity<String> sdkStatus = checkSdkStatus();
-        if (sdkStatus != null) return sdkStatus;
+        if (sdkStatus != null)
+            return sdkStatus;
 
         boolean loggedIn = sdkService.performLogin();
         return loggedIn
@@ -79,7 +91,8 @@ public class ApiController {
     @GetMapping("/searchTerminal")
     public ResponseEntity<String> searchTerminal() {
         ResponseEntity<String> sdkStatus = checkSdkStatus();
-        if (sdkStatus != null) return sdkStatus;
+        if (sdkStatus != null)
+            return sdkStatus;
 
         try {
             return ResponseEntity.ok(sdkService.searchTerminal().get());
@@ -92,7 +105,8 @@ public class ApiController {
     @GetMapping("/searchScreen")
     public ResponseEntity<String> searchTerminalIp() {
         ResponseEntity<String> sdkStatus = checkSdkStatus();
-        if (sdkStatus != null) return sdkStatus;
+        if (sdkStatus != null)
+            return sdkStatus;
 
         try {
             String result = sdkService.searchTerminalByIp().get();
@@ -114,9 +128,11 @@ public class ApiController {
 
         isProcessingPublishMessage = true;
         try {
-            if (!sdkService.isLogin()) sdkService.performLogin();
+            if (!sdkService.isLogin())
+                sdkService.performLogin();
             ResponseEntity<String> sdkStatus = checkSdkStatus();
-            if (sdkStatus != null) return sdkStatus;
+            if (sdkStatus != null)
+                return sdkStatus;
 
             String color;
             String message;
@@ -164,7 +180,8 @@ public class ApiController {
             }
 
             ResponseEntity<String> sdkStatus = checkSdkStatus();
-            if (sdkStatus != null) return sdkStatus;
+            if (sdkStatus != null)
+                return sdkStatus;
 
             String message = info != null ? info : success != null ? success : error != null ? error : null;
             String color = info != null ? "#5bc0de" : success != null ? "#22bb33" : "#bb2124";
@@ -222,18 +239,26 @@ public class ApiController {
     @GetMapping("/getEthernetInfo")
     public ResponseEntity<String> getEthernetInfo() {
         try {
-            return ResponseEntity.ok(sdkService.getEthernetInfo().get());
+               String result = sdkService.searchTerminalByIp().get();
+                JsonObject response = gson.fromJson(result, JsonObject.class);
+                if (response.has("logined") && !response.get("logined").getAsBoolean()) {
+                    sdkService.performLogin();
+                }
+           return ResponseEntity.ok(sdkService.getEthernetInfo().get());
         } catch (Exception e) {
             return ResponseEntity.status(500).body("Get Ethernet Info failed");
         }
     }
 
-    @GetMapping("/setEthernetInfo")
-    public ResponseEntity<String> setEthernetInfo(@RequestParam String newIp) {
+    @PostMapping("/setEthernetInfo")
+    public ResponseEntity<String> setEthernetInfo(@RequestBody EthernetConfig config) {
         try {
-            return ResponseEntity.ok(sdkService.setEthernetInfo(newIp).get());
+            String result = sdkService.setEthernetInfo(config).get(10, TimeUnit.SECONDS);
+            sdkService.updateConfig(config.getIp(), null, null); // Update config with new IP
+            sdkService.logout();
+            return ResponseEntity.ok(result);
         } catch (Exception e) {
-            return ResponseEntity.status(500).body("Set Ethernet Info failed");
+            return ResponseEntity.status(500).body("Set Ethernet Info failed: " + e.getMessage());
         }
     }
 

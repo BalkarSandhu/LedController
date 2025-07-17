@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Controller Dashboard</title>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+    <h1>Welcome to LED Controller</h1>
+
+    <!-- Network Configuration Fragment -->
+    <div th:replace="fragments/network-config"></div>
+
+    <!-- JavaScript -->
+    <script th:src="@{/js/scripts.js}"></script>
+</body>
+</html>

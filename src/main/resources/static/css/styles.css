@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.ip-input-group {
+    display: flex;
+    gap: 5px;
+}
+
+.ip-input {
+    width: 60px;
+    padding: 5px;
+}

@@ -1,5 +1,7 @@
 package com.dadhwal.LedController.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,10 +15,9 @@ public class PageController {
         this.appConfig = appConfig;
     }
 
-    @GetMapping("/page")
-    public String getHtmlTemplate(Model model) {
-        model.addAttribute("url", appConfig.getBaseurl());
-        return "textView"; // Will render templates/textView.html
+    @GetMapping("/")
+    public String showIndex(Model model) {
+        return "index";
     }
 
     @GetMapping("/configuration")

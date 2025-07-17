@@ -1,6 +1,8 @@
 package com.dadhwal.LedController.services;
 
 import com.dadhwal.LedController.LedSDK.SDKWrapper;
+import com.dadhwal.LedController.config.Config;
+import com.dadhwal.LedController.controller.requests.EthernetConfig;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
@@ -28,6 +30,7 @@ public class SdkService {
     private static String controllerIp;
     private static String WbFile;
     private static String baseurl;
+    private static Config config = new Config();
 
     private static final Gson gson = new Gson();
     private static volatile boolean sdkInitialized = false;
@@ -62,6 +65,9 @@ public class SdkService {
             controllerIp = properties.getProperty("controllerIp");
             WbFile = properties.getProperty("wbFile");
             baseurl = properties.getProperty("baseurl");
+            config.setControllerIp(controllerIp);
+            config.setWbFile(WbFile);
+            config.setBaseUrl(baseurl);
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Failed to load configuration", e);
         }
@@ -169,8 +175,8 @@ public class SdkService {
         return SDKWrapper.getEthernetInfo();
     }
 
-    public CompletableFuture<String> setEthernetInfo(String newIp) throws InterruptedException {
-        return SDKWrapper.setEthernetInfo(newIp);
+    public CompletableFuture<String> setEthernetInfo(EthernetConfig config) throws InterruptedException {
+        return SDKWrapper.setEthernetInfo(config);
     }
 
     public CompletableFuture<String> setScreenInfo() throws InterruptedException {
@@ -184,11 +190,11 @@ public class SdkService {
         }
 
         if (newIp != null && !newIp.isEmpty()) {
-            properties.setProperty("controller.ip", newIp);
+            properties.setProperty("controllerIp", newIp);
             controllerIp = newIp;
         }
         if (newWbFile != null && !newWbFile.isEmpty()) {
-            properties.setProperty("wb.file", newWbFile);
+            properties.setProperty("wbFile", newWbFile);
             WbFile = newWbFile;
         }
         if (newBaseUrl != null && !newBaseUrl.isEmpty()) {
@@ -199,6 +205,10 @@ public class SdkService {
         try (FileOutputStream output = new FileOutputStream("src/main/resources/" + CONFIG_FILE)) {
             properties.store(output, null);
         }
+    }
+
+    public String readConfig() {
+        return config.toString();
     }
 }
 

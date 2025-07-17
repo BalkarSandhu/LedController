@@ -16,6 +16,7 @@ import com.dadhwal.LedController.LedSDK.Program.ProgramPage;
 import com.dadhwal.LedController.LedSDK.Program.ProgramTransfer;
 import com.dadhwal.LedController.LedSDK.Program.ProgramWindow;
 import com.dadhwal.LedController.LedSDK.Screen.ScreenInfo;
+import com.dadhwal.LedController.controller.requests.EthernetConfig;
 import com.dadhwal.LedController.controller.responses.SearchTerminal;
 import com.google.gson.Gson;
 import com.sun.jna.Native;
@@ -361,25 +362,17 @@ public class SDKWrapper {
         return future;
     }
 
-    private static String setGateway(String ip) {
-        String[] ipParts = ip.split("\\.");
-        // Set the last octet to '1' for the gateway
-        ipParts[3] = "1";
-        return String.join(".", ipParts);
-    }
-
-    public static CompletableFuture<String> setEthernetInfo(String ip) throws InterruptedException {
+    public static CompletableFuture<String> setEthernetInfo(EthernetConfig config) throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
         try {
-            String gateway = setGateway(ip);
 
-            EthernetData ethernet=new EthernetData(-1, "eth0", false, ip, "255.255.255.0", gateway, List.of("8.8.8.8", "1.1.1.1"));
+            EthernetData ethernet=new EthernetData(-1, "eth0", false, config.getIp(), config.getMask(), config.getGateway(), config.getDnsServers());
             EthernetTaskInfo taskInfo= new EthernetTaskInfo(List.of(ethernet));
             String ethernetInfo= gson.toJson(new StringFormatter(g_sn,taskInfo));
             CountDownLatch latch = new CountDownLatch(1);
             instance.nvSetEthernetInfoAsync(ethernetInfo, (code, data) -> {
                 if(code == 0){
-                    future.complete("Screen Ip Successfully Set to: "+ip);
+                    future.complete("Screen Ip Successfully Set to: "+ config.toString());
                 } else {
                     future.completeExceptionally(new Exception("Set Ethernet Info Failed"));
                 }
