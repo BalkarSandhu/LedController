@@ -30,11 +30,15 @@ public class SdkService {
     private static String controllerIp;
     private static String WbFile;
     private static String baseUrl;
-    private static Config config = new Config();
+    private final Config config;
 
     private static final Gson gson = new Gson();
     private static volatile boolean sdkInitialized = false;
     private static volatile boolean login = false;
+
+    public SdkService(Config config) {
+        this.config = config;
+    }
 
     public boolean isSdkInitialized() {
         return sdkInitialized;
@@ -106,6 +110,14 @@ public class SdkService {
         }
     }
 
+    public boolean isControllerIpPingable() {
+        if (controllerIp == null || controllerIp.isBlank()) {
+            logger.warning("Controller IP is not set.");
+            return false;
+        }
+        return isPingable(controllerIp);
+    }
+
     private boolean isPingable(String ipAddress) {
         try {
             InetAddress inet = InetAddress.getByName(ipAddress);
@@ -134,11 +146,22 @@ public class SdkService {
     }
 
     public String readWbFileContent() throws IOException {
-        Path filePath = Paths.get(WbFile);
-        return Files.readString(filePath);
+    if (WbFile == null || WbFile.isBlank()) {
+        return "Invalid Path";
     }
 
-    public CompletableFuture<String> publishMessage(String type, String color) throws ExecutionException, InterruptedException {
+    Path filePath = Paths.get(WbFile);
+
+    if (!Files.exists(filePath)) {
+        return "Invalid Path";
+    }
+
+    return Files.readString(filePath);
+}
+
+
+    public CompletableFuture<String> publishMessage(String type, String color)
+            throws ExecutionException, InterruptedException {
         SDKWrapper.createProgramPage();
         SDKWrapper.setPageProgram(type, color);
         SDKWrapper.makeProgram();
@@ -191,14 +214,17 @@ public class SdkService {
 
         if (newIp != null && !newIp.isEmpty()) {
             properties.setProperty("controllerIp", newIp);
+            config.setControllerIp(newIp);
             controllerIp = newIp;
         }
         if (newWbFile != null && !newWbFile.isEmpty()) {
             properties.setProperty("wbFile", newWbFile);
+            config.setWbFile(newWbFile);
             WbFile = newWbFile;
         }
         if (newBaseUrl != null && !newBaseUrl.isEmpty()) {
             properties.setProperty("baseUrl", newBaseUrl);
+            config.setBaseUrl(newBaseUrl);
             baseUrl = newBaseUrl;
         }
 
@@ -211,4 +237,3 @@ public class SdkService {
         return config;
     }
 }
-

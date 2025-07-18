@@ -59,6 +59,40 @@ async function fetchControllerConfig() {
         .catch(err => console.error("Error fetching config:", err));
 }
 
+async function fetchStatus() {
+    try {
+        const response = await fetch("/api/status");
+        if (!response.ok) throw new Error("Failed to fetch status");
+        const status = await response.json();
+
+        document.getElementById("sdkStatus").textContent = status.sdkInitialized ? "✅ Yes" : "❌ No";
+        document.getElementById("loginStatus").textContent = status.login ? "✅ Yes" : "❌ No";
+        document.getElementById("controllerIpDisplay").textContent = status.controllerIp;
+        document.getElementById("ipReachable").textContent = status.ipReachable ? "✅ Reachable" : "❌ Unreachable";
+        document.getElementById("loginBtn").style.display = status.login ? "none" : "inline-block";
+    } catch (err) {
+        console.error("Error fetching system status:", err);
+    }
+}
+
+async function manualLogin() {
+    try {
+        const response = await fetch("/api/login", {
+            method: "POST"
+        });
+
+        const text = await response.text();
+        alert(`Login response: ${text}`);
+
+        // Re-fetch status after login attempt
+        fetchStatus();
+    } catch (err) {
+        console.error("Login request failed:", err);
+        alert("Login failed.");
+    }
+}
+
+
 async function submitControllerConfig() {
     const config = {
         controllerIp: document.getElementById("controllerIp").value,
@@ -132,9 +166,8 @@ async function postNetworkConfig(event) {
 // Fetch network config once page is loaded
 window.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded, fetching network config...');
+     fetchStatus();
     fetchNetworkConfig();
     fetchControllerConfig();
 
-    const form = document.getElementById('networkConfigForm');
-    form.addEventListener('submit', postNetworkConfig);
 });

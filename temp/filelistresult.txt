@@ -6,7 +6,7 @@
 250 Directory changed to /sdcard/nova
 250 Directory changed to /sdcard/nova/viplex_terminal
 250 Directory changed to /sdcard/nova/viplex_terminal/media
-229 Entering Passive Mode (|||56535|)
+229 Entering Passive Mode (|||45320|)
 200 Command TYPE okay.
 150 File status okay; about to open data connection.
 226 Closing data connection.

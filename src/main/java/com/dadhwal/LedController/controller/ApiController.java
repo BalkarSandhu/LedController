@@ -10,8 +10,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -44,10 +42,40 @@ public class ApiController {
                 : ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("SDK not initialized yet.");
     }
 
+    @GetMapping("/status")
+    public ResponseEntity<String> getSystemStatus() {
+        JsonObject status = new JsonObject();
+
+        status.addProperty("sdkInitialized", sdkService.isSdkInitialized());
+        status.addProperty("login", sdkService.isLogin());
+
+        Config config = sdkService.readConfig();
+
+        String ip = config.getControllerIp();
+        status.addProperty("controllerIp", ip != null ? ip : "");
+        status.addProperty("baseUrl", config.getBaseUrl() != null ? config.getBaseUrl() : "");
+        status.addProperty("wbFile", config.getWbFile() != null ? config.getWbFile() : "");
+
+        // Check if ip is set and not blank before pinging
+        if (ip != null && !ip.isBlank()) {
+            try {
+                status.addProperty("ipReachable", sdkService.isControllerIpPingable());
+            } catch (Exception e) {
+                status.addProperty("ipReachable", false);
+            }
+        } else {
+            status.addProperty("ipReachable", false);
+        }
+
+        return ResponseEntity.ok(status.toString());
+    }
+
     @PostMapping("/config")
     public ResponseEntity<String> updateConfig(@RequestBody Config request) {
         try {
+
             sdkService.updateConfig(request.getControllerIp(), request.getWbFile(), request.getBaseUrl());
+            sdkService.transferWebProgram().get();
             return ResponseEntity.ok("Configuration updated successfully.");
         } catch (Exception e) {
             logger.log(Level.SEVERE, "Failed to update configuration", e);
@@ -77,12 +105,7 @@ public class ApiController {
     }
 
     @PostMapping("/login")
-    @GetMapping("/login")
     public ResponseEntity<String> login() {
-        ResponseEntity<String> sdkStatus = checkSdkStatus();
-        if (sdkStatus != null)
-            return sdkStatus;
-
         boolean loggedIn = sdkService.performLogin();
         return loggedIn
                 ? ResponseEntity.ok("Login Successful")
@@ -276,13 +299,5 @@ public class ApiController {
         return ResponseEntity.ok("Test Passed");
     }
 
-    @GetMapping("/updateWbFile")
-    public ResponseEntity<String> updateWbFile(@RequestParam String newPath) {
-        try {
-            sdkService.updateConfig(null, newPath, null);
-            return ResponseEntity.ok("WbFile path updated to: " + newPath);
-        } catch (Exception e) {
-            return ResponseEntity.status(500).body("Failed to update WbFile path");
-        }
-    }
+
 }

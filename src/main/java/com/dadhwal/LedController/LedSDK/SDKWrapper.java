@@ -143,7 +143,7 @@ public class SDKWrapper {
                 if (code == 0) {
                     future.complete(data);
                 } else {
-                    future.completeExceptionally(new Exception("Login Failed"));
+                    future.completeExceptionally(new Exception("Login Requested"));
                 }
                 latch.countDown();
             });

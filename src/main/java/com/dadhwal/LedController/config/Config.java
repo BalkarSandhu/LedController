@@ -1,5 +1,8 @@
 package com.dadhwal.LedController.config;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Config {
     private String controllerIp;
     private String wbFile;

@@ -1,0 +1,13 @@
+<!-- fragments/status.html -->
+<div th:fragment="status-fragment">
+    <h2>System Status</h2>
+    <ul id="statusList">
+        <li><strong>Controller IP:</strong> <span id="controllerIpDisplay">Loading...</span></li>
+        <li><strong>IP Reachable:</strong> <span id="ipReachable">Checking...</span></li>
+        <li><strong>SDK Initialized:</strong> <span id="sdkStatus">Loading...</span></li>
+        <li><strong>Logged In:</strong>
+            <span id="loginStatus">Loading...</span>
+            <button id="loginBtn" style="display: none;" onclick="manualLogin()">Login</button>
+        </li>
+    </ul>
+</div>

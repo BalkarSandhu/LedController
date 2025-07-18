@@ -4,8 +4,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.dadhwal.LedController.config.Config;
+
 @Controller
 public class PageController {
+
+    private final Config config;
+
+    public PageController(Config config) {
+        this.config = config;
+    }
 
 
     @GetMapping("/")
@@ -13,9 +21,10 @@ public class PageController {
         return "index";
     }
 
-    @GetMapping("/configuration")
-    public String getConfigurationPage() {
-        return "configuration"; // Will render templates/configuration.html
+    @GetMapping("/page")
+    public String getHtmlTemplate(Model model) {
+        model.addAttribute("url", config.getBaseUrl());
+        return "textview"; // Will render templates/textView.html
     }
 
     @GetMapping("/network")
