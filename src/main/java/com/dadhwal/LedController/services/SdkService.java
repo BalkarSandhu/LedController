@@ -29,7 +29,7 @@ public class SdkService {
     private static final String CONFIG_FILE = "config.properties";
     private static String controllerIp;
     private static String WbFile;
-    private static String baseurl;
+    private static String baseUrl;
     private static Config config = new Config();
 
     private static final Gson gson = new Gson();
@@ -64,10 +64,10 @@ public class SdkService {
             properties.load(input);
             controllerIp = properties.getProperty("controllerIp");
             WbFile = properties.getProperty("wbFile");
-            baseurl = properties.getProperty("baseurl");
+            baseUrl = properties.getProperty("baseUrl");
             config.setControllerIp(controllerIp);
             config.setWbFile(WbFile);
-            config.setBaseUrl(baseurl);
+            config.setBaseUrl(baseUrl);
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Failed to load configuration", e);
         }
@@ -82,7 +82,7 @@ public class SdkService {
                 if (logined) {
                     login = true;
                     SDKWrapper.createProgramPage();
-                    SDKWrapper.setWebPageProgram(baseurl + "/page");
+                    SDKWrapper.setWebPageProgram(baseUrl + "/page");
                     SDKWrapper.makeProgram();
                     SDKWrapper.transferProgram();
                 }
@@ -118,7 +118,7 @@ public class SdkService {
 
     public boolean performLogin() {
         try {
-            CompletableFuture<String> res = SDKWrapper.login();
+            CompletableFuture<String> res = SDKWrapper.loginByIp(controllerIp);
             String result = res.get();
             JsonObject response = gson.fromJson(result, JsonObject.class);
 
@@ -146,7 +146,7 @@ public class SdkService {
     }
 
     public CompletableFuture<String> transferWebProgram() throws ExecutionException, InterruptedException {
-        SDKWrapper.setWebPageProgram(baseurl + "/page");
+        SDKWrapper.setWebPageProgram(baseUrl + "/page");
         SDKWrapper.makeProgram();
         return SDKWrapper.transferProgram();
     }
@@ -198,8 +198,8 @@ public class SdkService {
             WbFile = newWbFile;
         }
         if (newBaseUrl != null && !newBaseUrl.isEmpty()) {
-            properties.setProperty("baseurl", newBaseUrl);
-            baseurl = newBaseUrl;
+            properties.setProperty("baseUrl", newBaseUrl);
+            baseUrl = newBaseUrl;
         }
 
         try (FileOutputStream output = new FileOutputStream("src/main/resources/" + CONFIG_FILE)) {
@@ -207,8 +207,8 @@ public class SdkService {
         }
     }
 
-    public String readConfig() {
-        return config.toString();
+    public Config readConfig() {
+        return config;
     }
 }
 

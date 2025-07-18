@@ -10,8 +10,12 @@
 <body>
     <h1>Welcome to LED Controller</h1>
 
+    <div th:replace="fragments/update-config"></div>
+
     <!-- Network Configuration Fragment -->
     <div th:replace="fragments/network-config"></div>
+
+    
 
     <!-- JavaScript -->
     <script th:src="@{/js/scripts.js}"></script>

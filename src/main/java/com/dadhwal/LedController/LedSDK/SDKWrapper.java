@@ -117,7 +117,27 @@ public class SDKWrapper {
     public static CompletableFuture<String> login() throws InterruptedException {
         CompletableFuture<String> future = new CompletableFuture<>();
         try {
-            String loginParam = gson.toJson(new LoginReq(g_sn,"admin","SN2008@+", 0,1));
+            String loginParam = gson.toJson(new LoginReq(g_sn, "admin","SN2008@+", 0,1));
+            CountDownLatch latch = new CountDownLatch(1);
+            instance.nvLoginAsync(loginParam, (code, data) -> {
+                if (code == 0) {
+                    future.complete(data);
+                } else {
+                    future.completeExceptionally(new Exception("Login Failed"));
+                }
+                latch.countDown();
+            });
+            waitAPIReturn(latch);
+        } catch (InterruptedException e){
+            future.completeExceptionally(e);
+        }
+        return future;
+    }
+
+    public static CompletableFuture<String> loginByIp(String ip) throws InterruptedException {
+        CompletableFuture<String> future = new CompletableFuture<>();
+        try {
+            String loginParam = gson.toJson(new LoginReq(g_sn, ip, "admin","SN2008@+", 0, 1));
             CountDownLatch latch = new CountDownLatch(1);
             instance.nvLoginAsync(loginParam, (code, data) -> {
                 if (code == 0) {

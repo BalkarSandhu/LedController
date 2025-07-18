@@ -40,6 +40,49 @@ async function fetchNetworkConfig() {
     }
 }
 
+async function fetchControllerConfig() {
+    fetch("/api/config") // Adjust to your actual GET endpoint
+        .then(async response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const result = await response.json();
+            console.log("Controller config fetched:", result);
+            return result
+            
+})
+        .then(data => {
+            document.getElementById("controllerIp").value = data.controllerIp;
+            document.getElementById("wbFile").value = data.wbFile;
+            document.getElementById("baseUrl").value = data.baseUrl;
+        })
+        .catch(err => console.error("Error fetching config:", err));
+}
+
+async function submitControllerConfig() {
+    const config = {
+        controllerIp: document.getElementById("controllerIp").value,
+        wbFile: document.getElementById("wbFile").value,
+        baseUrl: document.getElementById("baseUrl").value
+    };
+
+    fetch("/api/config", {
+        method: "POST", // Or PUT
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(config)
+    })
+    .then(res => {
+        if (res.ok) {
+            alert("Configuration updated successfully!");
+        } else {
+            alert("Failed to update configuration.");
+        }
+    })
+    .catch(err => console.error("Update failed:", err));
+}
+
 async function postNetworkConfig(event) {
     event.preventDefault();  // Prevent actual form submit
 
@@ -90,6 +133,7 @@ async function postNetworkConfig(event) {
 window.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded, fetching network config...');
     fetchNetworkConfig();
+    fetchControllerConfig();
 
     const form = document.getElementById('networkConfigForm');
     form.addEventListener('submit', postNetworkConfig);

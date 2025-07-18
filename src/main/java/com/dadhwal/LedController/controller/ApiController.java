@@ -56,13 +56,14 @@ public class ApiController {
     }
 
     @GetMapping("/config")
-    public ResponseEntity<String> getConfig() {
+    public ResponseEntity<?> getConfig() {
         try {
-            String config = sdkService.readConfig();
+            Config config = sdkService.readConfig();
             return ResponseEntity.ok(config);
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "Failed to update configuration", e);
-            return ResponseEntity.status(500).body("Failed to update configuration");
+            logger.log(Level.SEVERE, "Failed to read configuration", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Failed to read configuration");
         }
     }
 
@@ -239,12 +240,12 @@ public class ApiController {
     @GetMapping("/getEthernetInfo")
     public ResponseEntity<String> getEthernetInfo() {
         try {
-               String result = sdkService.searchTerminalByIp().get();
-                JsonObject response = gson.fromJson(result, JsonObject.class);
-                if (response.has("logined") && !response.get("logined").getAsBoolean()) {
-                    sdkService.performLogin();
-                }
-           return ResponseEntity.ok(sdkService.getEthernetInfo().get());
+            String result = sdkService.searchTerminalByIp().get();
+            JsonObject response = gson.fromJson(result, JsonObject.class);
+            if (response.has("logined") && !response.get("logined").getAsBoolean()) {
+                sdkService.performLogin();
+            }
+            return ResponseEntity.ok(sdkService.getEthernetInfo().get());
         } catch (Exception e) {
             return ResponseEntity.status(500).body("Get Ethernet Info failed");
         }
@@ -255,7 +256,6 @@ public class ApiController {
         try {
             String result = sdkService.setEthernetInfo(config).get(10, TimeUnit.SECONDS);
             sdkService.updateConfig(config.getIp(), null, null); // Update config with new IP
-            sdkService.logout();
             return ResponseEntity.ok(result);
         } catch (Exception e) {
             return ResponseEntity.status(500).body("Set Ethernet Info failed: " + e.getMessage());

@@ -3,7 +3,7 @@ package com.dadhwal.LedController.config;
 public class Config {
     private String controllerIp;
     private String wbFile;
-    private String baseurl;
+    private String baseUrl;
 
     // Getters and setters
     public String getControllerIp() {
@@ -23,11 +23,11 @@ public class Config {
     }
 
     public String getBaseUrl() {
-        return baseurl;
+        return baseUrl;
     }
 
     public void setBaseUrl(String newBaseUrl) {
-        this.baseurl = newBaseUrl;
+        this.baseUrl = newBaseUrl;
     }
 
      @Override
@@ -35,7 +35,7 @@ public class Config {
         return "{" +
                 "controllerIp='" + controllerIp + '\'' +
                 ", wbFile='" + wbFile + '\'' +
-                ", baseurl='" + baseurl + '\'' +
+                ", baseUrl='" + baseUrl + '\'' +
                 '}';
     }
 }
