@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Live Time</title>
     <style>
-        body, html {
+        body,
+        html {
             margin: 0;
             padding: 0;
         }
@@ -14,8 +16,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: auto;
+            width: 96px;
+            /* Fixed width */
             height: 16px;
+            text-align: center;
+
+            /* Center align text */
+            overflow: hidden;
+            /* Hide overflow */
         }
 
         .top-left p {
@@ -23,36 +31,45 @@
             padding: 0;
             font-size: 15px;
             color: red;
+            white-space: nowrap;
+            /* Prevent text wrap */
+            overflow: hidden;
+            /* Hide overflow */
+            text-overflow: ellipsis;
+            /* Show ... when text is too long */
         }
     </style>
 </head>
+
 <body>
-<div class="top-left">
-    <p id="text">.</p>
-</div>
+    <div class="top-left">
+        <p id="text">.</p>
+    </div>
 
-<script th:inline="javascript">
-    /*<![CDATA[*/
-    const url = /*[[${url}]]*/ 'http://localhost:8081'; // Default URL, can be overridden by the controller
 
-    async function fetchWB() {
-        try {
-            const response = await fetch(url + '/api/readable');
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        const url = /*[[${url}]]*/ 'http://localhost:8081'; // Default URL, can be overridden by the controller
+
+        async function fetchWB() {
+            try {
+                const response = await fetch(url + '/api/readable');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const resp = await response.text();
+                console.log("Fetched:", resp);
+                document.getElementById('text').textContent = resp;
+            } catch (err) {
+                console.error("Fetch error:", err);
             }
-            const resp = await response.text();
-            console.log("Fetched:", resp);
-            document.getElementById('text').textContent = resp;
-        } catch (err) {
-            console.error("Fetch error:", err);
         }
-    }
 
-    setInterval(fetchWB, 1000); // Update every 1 second
-    fetchWB(); // Initial fetch
-    /*]]>*/
-</script>
+        setInterval(fetchWB, 1000); // Update every 1 second
+        fetchWB(); // Initial fetch
+        /*]]>*/
+    </script>
 
 </body>
+
 </html>

@@ -98,7 +98,7 @@ public class ApiController {
     @GetMapping("/readable")
     public ResponseEntity<String> readFile() {
         try {
-            return ResponseEntity.ok(sdkService.readWbFileContent());
+            return ResponseEntity.ok(sdkService.readWbFileContent() + " KG");
         } catch (Exception e) {
             return ResponseEntity.status(500).body("Error reading file: " + e.getMessage());
         }
