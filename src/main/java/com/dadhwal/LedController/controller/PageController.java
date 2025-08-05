@@ -26,9 +26,4 @@ public class PageController {
         model.addAttribute("url", config.getBaseUrl());
         return "textview"; // Will render templates/textView.html
     }
-
-    @GetMapping("/network")
-    public String getNetworkConfigPage() {
-        return "network"; // Will render templates/network.html
-    }
 }
